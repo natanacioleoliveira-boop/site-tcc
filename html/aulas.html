@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!-- ========== CONFIGURAÇÕES INICIAIS ========== -->
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Aprenda educação financeira na Base 6, mesmo sem cadastro.">
+
+    <title>Aulas | Base 6</title>
+
+    <!-- ========== FONTES DO SITE ========== -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Sedgwick+Ave+Display&display=swap"
+          rel="stylesheet">
+
+    <!-- ========== CONEXÃO COM CSS ========== -->
+    <link rel="stylesheet" href="../css/site.css">
+</head>
+
+<body>
+
+    <!-- ========== ACESSO DIRETO AO CONTEÚDO ========== -->
+    <a href="#conteudo" class="pular-conteudo">
+        Pular para o conteúdo
+    </a>
+
+
+    <!-- ========================================
+         1. CABEÇALHO - BASE 6
+    ======================================== -->
+
+    <header class="cabecalho">
+
+        <div class="container cabecalho-conteudo">
+
+            <!-- ========== LOGO BASE 6 ========== -->
+            <a href="inicio.html"
+               class="logo-marca"
+               aria-label="Base 6 - Página inicial">
+
+                <svg class="logo-coroa"
+                     viewBox="0 0 80 50"
+                     fill="none"
+                     aria-hidden="true">
+
+                    <path
+                        d="M5 37 L13 12 L30 26 L42 5 L55 26 L72 12 L77 37 Z"
+                        stroke="currentColor"
+                        stroke-width="5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    />
+
+                    <path
+                        d="M8 44 L75 44"
+                        stroke="currentColor"
+                        stroke-width="5"
+                        stroke-linecap="round"
+                    />
+
+                </svg>
+
+                <span class="logo-letras">
+                    <span class="logo-base">BASE</span><span class="logo-numero">6</span>
+                </span>
+
+                <span class="logo-risco"
+                      aria-hidden="true"></span>
+
+            </a>
+
+
+            <!-- ========== MENU PRINCIPAL ========== -->
+            <nav class="menu" aria-label="Menu principal">
+
+                <a href="inicio.html">
+                    Início
+                </a>
+
+                <a href="aulas.html"
+                   aria-current="page"
+                   class="ativo">
+                    Aulas
+                </a>
+
+                <a href="login.html">
+                    Minha Área
+                </a>
+
+                <a href="comunidade.html">
+                    Comunidade
+                </a>
+
+            </nav>
+
+
+            <!-- ========== LOGIN OPCIONAL ========== -->
+            <a href="login.html" class="botao-cabecalho">
+                Entrar
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- ========================================
+         2. CONTEÚDO PRINCIPAL
+    ======================================== -->
+
+    <main id="conteudo">
+
+
+        <!-- ========================================
+             APRESENTAÇÃO DAS AULAS
+        ======================================== -->
+
+        <section class="abertura-aulas"
+                 aria-labelledby="titulo-aulas">
+
+            <div class="container abertura-conteudo">
+
+                <!-- ========== TEXTO PRINCIPAL ========== -->
+                <div>
+
+                    <p class="etiqueta">
+                        SEU APRENDIZADO COMEÇA AQUI
+                    </p>
+
+                    <h1 id="titulo-aulas">
+                        Bora entender melhor
+                        <span>seu dinheiro?</span>
+                    </h1>
+
+                    <p class="abertura-descricao">
+                        Aprenda a organizar seus gastos,
+                        economizar e planejar seus objetivos.
+
+                        Aqui você pode estudar no seu ritmo,
+                        mesmo sem criar uma conta.
+                    </p>
+
+                    <!-- ========== BOTÃO VER AULAS ========== -->
+                    <a href="#lista-aulas"
+                       class="botao-principal">
+
+                        Explorar aulas
+                        <span aria-hidden="true">→</span>
+
+                    </a>
+
+                </div>
+
+
+                <!-- ========== DESTAQUE VISUAL ========== -->
+                <aside class="destaque-abertura"
+                       aria-label="Mensagem da Base 6">
+
+                    <span class="destaque-icone"
+                          aria-hidden="true">✦</span>
+
+                    <p class="destaque-frase">
+                        Conhecimento não precisa
+                        de cadastro para começar.
+                    </p>
+
+                    <p class="destaque-descricao">
+                        Aprenda primeiro.
+                        Crie sua conta quando quiser
+                        acompanhar sua evolução.
+                    </p>
+
+                </aside>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             3. CONTEÚDOS DISPONÍVEIS
+        ======================================== -->
+
+        <section class="secao-aulas"
+                 id="lista-aulas"
+                 aria-labelledby="titulo-lista-aulas">
+
+            <div class="container">
+
+                <!-- ========== TÍTULO DA SEÇÃO ========== -->
+                <header class="cabecalho-secao">
+
+                    <p class="etiqueta etiqueta-clara">
+                        PRIMEIROS PASSOS
+                    </p>
+
+                    <h2 id="titulo-lista-aulas">
+                        Comece pelo básico.
+                    </h2>
+
+                    <p>
+                        Separamos alguns assuntos importantes
+                        para você dar os primeiros passos
+                        na educação financeira.
+                    </p>
+
+                </header>
+
+
+                <!-- ========== GRADE DE AULAS ========== -->
+                <div class="grade-aulas">
+
+
+                    <!-- ========== AULA 1 ========== -->
+                    <article class="card-aula">
+
+                        <div class="card-topo">
+
+                            <span class="card-icone">
+                                01
+                            </span>
+
+                            <span class="card-categoria">
+                                ORGANIZAÇÃO
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            Para onde vai meu dinheiro?
+                        </h3>
+
+                        <p>
+                            Entenda como identificar suas
+                            entradas e saídas de dinheiro
+                            e organizar seu orçamento.
+                        </p>
+
+                        <!-- A aula abre sem cadastro -->
+                        <!-- ========== CONTEÚDO DA AULA 1 ========== -->
+<!-- Espaço reservado para conteúdo futuro -->
+
+<details class="conteudo-aula">
+
+    <summary>
+        Ler primeira aula
+        <span aria-hidden="true">+</span>
+    </summary>
+
+    <!-- Conteúdo será adicionado posteriormente -->
+
+</details>
+
+                    </article>
+
+
+                    <!-- ========== AULA 2 ========== -->
+                    <article class="card-aula">
+
+                        <div class="card-topo">
+
+                            <span class="card-icone icone-azul">
+                                02
+                            </span>
+
+                            <span class="card-categoria">
+                                CONSUMO
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            Preciso mesmo comprar isso?
+                        </h3>
+
+                        <p>
+                            Aprenda a diferenciar
+                            necessidades e desejos
+                            antes de gastar.
+                        </p>
+
+                        <!-- A aula abre sem cadastro -->
+                        
+<!-- ========== CONTEÚDO DA AULA 2 ========== -->
+<!-- Espaço reservado para conteúdo futuro -->
+
+<details class="conteudo-aula">
+
+    <summary>
+        Ler segunda aula
+        <span aria-hidden="true">+</span>
+    </summary>
+
+    <!-- Conteúdo será adicionado posteriormente -->
+
+</details>
+
+                    </article>
+
+
+                    <!-- ========== AULA 3 ========== -->
+                    <article class="card-aula">
+
+                        <div class="card-topo">
+
+                            <span class="card-icone icone-terracota">
+                                03
+                            </span>
+
+                            <span class="card-categoria">
+                                PLANEJAMENTO
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            Transforme planos em metas.
+                        </h3>
+
+                        <p>
+                            Descubra como planejar
+                            objetivos financeiros
+                            de maneira realista.
+                        </p>
+
+                        <!-- A aula abre sem cadastro -->
+                        
+<!-- ========== CONTEÚDO DA AULA 3 ========== -->
+<!-- Espaço reservado para conteúdo futuro -->
+
+<details class="conteudo-aula">
+
+    <summary>
+        Ler terceira aula
+        <span aria-hidden="true">+</span>
+    </summary>
+
+    <!-- Conteúdo será adicionado posteriormente -->
+
+</details>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             4. CONVITE PARA CRIAR UMA CONTA
+        ======================================== -->
+
+        <section class="secao-convite"
+                 aria-labelledby="titulo-convite">
+
+            <div class="container">
+
+                <div class="convite-conteudo">
+
+                    <!-- ========== TEXTO DO CONVITE ========== -->
+                    <div>
+
+                        <p class="etiqueta etiqueta-escura">
+                            SUA EVOLUÇÃO IMPORTA
+                        </p>
+
+                        <h2 id="titulo-convite">
+                            Quer acompanhar
+                            <span>seu progresso?</span>
+                        </h2>
+
+                        <p>
+                            Você pode continuar estudando
+                            sem cadastro.
+
+                            Mas, com uma conta, poderá
+                            futuramente salvar as aulas
+                            concluídas e acompanhar
+                            sua evolução na Base 6.
+                        </p>
+
+                    </div>
+
+                    <!-- ========== OPÇÕES DO USUÁRIO ========== -->
+                    <div class="convite-acoes">
+
+                        <a href="cadastro.html"
+                           class="botao-principal">
+
+                            Criar minha conta
+                            <span aria-hidden="true">→</span>
+
+                        </a>
+
+                        <a href="#lista-aulas"
+                           class="link-discreto">
+
+                            Continuar sem conta
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ========================================
+         5. RODAPÉ - BASE 6
+    ======================================== -->
+
+    <footer class="rodape">
+
+        <div class="container rodape-conteudo">
+
+            <p>
+                Base 6 — Educação financeira para todos.
+            </p>
+
+            <a href="inicio.html">
+                Voltar à página inicial
+            </a>
+
+        </div>
+
+    </footer>
+
+
+
+
+
+
+</body>
+</html>

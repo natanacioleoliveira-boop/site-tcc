@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!-- ========== CONFIGURAÇÕES INICIAIS ========== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Base 6: aprenda educação financeira de maneira simples, acessível e conectada à sua realidade.">
+
+    <title>Início | Base 6</title>
+
+
+    <!-- ========== FONTES DO SITE ========== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Sedgwick+Ave+Display&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- ========== CONEXÃO COM CSS ========== -->
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+    <!-- ========== ACESSO DIRETO AO CONTEÚDO ========== -->
+    <a href="#conteudo" class="pular-conteudo">
+        Pular para o conteúdo principal
+    </a>
+
+
+    <!-- ========================================
+         1. CABEÇALHO - BASE 6
+    ======================================== -->
+
+    <header class="cabecalho">
+
+        <div class="container cabecalho-conteudo">
+
+            <!-- ========== LOGO BASE 6 ========== -->
+            <a href="inicio.html"
+               class="logo-marca"
+               aria-label="Base 6 - Página inicial">
+
+                <!-- Coroa decorativa -->
+                <svg class="logo-coroa"
+                     viewBox="0 0 80 50"
+                     fill="none"
+                     aria-hidden="true">
+
+                    <path
+                        d="M5 37 L13 12 L30 26 L42 5 L55 26 L72 12 L77 37 Z"
+                        stroke="currentColor"
+                        stroke-width="5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    />
+
+                    <path
+                        d="M8 44 L75 44"
+                        stroke="currentColor"
+                        stroke-width="5"
+                        stroke-linecap="round"
+                    />
+
+                </svg>
+
+                <!-- Nome da marca -->
+                <span class="logo-letras">
+                    <span class="logo-base">BASE</span><span class="logo-numero">6</span>
+                </span>
+
+                <!-- Pincelada verde -->
+                <span class="logo-risco" aria-hidden="true"></span>
+
+            </a>
+
+
+            <!-- ========== MENU DE NAVEGAÇÃO ========== -->
+            <nav class="menu" aria-label="Menu principal">
+
+                <a href="inicio.html"
+                   class="menu-link ativo"
+                   aria-current="page">
+                    Início
+                </a>
+
+                <a href="aulas.html" class="menu-link">
+                    Aulas
+                </a>
+
+                <a href="minha-area.html" class="menu-link">
+                    Minha Área
+                </a>
+
+                <a href="comunidade.html" class="menu-link">
+                    Comunidade
+                </a>
+
+            </nav>
+
+
+            <!-- ========== ENTRAR / PERFIL ========== -->
+
+            <!--
+                Usuário não conectado:
+                mostrar o link Entrar.
+
+                Usuário conectado:
+                futuramente o JavaScript substituirá
+                este conteúdo pelo perfil da pessoa.
+            -->
+
+            <div class="area-perfil" id="area-perfil">
+
+                <a href="login.html" class="botao-entrar">
+
+                    <span>Entrar</span>
+
+                    <!-- Ícone de perfil -->
+                    <svg viewBox="0 0 24 24"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="1.8"
+                         stroke-linecap="round"
+                         stroke-linejoin="round"
+                         aria-hidden="true">
+
+                        <circle cx="12" cy="8" r="4"></circle>
+                        <path d="M4 21v-2a8 8 0 0 1 16 0v2"></path>
+
+                    </svg>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ========================================
+         2. CONTEÚDO PRINCIPAL
+    ======================================== -->
+
+    <main id="conteudo">
+
+
+        <!-- ========================================
+             APRESENTAÇÃO - PÁGINA INICIAL
+        ======================================== -->
+
+        <section class="apresentacao"
+                 aria-labelledby="titulo-inicial">
+
+            <div class="container apresentacao-conteudo">
+
+
+                <!-- ========== LADO ESQUERDO - TEXTOS ========== -->
+
+                <div class="apresentacao-texto">
+
+                    <!-- ========== ETIQUETA SUPERIOR ========== -->
+
+                    <p class="etiqueta">
+                        BEM-VINDO À BASE 6
+                    </p>
+
+
+                    <!-- ========== TÍTULO PRINCIPAL ========== -->
+
+                    <h1 id="titulo-inicial">
+                        Seu corre tem valor.
+                        <span>Seu dinheiro também.</span>
+                    </h1>
+
+
+                    <!-- ========== DESCRIÇÃO DO PROJETO ========== -->
+
+                    <p class="descricao">
+                        A Base 6 é o seu espaço para aprender
+                        educação financeira de forma simples
+                        e sem complicações.
+
+                        Aqui, você descobre como organizar
+                        seus gastos, planejar seus objetivos
+                        e tomar decisões mais conscientes
+                        sobre seu dinheiro.
+
+                        Tudo no seu ritmo e conectado
+                        à sua realidade.
+                    </p>
+
+
+                    <!-- ========== BOTÃO COMEÇAR AGORA ========== -->
+
+                    <a href="aulas.html" class="botao-comecar">
+
+                        Começar agora
+
+                        <svg viewBox="0 0 24 24"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="2"
+                             stroke-linecap="round"
+                             stroke-linejoin="round"
+                             aria-hidden="true">
+
+                            <path d="M5 12h14"></path>
+                            <path d="m13 6 6 6-6 6"></path>
+
+                        </svg>
+
+                    </a>
+
+                </div>
+
+
+                <!-- ========== LADO DIREITO - FOTOGRAFIA ========== -->
+
+               <figure class="apresentacao-imagem">
+
+    <img src="../srcc/Amizade Urbana em Retrato Coletivo.png" alt="Jovens diversos sorrindo">
+
+    <figcaption class="legenda-foto">
+        <span class="legenda-destaque">
+            BASE 6
+        </span>
+
+        <span>
+            O conhecimento abre caminhos.
+        </span>
+    </figcaption>
+
+</figure>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             3. SELOS DE BENEFÍCIOS
+        ======================================== -->
+
+        <section class="secao-selos"
+                 aria-labelledby="titulo-beneficios">
+
+            <div class="container">
+
+                <!-- Título para identificar a seção -->
+                <h2 id="titulo-beneficios" class="visualmente-oculto">
+                    Benefícios do Base 6
+                </h2>
+
+
+                <!-- ========== LISTA DOS SELOS ========== -->
+
+                <ul class="lista-selos">
+
+
+                    <!-- ========== SELO 1 - APRENDIZADO ========== -->
+
+                    <li class="selo">
+
+                        <span class="selo-icone" aria-hidden="true">
+
+                            <svg viewBox="0 0 24 24"
+                                 fill="none"
+                                 stroke="currentColor"
+                                 stroke-width="1.7"
+                                 stroke-linecap="round"
+                                 stroke-linejoin="round">
+
+                                <path d="M12 7v14"></path>
+                                <path d="M3 18V5a2 2 0 0 1 2-2h3a6 6 0 0 1 4 2 6 6 0 0 1 4-2h3a2 2 0 0 1 2 2v13"></path>
+                                <path d="M3 18a2 2 0 0 1 2-2h3a6 6 0 0 1 4 2 6 6 0 0 1 4-2h3a2 2 0 0 1 2 2"></path>
+
+                            </svg>
+
+                        </span>
+
+                        <div class="selo-texto">
+
+                            <h3>
+                                Aprenda sem complicação
+                            </h3>
+
+                            <p>
+                                Conteúdos simples e práticos.
+                            </p>
+
+                        </div>
+
+                    </li>
+
+
+                    <!-- ========== SELO 2 - INCLUSÃO ========== -->
+
+                    <li class="selo">
+
+                        <span class="selo-icone" aria-hidden="true">
+
+                            <svg viewBox="0 0 24 24"
+                                 fill="none"
+                                 stroke="currentColor"
+                                 stroke-width="1.7"
+                                 stroke-linecap="round"
+                                 stroke-linejoin="round">
+
+                                <circle cx="9" cy="8" r="3"></circle>
+                                <path d="M3 20v-2a6 6 0 0 1 12 0v2"></path>
+                                <path d="M17 5a3 3 0 0 1 0 6"></path>
+                                <path d="M18 14a5 5 0 0 1 3 5v1"></path>
+
+                            </svg>
+
+                        </span>
+
+                        <div class="selo-texto">
+
+                            <h3>
+                                Educação para todos
+                            </h3>
+
+                            <p>
+                                Conhecimento mais acessível.
+                            </p>
+
+                        </div>
+
+                    </li>
+
+
+                    <!-- ========== SELO 3 - FUTURO ========== -->
+
+                    <li class="selo">
+
+                        <span class="selo-icone" aria-hidden="true">
+
+                            <svg viewBox="0 0 24 24"
+                                 fill="none"
+                                 stroke="currentColor"
+                                 stroke-width="1.7"
+                                 stroke-linecap="round"
+                                 stroke-linejoin="round">
+
+                                <path d="M3 17 9 11l4 4 8-8"></path>
+                                <path d="M15 7h6v6"></path>
+
+                            </svg>
+
+                        </span>
+
+                        <div class="selo-texto">
+
+                            <h3>
+                                Construa seu futuro
+                            </h3>
+
+                            <p>
+                                Evolua no seu próprio ritmo.
+                            </p>
+
+                        </div>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ========================================
+         4. RODAPÉ - BASE 6
+    ======================================== -->
+
+    <footer class="rodape">
+
+        <div class="container rodape-conteudo">
+
+            <p>
+                Base 6 — Educação financeira para todos.
+            </p>
+
+            <a href="index.html">
+                Conheça nossa missão
+            </a>
+
+        </div>
+
+    </footer>
+
+
+
+
+</body>
+</html>

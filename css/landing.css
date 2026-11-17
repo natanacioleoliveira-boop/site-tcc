@@ -1,0 +1,1219 @@
+/* ========================================
+   BASE 6 - LANDING PAGE
+   ARQUIVO: landing.css
+======================================== */
+
+
+/* ========== CORES PRINCIPAIS ========== */
+
+:root {
+    --verde-escuro: #071b14;
+    --verde-medio: #123c2b;
+    --verde-limao: #c7f238;
+
+    --branco: #ffffff;
+    --creme: #f5f4ec;
+    --cinza: #bdcec2;
+    --preto-suave: #10251b;
+
+    --borda-clara: rgba(255, 255, 255, 0.15);
+    --largura-maxima: 1180px;
+}
+
+
+/* ========== CONFIGURAÇÕES GERAIS ========== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--verde-escuro);
+    color: var(--branco);
+    font-family: "DM Sans", Arial, sans-serif;
+    line-height: 1.6;
+    overflow-wrap: break-word;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.container {
+    width: min(
+        var(--largura-maxima),
+        calc(100% - 48px)
+    );
+    margin-inline: auto;
+}
+
+
+/* ========== ACESSIBILIDADE - FOCO ========== */
+
+a:focus-visible {
+    outline: 3px solid var(--verde-limao);
+    outline-offset: 5px;
+}
+
+.pular-conteudo {
+    position: absolute;
+    top: -100px;
+    left: 15px;
+    z-index: 100;
+
+    padding: 12px 18px;
+    border-radius: 8px;
+
+    background: var(--verde-limao);
+    color: var(--preto-suave);
+    font-weight: 700;
+}
+
+.pular-conteudo:focus {
+    top: 15px;
+}
+
+
+/* ========================================
+   1. CABEÇALHO - BASE 6
+======================================== */
+
+.cabecalho {
+    background: #061710;
+    border-bottom: 1px solid var(--borda-clara);
+}
+
+.cabecalho-conteudo {
+    display: grid;
+    grid-template-columns: 190px 1fr auto;
+    align-items: center;
+    gap: 25px;
+
+    min-height: 105px;
+}
+
+
+/* ========================================
+   2. LOGO BASE 6 - ESTILO GRAFITE
+======================================== */
+
+/* ========== ESTRUTURA DO LOGO ========== */
+
+.logo-marca {
+    position: relative;
+    display: inline-flex;
+    align-items: baseline;
+    justify-self: start;
+
+    width: max-content;
+    max-width: 100%;
+
+    padding: 14px 6px 16px 8px;
+
+    font-family: "Sedgwick Ave Display", cursive;
+    line-height: 1;
+    white-space: nowrap;
+
+    transform: rotate(-5deg);
+}
+
+
+/* ========== LETRAS DO LOGO ========== */
+
+.logo-letras {
+    position: relative;
+    z-index: 1;
+
+    display: inline-flex;
+    align-items: baseline;
+
+    font-size: 2.65rem;
+    letter-spacing: -0.075em;
+
+    filter: drop-shadow(3px 4px 0 #020a05);
+}
+
+
+/* ========== PALAVRA BASE ========== */
+
+.logo-base {
+    color: var(--branco);
+
+    -webkit-text-stroke: 0.5px #06120a;
+    paint-order: stroke fill;
+}
+
+
+/* ========== NÚMERO 6 ========== */
+
+.logo-numero {
+    color: var(--verde-limao);
+    font-size: 1.3em;
+
+    margin-left: 1px;
+
+    -webkit-text-stroke: 0.5px #06120a;
+    paint-order: stroke fill;
+}
+
+
+/* ========== COROA DO LOGO ========== */
+
+.logo-coroa {
+    position: absolute;
+
+    width: 34px;
+    height: 27px;
+
+    top: -8px;
+    left: 18px;
+
+    color: var(--verde-limao);
+
+    transform: rotate(-17deg);
+
+    filter: drop-shadow(2px 2px 0 #020a05);
+}
+
+
+/* ========== PINCELADA ABAIXO DO LOGO ========== */
+
+.logo-risco {
+    position: absolute;
+    z-index: 0;
+
+    left: 24%;
+    right: 5%;
+    bottom: 4px;
+
+    height: 8px;
+
+    background: var(--verde-limao);
+
+    border-radius: 100% 20% 80% 30%;
+    transform: rotate(-6deg) skewX(-18deg);
+}
+
+
+/* ========== EFEITO AO PASSAR O MOUSE ========== */
+
+a.logo-marca:hover .logo-risco {
+    background: #deff6d;
+}
+
+
+/* ========================================
+   3. MENU DE NAVEGAÇÃO
+======================================== */
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+}
+
+.menu a {
+    color: var(--cinza);
+    font-size: 0.95rem;
+    font-weight: 700;
+    transition: color 0.2s ease;
+}
+
+.menu a:hover {
+    color: var(--verde-limao);
+}
+
+
+/* ========== BOTÃO ACESSAR SITE ========== */
+
+.botao-menu {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    padding: 12px 23px;
+    border-radius: 30px;
+
+    background: var(--verde-limao);
+    color: var(--preto-suave);
+
+    font-size: 0.9rem;
+    font-weight: 800;
+    white-space: nowrap;
+
+    transition: background 0.2s ease;
+}
+
+.botao-menu:hover {
+    background: #ddff78;
+}
+
+
+/* ========================================
+   4. APRESENTAÇÃO PRINCIPAL - HERO
+======================================== */
+
+.hero {
+    background:
+        radial-gradient(
+            circle at 82% 40%,
+            #1a4933 0%,
+            transparent 50%
+        ),
+        var(--verde-escuro);
+}
+
+.hero-conteudo {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 70px;
+
+    padding-top: 85px;
+    padding-bottom: 95px;
+}
+
+.hero-texto {
+    min-width: 0;
+}
+
+
+/* ========== ETIQUETAS DAS SEÇÕES ========== */
+
+.etiqueta {
+    margin-bottom: 24px;
+
+    color: var(--verde-limao);
+
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 1.6px;
+    line-height: 1.5;
+}
+
+
+/* ========== TÍTULO PRINCIPAL ========== */
+
+.hero h1 {
+    max-width: 700px;
+
+    font-size: clamp(3rem, 4.7vw, 5rem);
+    font-weight: 800;
+
+    letter-spacing: -2.5px;
+    line-height: 1.08;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--verde-limao);
+}
+
+
+/* ========== DESCRIÇÃO DO HERO ========== */
+
+.hero-descricao {
+    max-width: 530px;
+    margin-top: 28px;
+
+    color: var(--cinza);
+    font-size: 1.07rem;
+    line-height: 1.85;
+}
+
+
+/* ========== BOTÕES PRINCIPAIS ========== */
+
+.hero-botoes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+
+    margin-top: 34px;
+}
+
+.botao-principal {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+
+    padding: 16px 27px;
+    border-radius: 35px;
+
+    background: var(--verde-limao);
+    color: var(--preto-suave);
+
+    font-size: 0.96rem;
+    font-weight: 800;
+    text-align: center;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.botao-principal:hover {
+    background: #dcff72;
+    transform: translateY(-2px);
+}
+
+.botao-secundario {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px 24px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 35px;
+
+    color: var(--branco);
+
+    font-size: 0.95rem;
+    font-weight: 700;
+
+    transition: background 0.2s ease;
+}
+
+.botao-secundario:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+
+/* ========== BENEFÍCIOS ABAIXO DOS BOTÕES ========== */
+
+.beneficios-hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px 20px;
+
+    margin-top: 38px;
+    list-style: none;
+}
+
+.beneficios-hero li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: var(--cinza);
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+.beneficios-hero li::before {
+    content: "";
+
+    width: 7px;
+    height: 7px;
+    flex-shrink: 0;
+
+    border-radius: 50%;
+    background: var(--verde-limao);
+}
+
+
+/* ========================================
+   5. FOTO PRINCIPAL
+======================================== */
+
+.hero-visual {
+    position: relative;
+
+    height: 535px;
+    min-width: 0;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(199, 242, 56, 0.3);
+    border-radius: 24px;
+
+    background: var(--verde-medio);
+
+    box-shadow: 15px 15px 0 rgba(199, 242, 56, 0.07);
+}
+
+.foto-principal {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center 40%;
+}
+
+
+/* ========== DEGRADÊ DA FOTO ========== */
+
+.hero-visual::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to top,
+        rgba(2, 19, 12, 0.85),
+        transparent 45%
+    );
+
+    pointer-events: none;
+}
+
+
+/* ========== SELO SOBRE A FOTO ========== */
+
+.selo-imagem {
+    position: absolute;
+    z-index: 2;
+
+    top: 22px;
+    right: 22px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px 15px;
+    border-radius: 12px;
+
+    background: var(--verde-limao);
+    color: var(--preto-suave);
+
+    font-size: 0.72rem;
+    font-weight: 800;
+    line-height: 1.35;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.selo-imagem > span:first-child {
+    font-size: 1.7rem;
+}
+
+
+/* ========== LEGENDA DA FOTO ========== */
+
+.legenda-imagem {
+    position: absolute;
+    z-index: 2;
+
+    bottom: 25px;
+    left: 25px;
+    right: 25px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    color: var(--branco);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.legenda-imagem strong {
+    color: var(--verde-limao);
+
+    font-family: "Sedgwick Ave Display", cursive;
+    font-size: 2.1rem;
+}
+
+
+/* ========================================
+   6. COMO FUNCIONA
+======================================== */
+
+.secao-funcionamento {
+    padding: 105px 0 115px;
+
+    background: var(--creme);
+    color: var(--preto-suave);
+}
+
+.cabecalho-secao {
+    max-width: 750px;
+    margin: 0 auto 55px;
+
+    text-align: center;
+}
+
+.etiqueta-escura {
+    color: #36771d;
+}
+
+
+/* ========== TÍTULO DA SEÇÃO ========== */
+
+.cabecalho-secao h2 {
+    font-size: clamp(2rem, 3.5vw, 3.6rem);
+    font-weight: 800;
+
+    letter-spacing: -1.5px;
+    line-height: 1.15;
+}
+
+.cabecalho-secao h2 span {
+    color: #337a24;
+}
+
+.cabecalho-secao > p:last-child {
+    max-width: 590px;
+    margin: 22px auto 0;
+
+    color: #526458;
+    font-size: 1.05rem;
+    line-height: 1.75;
+}
+
+
+/* ========== LISTA DE ETAPAS ========== */
+
+.lista-etapas {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+
+    list-style: none;
+}
+
+
+/* ========== CARDS DAS ETAPAS ========== */
+
+.card-etapa {
+    position: relative;
+
+    height: 100%;
+    min-height: 315px;
+
+    padding: 30px;
+
+    border: 1px solid #dde5d8;
+    border-radius: 20px;
+
+    background: var(--branco);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.card-etapa:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 28px rgba(12, 40, 24, 0.08);
+}
+
+.numero-etapa {
+    position: absolute;
+    top: 28px;
+    right: 28px;
+
+    color: #719269;
+    font-size: 0.87rem;
+    font-weight: 800;
+}
+
+.icone-etapa {
+    display: grid;
+    place-items: center;
+
+    width: 62px;
+    height: 62px;
+    margin-bottom: 30px;
+
+    border-radius: 16px;
+
+    background: #e8f5d2;
+    color: #26651b;
+
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.card-etapa h3 {
+    margin-bottom: 14px;
+
+    color: var(--preto-suave);
+    font-size: 1.3rem;
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+.card-etapa p {
+    color: #586a5d;
+    font-size: 0.96rem;
+    line-height: 1.75;
+}
+
+
+/* ========================================
+   7. NOSSA MISSÃO
+======================================== */
+
+/* ========== FUNDO DA SEÇÃO NOSSA MISSÃO ========== */
+
+.secao-missao {
+    padding: 115px 0;
+
+    /* Imagem da periferia com filtro escuro */
+    background:
+        linear-gradient(
+            rgba(7, 27, 20, 0.76),
+            rgba(7, 27, 20, 0.84)
+        ),
+        url("./srcc/pn2cEB7Fbj2SzObKm3yie94dkQo_-P91tnZf7hdzqLcuRV3yulnFnn06kflprSCZsGf3cvKgyd6YZZNivSFN6CR4S-InvjR9cK0nobv5nO2m1v2zRzjgz76wKypMGugBw07Tu8BbOMNZRtky_GjMJlHj9UI7Y3lTfPl0iSoOtsbuUn0g88agQpmMnJ4zzWKs.jfif");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.missao-conteudo {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 85px;
+}
+
+
+/* ========== QUADRO VISUAL DA MISSÃO ========== */
+
+/* ========== LOGO SEM QUADRADO - NOSSA MISSÃO ========== */
+
+.missao-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 430px;
+    padding: 40px 20px;
+
+    /* Remove o fundo e as bordas do quadrado */
+    background: transparent;
+    border: none;
+    border-radius: 0;
+
+    text-align: center;
+}
+
+/* ========================================
+   8. LOGO GRANDE DA MISSÃO
+======================================== */
+
+/* Altera apenas o logo dentro do quadro
+   da seção "Nossa missão". */
+
+.logo-grande {
+    margin-bottom: 25px;
+    padding: 35px 6px 24px 8px;
+}
+
+.logo-grande .logo-letras {
+    font-size: clamp(3.6rem, 7.3vw, 6.7rem);
+    filter: drop-shadow(6px 7px 0 #020a05);
+}
+
+.logo-grande .logo-coroa {
+    width: 65px;
+    height: 48px;
+
+    top: -12px;
+    left: 35px;
+}
+
+.logo-grande .logo-risco {
+    height: 12px;
+    bottom: 5px;
+
+    left: 24%;
+    right: 4%;
+}
+
+
+/* ========== FRASE ABAIXO DO LOGO ========== */
+
+.missao-palavra {
+    margin-top: 10px;
+
+    color: var(--branco);
+    font-size: 1.5rem;
+    font-weight: 800;
+
+    letter-spacing: 0.02em;
+    line-height: 1.3;
+}
+
+
+/* ========== TEXTO DA MISSÃO ========== */
+
+.missao-texto h2 {
+    font-size: clamp(2.1rem, 3.5vw, 3.7rem);
+    font-weight: 800;
+
+    letter-spacing: -1.7px;
+    line-height: 1.15;
+}
+
+.missao-texto h2 span {
+    color: var(--verde-limao);
+}
+
+.missao-texto > p:not(.etiqueta) {
+    margin-top: 24px;
+
+    color: var(--cinza);
+    font-size: 1.04rem;
+    line-height: 1.85;
+}
+
+
+/* ========== FRASE DE DESTAQUE ========== */
+
+.frase-missao {
+    margin-top: 30px;
+    padding: 18px 22px;
+
+    border-left: 4px solid var(--verde-limao);
+
+    background: rgba(199, 242, 56, 0.06);
+    color: var(--branco);
+
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.65;
+}
+
+
+/* ========================================
+   9. CONVITE FINAL
+======================================== */
+
+.secao-convite {
+    padding: 110px 0;
+
+    background: radial-gradient(
+        circle at 50% 40%,
+        #20563b,
+        #071b14 75%
+    );
+
+    border-top: 1px solid var(--borda-clara);
+}
+
+.convite-conteudo {
+    max-width: 800px;
+    margin-inline: auto;
+
+    text-align: center;
+}
+
+.convite-simbolo {
+    display: block;
+    margin-bottom: 14px;
+
+    color: var(--verde-limao);
+    font-size: 3.5rem;
+    line-height: 1;
+}
+
+.convite-conteudo h2 {
+    font-size: clamp(2.3rem, 4.2vw, 4.2rem);
+    font-weight: 800;
+
+    letter-spacing: -2px;
+    line-height: 1.15;
+}
+
+.convite-conteudo h2 span {
+    display: block;
+    color: var(--verde-limao);
+}
+
+.convite-conteudo > p:not(.etiqueta) {
+    max-width: 560px;
+    margin: 24px auto 0;
+
+    color: var(--cinza);
+    font-size: 1.05rem;
+    line-height: 1.75;
+}
+
+.convite-conteudo .botao-principal {
+    margin-top: 33px;
+}
+
+
+/* ========================================
+   10. RODAPÉ - BASE 6
+======================================== */
+
+.rodape {
+    padding: 33px 0;
+
+    border-top: 1px solid var(--borda-clara);
+
+    background: #04130d;
+}
+
+.rodape-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+
+/* ========== LOGO DO RODAPÉ ========== */
+
+.rodape .logo-letras {
+    font-size: 2rem;
+}
+
+.rodape .logo-coroa {
+    width: 27px;
+    height: 23px;
+}
+
+.rodape .logo-risco {
+    height: 6px;
+}
+
+
+/* ========== TEXTO DO RODAPÉ ========== */
+
+.rodape p {
+    color: var(--cinza);
+    font-size: 0.9rem;
+}
+
+
+/* ========== LINK VOLTAR AO INÍCIO ========== */
+
+.voltar-topo {
+    color: var(--verde-limao);
+    font-size: 0.88rem;
+    font-weight: 700;
+}
+
+.voltar-topo:hover {
+    text-decoration: underline;
+}
+
+
+/* ========================================
+   11. RESPONSIVIDADE - TABLETS
+======================================== */
+
+@media (max-width: 950px) {
+
+    /* ========== CABEÇALHO TABLET ========== */
+
+    .cabecalho-conteudo {
+        grid-template-columns: 165px 1fr auto;
+        gap: 15px;
+    }
+
+    .logo-letras {
+        font-size: 2.25rem;
+    }
+
+    .menu {
+        gap: 20px;
+    }
+
+    .menu a {
+        font-size: 0.87rem;
+    }
+
+
+    /* ========== APRESENTAÇÃO TABLET ========== */
+
+    .hero-conteudo {
+        gap: 35px;
+        padding-top: 65px;
+        padding-bottom: 75px;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.7rem, 5vw, 4rem);
+    }
+
+    .hero-visual {
+        height: 470px;
+    }
+
+
+    /* ========== MISSÃO TABLET ========== */
+
+    .missao-conteudo {
+        gap: 40px;
+    }
+
+    .missao-visual {
+        min-height: 375px;
+    }
+
+    .logo-grande .logo-letras {
+        font-size: clamp(3.5rem, 7vw, 5.5rem);
+    }
+
+
+    /* ========== CARDS TABLET ========== */
+
+    .card-etapa {
+        padding: 24px;
+    }
+
+}
+
+
+/* ========================================
+   12. RESPONSIVIDADE - CELULARES
+======================================== */
+
+@media (max-width: 700px) {
+
+    /* ========== CONTAINER MOBILE ========== */
+
+    .container {
+        width: min(100% - 32px, 500px);
+    }
+
+
+    /* ========== CABEÇALHO MOBILE ========== */
+
+    .cabecalho-conteudo {
+        grid-template-columns: 1fr auto;
+        gap: 14px;
+        padding: 17px 0;
+    }
+
+    .logo-letras {
+        font-size: 2.1rem;
+    }
+
+    .botao-menu {
+        padding: 11px 17px;
+        font-size: 0.82rem;
+    }
+
+
+    /* ========== MENU MOBILE ========== */
+
+    .menu {
+        grid-column: 1 / -1;
+        grid-row: 2;
+
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 22px;
+    }
+
+    .menu a {
+        font-size: 0.84rem;
+    }
+
+
+    /* ========== APRESENTAÇÃO MOBILE ========== */
+
+    .hero-conteudo {
+        grid-template-columns: 1fr;
+
+        gap: 42px;
+        padding-top: 58px;
+        padding-bottom: 75px;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.6rem, 9vw, 4rem);
+        letter-spacing: -1.5px;
+    }
+
+    .hero-descricao {
+        font-size: 1rem;
+        line-height: 1.75;
+    }
+
+
+    /* ========== BOTÕES MOBILE ========== */
+
+    .hero-botoes {
+        align-items: stretch;
+    }
+
+    .hero-botoes a {
+        flex-grow: 1;
+    }
+
+
+    /* ========== FOTO MOBILE ========== */
+
+    .hero-visual {
+        height: 450px;
+    }
+
+    .selo-imagem {
+        top: 15px;
+        right: 15px;
+
+        padding: 10px 12px;
+        font-size: 0.65rem;
+    }
+
+
+    /* ========== COMO FUNCIONA MOBILE ========== */
+
+    .secao-funcionamento {
+        padding: 75px 0 85px;
+    }
+
+    .cabecalho-secao {
+        margin-bottom: 40px;
+    }
+
+    .cabecalho-secao h2 {
+        font-size: clamp(2rem, 7vw, 3rem);
+    }
+
+
+    /* ========== CARDS MOBILE ========== */
+
+    .lista-etapas {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .card-etapa {
+        min-height: auto;
+        padding: 28px;
+    }
+
+    .icone-etapa {
+        margin-bottom: 20px;
+    }
+
+
+    /* ========== MISSÃO MOBILE ========== */
+
+    .secao-missao {
+        padding: 80px 0;
+    }
+
+    .missao-conteudo {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .missao-visual {
+        min-height: 320px;
+    }
+
+    .logo-grande .logo-letras {
+        font-size: clamp(3.2rem, 13vw, 5.8rem);
+    }
+
+    .logo-grande .logo-coroa {
+        width: 52px;
+        left: 20px;
+    }
+
+    .missao-texto h2 {
+        font-size: clamp(2.1rem, 7.5vw, 3rem);
+    }
+
+
+    /* ========== CONVITE FINAL MOBILE ========== */
+
+    .secao-convite {
+        padding: 85px 0;
+    }
+
+    .convite-conteudo h2 {
+        font-size: clamp(2.2rem, 8vw, 3.5rem);
+    }
+
+
+    /* ========== RODAPÉ MOBILE ========== */
+
+    .rodape-conteudo {
+        flex-direction: column;
+        text-align: center;
+        gap: 18px;
+    }
+
+}
+
+
+/* ========================================
+   13. TELAS MUITO PEQUENAS
+======================================== */
+
+@media (max-width: 380px) {
+
+    .hero h1 {
+        font-size: 2.45rem;
+    }
+
+    .hero-visual {
+        height: 370px;
+    }
+
+    .selo-imagem {
+        max-width: 180px;
+    }
+
+    .hero-botoes {
+        flex-direction: column;
+    }
+
+    .hero-botoes a {
+        width: 100%;
+    }
+
+    .logo-grande .logo-letras {
+        font-size: 3rem;
+    }
+
+}
+
+
+/* ========================================
+   14. ACESSIBILIDADE - REDUZIR MOVIMENTOS
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .menu a,
+    .botao-menu,
+    .botao-principal,
+    .botao-secundario,
+    .card-etapa {
+        transition: none;
+    }
+
+    .botao-principal:hover,
+    .card-etapa:hover {
+        transform: none;
+    }
+
+}

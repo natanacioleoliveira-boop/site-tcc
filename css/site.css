@@ -1,0 +1,1170 @@
+
+/* ========================================
+   BASE 6 - AULAS, LOGIN E CADASTRO
+======================================== */
+
+
+/* ========================================
+   1. IDENTIDADE VISUAL - CORES
+======================================== */
+
+:root {
+    /* Cores tradicionais da Base 6 */
+    --verde-escuro: #071b14;
+    --verde-medio: #123c2b;
+    --verde-limao: #c7f238;
+
+    /* Novas cores complementares */
+    --bege: #f5eee5;
+    --terracota: #ce8c64;
+    --azul-suave: #a9c9d3;
+
+    /* Cores auxiliares */
+    --branco: #ffffff;
+    --texto-escuro: #14271d;
+    --texto-suave: #56665c;
+    --cinza-claro: #c4d0c7;
+
+    /* Bordas e largura */
+    --borda-escura: #dfe5dc;
+    --borda-clara: rgba(255, 255, 255, 0.15);
+    --largura-maxima: 1180px;
+}
+
+
+/* ========================================
+   2. CONFIGURAÇÕES GERAIS
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background: var(--bege);
+    color: var(--texto-escuro);
+
+    font-family: "DM Sans", Arial, sans-serif;
+    line-height: 1.6;
+}
+
+main {
+    flex: 1;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+svg {
+    display: block;
+}
+
+.container {
+    width: min(
+        var(--largura-maxima),
+        calc(100% - 48px)
+    );
+
+    margin-inline: auto;
+}
+
+
+/* ========== FOCO PARA NAVEGAÇÃO ========== */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+summary:focus-visible {
+    outline: 3px solid #437c39;
+    outline-offset: 4px;
+}
+
+
+/* ========== PULAR PARA CONTEÚDO ========== */
+
+.pular-conteudo {
+    position: absolute;
+    top: -100px;
+    left: 15px;
+    z-index: 100;
+
+    padding: 12px 18px;
+
+    background: var(--verde-limao);
+    color: var(--texto-escuro);
+
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+.pular-conteudo:focus {
+    top: 15px;
+}
+
+
+/* ========================================
+   3. CABEÇALHO - BASE 6
+======================================== */
+
+.cabecalho,
+.cabecalho-conta {
+    background: #061710;
+    color: var(--branco);
+
+    border-bottom: 1px solid var(--borda-clara);
+}
+
+.cabecalho-conteudo {
+    display: grid;
+    grid-template-columns: max-content 1fr auto;
+
+    align-items: center;
+    gap: 38px;
+
+    min-height: 102px;
+}
+
+
+/* ========== LOGO BASE 6 ========== */
+
+.logo-marca {
+    position: relative;
+
+    display: inline-flex;
+    align-items: baseline;
+
+    width: max-content;
+
+    padding: 14px 6px 16px 8px;
+
+    font-family: "Sedgwick Ave Display", cursive;
+    line-height: 1;
+
+    white-space: nowrap;
+    transform: rotate(-5deg);
+}
+
+.logo-letras {
+    position: relative;
+    z-index: 1;
+
+    display: inline-flex;
+    align-items: baseline;
+
+    font-size: 2.55rem;
+    letter-spacing: -0.075em;
+
+    filter: drop-shadow(3px 4px 0 #020a05);
+}
+
+.logo-base {
+    color: var(--branco);
+}
+
+.logo-numero {
+    color: var(--verde-limao);
+    font-size: 1.3em;
+}
+
+.logo-coroa {
+    position: absolute;
+
+    top: -8px;
+    left: 18px;
+
+    width: 34px;
+    height: 27px;
+
+    color: var(--verde-limao);
+    transform: rotate(-17deg);
+}
+
+.logo-risco {
+    position: absolute;
+
+    left: 24%;
+    right: 5%;
+    bottom: 4px;
+
+    height: 8px;
+
+    background: var(--verde-limao);
+    border-radius: 100% 20% 80% 30%;
+
+    transform: rotate(-6deg) skewX(-18deg);
+}
+
+
+/* ========== MENU DE NAVEGAÇÃO ========== */
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    gap: clamp(14px, 2.5vw, 38px);
+}
+
+.menu a {
+    padding: 10px 0;
+
+    color: var(--cinza-claro);
+    border-bottom: 2px solid transparent;
+
+    font-size: 0.93rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.menu a:hover,
+.menu a.ativo {
+    color: var(--verde-limao);
+    border-bottom-color: var(--verde-limao);
+}
+
+
+/* ========== BOTÃO ENTRAR DO CABEÇALHO ========== */
+
+.botao-cabecalho {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px 22px;
+
+    background: var(--branco);
+    color: var(--texto-escuro);
+
+    border-radius: 30px;
+
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.botao-cabecalho:hover {
+    background: var(--verde-limao);
+}
+
+
+/* ========================================
+   4. BOTÕES DO PROJETO
+======================================== */
+
+.botao-principal {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+
+    min-height: 50px;
+    padding: 14px 24px;
+
+    background: var(--verde-limao);
+    color: var(--texto-escuro);
+
+    border: none;
+    border-radius: 30px;
+
+    font-weight: 800;
+    text-align: center;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+a.botao-principal:hover,
+button.botao-principal:not(:disabled):hover {
+    background: #dcff72;
+    transform: translateY(-2px);
+}
+
+.botao-principal:disabled {
+    opacity: 0.75;
+    cursor: not-allowed;
+}
+
+
+/* ========================================
+   5. APRESENTAÇÃO DA PÁGINA DE AULAS
+======================================== */
+
+.abertura-aulas {
+    background:
+        radial-gradient(
+            circle at 85% 45%,
+            #1a4832 0%,
+            transparent 50%
+        ),
+        var(--verde-escuro);
+
+    color: var(--branco);
+}
+
+.abertura-conteudo {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+
+    align-items: center;
+    gap: 65px;
+
+    padding-top: 85px;
+    padding-bottom: 85px;
+}
+
+
+/* ========== ETIQUETAS ========== */
+
+.etiqueta {
+    margin-bottom: 18px;
+
+    color: var(--verde-limao);
+    font-size: 0.77rem;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+    line-height: 1.5;
+}
+
+.etiqueta-clara,
+.etiqueta-escura {
+    color: #397324;
+}
+
+
+/* ========== TÍTULO DAS AULAS ========== */
+
+.abertura-aulas h1 {
+    font-size: clamp(2.7rem, 4.5vw, 4.5rem);
+    line-height: 1.1;
+    letter-spacing: -0.045em;
+}
+
+.abertura-aulas h1 span {
+    color: var(--verde-limao);
+}
+
+
+/* ========== DESCRIÇÃO DAS AULAS ========== */
+
+.abertura-descricao {
+    max-width: 580px;
+    margin: 25px 0 30px;
+
+    color: var(--cinza-claro);
+    font-size: 1.06rem;
+    line-height: 1.8;
+}
+
+
+/* ========== PAINEL DE DESTAQUE ========== */
+
+.destaque-abertura {
+    padding: 45px 35px;
+
+    background: #183c30;
+
+    border: 1px solid #477261;
+    border-radius: 24px;
+}
+
+.destaque-icone {
+    display: inline-block;
+    margin-bottom: 25px;
+
+    color: var(--terracota);
+    font-size: 3rem;
+}
+
+.destaque-frase {
+    font-size: clamp(1.6rem, 2.4vw, 2.5rem);
+    font-weight: 800;
+    line-height: 1.25;
+}
+
+.destaque-descricao {
+    margin-top: 20px;
+
+    color: var(--cinza-claro);
+    line-height: 1.75;
+}
+
+
+/* ========================================
+   6. LISTA DE AULAS
+======================================== */
+
+.secao-aulas {
+    padding: 95px 0 105px;
+
+    background: var(--bege);
+}
+
+
+/* ========== TÍTULO DA SEÇÃO ========== */
+
+.cabecalho-secao {
+    max-width: 680px;
+
+    margin-bottom: 45px;
+}
+
+.cabecalho-secao h2 {
+    font-size: clamp(2rem, 3.4vw, 3.4rem);
+    line-height: 1.15;
+    letter-spacing: -0.04em;
+}
+
+.cabecalho-secao > p:last-child {
+    margin-top: 18px;
+
+    color: var(--texto-suave);
+    line-height: 1.75;
+}
+
+
+/* ========== GRADE DOS CARDS ========== */
+
+.grade-aulas {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+
+/* ========== CARD DE AULA ========== */
+
+.card-aula {
+    display: flex;
+    flex-direction: column;
+
+    padding: 28px;
+
+    background: var(--branco);
+
+    border: 1px solid var(--borda-escura);
+    border-radius: 20px;
+
+    box-shadow: 0 8px 25px rgba(20, 39, 29, 0.04);
+}
+
+.card-topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+    margin-bottom: 26px;
+}
+
+
+/* ========== NÚMEROS DOS CARDS ========== */
+
+.card-icone {
+    display: grid;
+    place-items: center;
+
+    width: 54px;
+    height: 54px;
+
+    flex-shrink: 0;
+
+    background: var(--verde-limao);
+    color: var(--texto-escuro);
+
+    border-radius: 15px;
+
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.card-icone.icone-azul {
+    background: var(--azul-suave);
+}
+
+.card-icone.icone-terracota {
+    background: #e9bca0;
+}
+
+
+/* ========== CATEGORIA DA AULA ========== */
+
+.card-categoria {
+    color: #596b5d;
+
+    font-size: 0.69rem;
+    font-weight: 800;
+    letter-spacing: 0.6px;
+}
+
+
+/* ========== TEXTOS DOS CARDS ========== */
+
+.card-aula h3 {
+    margin-bottom: 13px;
+
+    font-size: 1.35rem;
+    line-height: 1.3;
+}
+
+.card-aula > p {
+    margin-bottom: 24px;
+
+    color: var(--texto-suave);
+    font-size: 0.97rem;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   7. CONTEÚDO EXPANSÍVEL DAS AULAS
+======================================== */
+
+.conteudo-aula {
+    margin-top: auto;
+
+    border-top: 1px solid var(--borda-escura);
+}
+
+.conteudo-aula summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+    padding: 19px 0 0;
+
+    color: #245c36;
+
+    font-weight: 800;
+    cursor: pointer;
+
+    list-style: none;
+}
+
+.conteudo-aula summary::-webkit-details-marker {
+    display: none;
+}
+
+.conteudo-aula summary span {
+    font-size: 1.4rem;
+    line-height: 1;
+}
+
+.conteudo-aula[open] summary span {
+    transform: rotate(45deg);
+}
+
+
+/* ========== TEXTO DA AULA ABERTA ========== */
+
+.aula-expandida {
+    padding-top: 20px;
+}
+
+.aula-expandida h4 {
+    margin-bottom: 14px;
+    font-size: 1.05rem;
+}
+
+.aula-expandida p {
+    margin-bottom: 14px;
+
+    color: var(--texto-suave);
+    font-size: 0.92rem;
+    line-height: 1.75;
+}
+
+
+/* ========================================
+   8. CONVITE PARA CRIAR CONTA
+======================================== */
+
+.secao-convite {
+    padding: 65px 0;
+
+    background: #e2eaf0;
+}
+
+.convite-conteudo {
+    display: grid;
+    grid-template-columns: 1fr auto;
+
+    align-items: center;
+    gap: 45px;
+}
+
+.convite-conteudo h2 {
+    font-size: clamp(2rem, 3.4vw, 3.1rem);
+    line-height: 1.15;
+    letter-spacing: -0.04em;
+}
+
+.convite-conteudo h2 span {
+    color: #266d42;
+}
+
+.convite-conteudo p:not(.etiqueta) {
+    max-width: 650px;
+    margin-top: 18px;
+
+    color: #435a50;
+    line-height: 1.75;
+}
+
+
+/* ========== BOTÕES DO CONVITE ========== */
+
+.convite-acoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 15px;
+}
+
+.link-discreto {
+    color: #23513d;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.link-discreto:hover {
+    text-decoration: underline;
+}
+
+
+/* ========================================
+   9. PÁGINAS DE LOGIN E CADASTRO
+======================================== */
+
+.pagina-conta {
+    background: var(--bege);
+}
+
+
+/* ========== CABEÇALHO DE CONTA ========== */
+
+.conta-topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    min-height: 92px;
+}
+
+.voltar-site {
+    color: var(--cinza-claro);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.voltar-site:hover {
+    color: var(--verde-limao);
+}
+
+
+/* ========== ORGANIZAÇÃO DAS TELAS ========== */
+
+.main-conta {
+    display: flex;
+    align-items: center;
+
+    padding: 70px 0;
+}
+
+.conta-conteudo {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+
+    align-items: center;
+    gap: 70px;
+}
+
+
+/* ========== PAINEL ESQUERDO ========== */
+
+.painel-conta {
+    padding: 45px 35px;
+
+    background: var(--verde-escuro);
+    color: var(--branco);
+
+    border-radius: 24px;
+}
+
+.painel-conta h1 {
+    font-size: clamp(2.4rem, 3.8vw, 3.9rem);
+    line-height: 1.12;
+    letter-spacing: -0.04em;
+}
+
+.painel-conta h1 span {
+    color: var(--verde-limao);
+}
+
+.painel-conta > p:not(.etiqueta) {
+    margin-top: 25px;
+
+    color: var(--cinza-claro);
+    line-height: 1.8;
+}
+
+
+/* ========== DESTAQUE DO PAINEL ========== */
+
+.painel-destaque {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+
+    margin-top: 45px;
+    padding: 18px;
+
+    background: #234333;
+
+    border-radius: 15px;
+}
+
+.painel-destaque > span {
+    color: var(--terracota);
+    font-size: 2rem;
+}
+
+.painel-destaque p {
+    font-size: 0.93rem;
+    font-weight: 700;
+}
+
+
+/* ========================================
+   10. CARTÃO DE LOGIN E CADASTRO
+======================================== */
+
+.cartao-formulario {
+    padding: 42px;
+
+    background: var(--branco);
+
+    border: 1px solid var(--borda-escura);
+    border-radius: 24px;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.04);
+}
+
+
+/* ========== CABEÇALHO DO FORMULÁRIO ========== */
+
+.formulario-cabecalho h2 {
+    font-size: clamp(1.8rem, 2.8vw, 2.5rem);
+    line-height: 1.2;
+}
+
+.formulario-cabecalho > p:last-child {
+    margin-top: 13px;
+
+    color: var(--texto-suave);
+    font-size: 0.96rem;
+}
+
+
+/* ========================================
+   11. CAMPOS DOS FORMULÁRIOS
+======================================== */
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+
+    gap: 19px;
+    margin-top: 32px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.campo label {
+    font-size: 0.91rem;
+    font-weight: 800;
+}
+
+.campo input {
+    width: 100%;
+    min-height: 50px;
+
+    padding: 13px 15px;
+
+    border: 1px solid #becbc0;
+    border-radius: 11px;
+
+    background: #fcfcfa;
+    color: var(--texto-escuro);
+
+    font-size: 0.97rem;
+}
+
+.campo input::placeholder {
+    color: #66756a;
+}
+
+.campo input:focus {
+    border-color: #39764d;
+    outline: 2px solid #a9d4b4;
+    outline-offset: 1px;
+}
+
+.campo small {
+    color: var(--texto-suave);
+    font-size: 0.8rem;
+}
+
+
+/* ========== BOTÃO DO FORMULÁRIO ========== */
+
+.botao-largo {
+    width: 100%;
+    margin-top: 5px;
+}
+
+
+/* ========== AVISO DE DESENVOLVIMENTO ========== */
+
+.aviso-formulario {
+    color: var(--texto-suave);
+
+    font-size: 0.79rem;
+    text-align: center;
+}
+
+
+/* ========================================
+   12. LINKS DO LOGIN E CADASTRO
+======================================== */
+
+.alternativa-conta {
+    margin-top: 30px;
+    text-align: center;
+
+    font-size: 0.91rem;
+}
+
+.alternativa-conta a {
+    color: #246c3c;
+    font-weight: 800;
+}
+
+.alternativa-conta a:hover {
+    text-decoration: underline;
+}
+
+
+/* ========== ACESSO COMO VISITANTE ========== */
+
+.acesso-visitante {
+    margin-top: 28px;
+    padding: 22px;
+
+    background: #e9f0f2;
+
+    border: 1px solid #d1dee4;
+    border-radius: 14px;
+
+    text-align: center;
+}
+
+.acesso-visitante p {
+    margin-bottom: 9px;
+
+    color: #3e5660;
+    font-size: 0.9rem;
+}
+
+.acesso-visitante a {
+    color: #1d563b;
+
+    font-size: 0.93rem;
+    font-weight: 800;
+}
+
+.acesso-visitante a:hover {
+    text-decoration: underline;
+}
+
+
+/* ========================================
+   13. RODAPÉ
+======================================== */
+
+.rodape {
+    padding: 24px 0;
+
+    background: #061710;
+    color: var(--cinza-claro);
+}
+
+.rodape-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.rodape p,
+.rodape a {
+    font-size: 0.86rem;
+}
+
+.rodape a {
+    color: var(--verde-limao);
+    font-weight: 700;
+}
+
+
+/* ========================================
+   14. RESPONSIVIDADE - TABLET
+======================================== */
+
+@media (max-width: 950px) {
+
+    /* ========== MENU ========== */
+
+    .cabecalho-conteudo {
+        gap: 18px;
+    }
+
+    .menu {
+        gap: 15px;
+    }
+
+    .menu a {
+        font-size: 0.82rem;
+    }
+
+    .logo-letras {
+        font-size: 2.2rem;
+    }
+
+
+    /* ========== AULAS ========== */
+
+    .abertura-conteudo {
+        gap: 30px;
+    }
+
+    .card-aula {
+        padding: 22px;
+    }
+
+
+    /* ========== FORMULÁRIOS ========== */
+
+    .conta-conteudo {
+        gap: 35px;
+    }
+
+    .cartao-formulario {
+        padding: 30px;
+    }
+
+}
+
+
+/* ========================================
+   15. RESPONSIVIDADE - CELULAR
+======================================== */
+
+@media (max-width: 700px) {
+
+    /* ========== CONTAINER ========== */
+
+    .container {
+        width: min(100% - 32px, 500px);
+    }
+
+
+    /* ========== CABEÇALHO ========== */
+
+    .cabecalho-conteudo {
+        grid-template-columns: 1fr auto;
+
+        gap: 8px 14px;
+
+        padding: 15px 0;
+    }
+
+    .logo-letras {
+        font-size: 2.15rem;
+    }
+
+    .menu {
+        grid-column: 1 / -1;
+        grid-row: 2;
+
+        overflow-x: auto;
+
+        justify-content: space-between;
+        gap: 16px;
+    }
+
+    .menu a {
+        flex-shrink: 0;
+        font-size: 0.83rem;
+    }
+
+    .botao-cabecalho {
+        padding: 10px 17px;
+    }
+
+
+    /* ========== ABERTURA DAS AULAS ========== */
+
+    .abertura-conteudo {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+        padding: 60px 0;
+    }
+
+    .abertura-aulas h1 {
+        font-size: clamp(2.5rem, 9vw, 3.6rem);
+    }
+
+    .destaque-abertura {
+        padding: 30px;
+    }
+
+
+    /* ========== LISTA DE AULAS ========== */
+
+    .secao-aulas {
+        padding: 70px 0;
+    }
+
+    .grade-aulas {
+        grid-template-columns: 1fr;
+    }
+
+    .card-aula {
+        padding: 28px;
+    }
+
+
+    /* ========== CONVITE PARA CADASTRO ========== */
+
+    .convite-conteudo {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .convite-acoes {
+        align-items: stretch;
+    }
+
+
+    /* ========== LOGIN E CADASTRO ========== */
+
+    .main-conta {
+        padding: 35px 0 60px;
+    }
+
+    .conta-conteudo {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+    .painel-conta {
+        padding: 30px;
+    }
+
+    .painel-destaque {
+        margin-top: 25px;
+    }
+
+    .cartao-formulario {
+        padding: 30px 24px;
+    }
+
+
+    /* ========== RODAPÉ ========== */
+
+    .rodape-conteudo {
+        flex-direction: column;
+
+        text-align: center;
+        gap: 12px;
+    }
+
+}
+
+
+/* ========================================
+   16. CELULARES PEQUENOS
+======================================== */
+
+@media (max-width: 380px) {
+
+    .abertura-aulas h1 {
+        font-size: 2.35rem;
+    }
+
+    .cartao-formulario {
+        padding: 24px 18px;
+    }
+
+    .menu {
+        justify-content: flex-start;
+    }
+
+}
+
+
+/* ========================================
+   17. REDUÇÃO DE MOVIMENTOS
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .botao-principal,
+    .conteudo-aula summary span {
+        transition: none;
+    }
+
+    a.botao-principal:hover {
+        transform: none;
+    }
+
+}
