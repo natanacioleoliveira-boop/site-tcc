@@ -1,0 +1,300 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!-- ========== CONFIGURAÇÕES INICIAIS ========== -->
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Entre na sua conta Base 6 e continue sua jornada de aprendizado.">
+
+    <title>Entrar | Base 6</title>
+
+
+    <!-- ========== FONTES DO SITE ========== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Sedgwick+Ave+Display&display=swap"
+          rel="stylesheet">
+
+
+    <!-- ========== CONEXÃO COM CSS ========== -->
+    <link rel="stylesheet" href="../css/site.css">
+
+</head>
+
+<body class="pagina-conta pagina-login">
+
+    <!-- ========== ACESSIBILIDADE - PULAR PARA CONTEÚDO ========== -->
+
+    <a href="#conteudo" class="pular-conteudo">
+        Pular para o conteúdo principal
+    </a>
+
+
+    <!-- ========================================
+         1. CABEÇALHO - BASE 6
+    ======================================== -->
+
+    <header class="cabecalho-conta">
+
+        <div class="container conta-topo">
+
+            <!-- ========== LOGO BASE 6 ========== -->
+
+           <a href="inicio.html"
+   class="logo-coroa-link"
+   aria-label="Voltar para a página inicial">
+
+    <svg class="logo-coroa-simples"
+         viewBox="0 0 80 50"
+         fill="none"
+         aria-hidden="true">
+
+        <path
+            d="M5 37 L13 12 L30 26 L42 5 L55 26 L72 12 L77 37 Z"
+            stroke="currentColor"
+            stroke-width="5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        />
+
+        <path
+            d="M8 44 L75 44"
+            stroke="currentColor"
+            stroke-width="5"
+            stroke-linecap="round"
+        />
+
+    </svg>
+
+</a>
+
+
+            <!-- ========== VOLTAR AO SITE ========== -->
+
+            <a href="inicio.html"
+               class="voltar-site">
+
+                ← Voltar ao site
+
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- ========================================
+         2. CONTEÚDO PRINCIPAL
+    ======================================== -->
+
+    <main class="main-conta" id="conteudo">
+
+        <div class="container conta-conteudo">
+
+
+            <!-- ========================================
+                 3. LADO ESQUERDO - APRESENTAÇÃO
+            ======================================== -->
+
+            <section class="painel-conta"
+                     aria-labelledby="titulo-boas-vindas">
+
+                <!-- ========== ETIQUETA SUPERIOR ========== -->
+
+                <p class="etiqueta">
+                    BEM-VINDO DE VOLTA
+                </p>
+
+
+                <!-- ========== TÍTULO PRINCIPAL ========== -->
+
+                <h1 id="titulo-boas-vindas">
+
+                    Entre na sua conta.
+
+                    <span>
+                        Seu corre continua aqui.
+                    </span>
+
+                </h1>
+
+
+                <!-- ========== TEXTO DE APRESENTAÇÃO ========== -->
+
+                <p>
+                    Que bom ter você por aqui!
+
+                    Acesse seu espaço na Base 6
+                    para acompanhar seus estudos
+                    e continuar sua jornada de
+                    aprendizado.
+
+                    Cada passo conta!
+                </p>
+
+
+                <!-- ========== DESTAQUE INFERIOR ========== -->
+
+                <div class="painel-destaque">
+
+                    <span aria-hidden="true">
+                        ✦
+                    </span>
+
+                    <p>
+                        Aprender hoje é construir
+                        novas oportunidades para amanhã.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- ========================================
+                 4. LADO DIREITO - LOGIN
+            ======================================== -->
+
+            <section class="cartao-formulario"
+                     aria-labelledby="titulo-login">
+
+
+                <!-- ========== TÍTULO DO FORMULÁRIO ========== -->
+
+                <header class="formulario-cabecalho">
+
+                    <p class="etiqueta etiqueta-escura">
+                        ACESSE SEU ESPAÇO
+                    </p>
+
+                    <h2 id="titulo-login">
+                        Que bom te ver por aqui!
+                    </h2>
+
+                    <p>
+                        Digite seus dados para entrar na Base 6.
+                    </p>
+
+                </header>
+
+
+                <!-- ========================================
+                     5. FORMULÁRIO DE LOGIN
+                ======================================== -->
+
+                <form class="formulario"
+                      id="formulario-login">
+
+
+                    <!-- ========== NOME OU E-MAIL ========== -->
+
+                    <div class="campo">
+
+                        <label for="login-identificador">
+                            Nome de usuário ou e-mail
+                        </label>
+
+                        <input
+                            type="text"
+                            id="login-identificador"
+                            name="identificador"
+                            placeholder="Digite seu usuário ou e-mail"
+                            autocomplete="username"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- ========== SENHA ========== -->
+
+                    <div class="campo">
+
+                        <label for="login-senha">
+                            Senha
+                        </label>
+
+                        <input
+                            type="password"
+                            id="login-senha"
+                            name="senha"
+                            placeholder="Digite sua senha"
+                            autocomplete="current-password"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- ========== BOTÃO ENTRAR ========== -->
+                    <!-- Será ativado com o sistema de autenticação -->
+
+                    <button
+                        type="submit"
+                        class="botao-principal botao-largo"
+                        disabled
+                    >
+
+                        Entrar na minha conta
+
+                        <span aria-hidden="true">
+                            →
+                        </span>
+
+                    </button>
+
+                </form>
+
+
+                <!-- ========================================
+                     6. LINK PARA CADASTRO
+                ======================================== -->
+
+                <p class="alternativa-conta">
+
+                    Ainda não tem uma conta?
+
+                    <a href="cadastro.html">
+                        Cadastre-se
+                    </a>
+
+                </p>
+
+
+                <!-- ========================================
+                     7. CONTINUAR COMO VISITANTE
+                ======================================== -->
+
+                <div class="acesso-visitante">
+
+                    <p>
+                        Só quer conhecer os conteúdos?
+                    </p>
+
+                    <a href="aulas.html">
+                        Continuar sem cadastro →
+                    </a>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+
+</body>
+</html>

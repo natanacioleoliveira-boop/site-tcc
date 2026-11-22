@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="../css/site.css">
 </head>
 
-<body class="pagina-conta">
+<body class="pagina-conta pagina-cadastro">
 
     <!-- ========================================
          1. CABEÇALHO DO CADASTRO
@@ -38,25 +38,33 @@
         <div class="container conta-topo">
 
             <!-- ========== LOGO BASE 6 ========== -->
-            <a href="inicio.html"
-               class="logo-marca"
-               aria-label="Base 6 - Página inicial">
+           <a href="inicio.html"
+   class="logo-coroa-link"
+   aria-label="Voltar para a página inicial">
 
-                <span class="logo-letras">
-                    <span class="logo-base">BASE</span><span class="logo-numero">6</span>
-                </span>
+    <svg class="logo-coroa-simples"
+         viewBox="0 0 80 50"
+         fill="none"
+         aria-hidden="true">
 
-                <span class="logo-risco"
-                      aria-hidden="true"></span>
+        <path
+            d="M5 37 L13 12 L30 26 L42 5 L55 26 L72 12 L77 37 Z"
+            stroke="currentColor"
+            stroke-width="5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        />
 
-            </a>
+        <path
+            d="M8 44 L75 44"
+            stroke="currentColor"
+            stroke-width="5"
+            stroke-linecap="round"
+        />
 
-            <!-- ========== VOLTAR AO SITE ========== -->
-            <a href="inicio.html" class="voltar-site">
-                ← Voltar ao site
-            </a>
+    </svg>
 
-        </div>
+</a>
 
     </header>
 
@@ -220,6 +228,95 @@
                     </div>
 
 
+                    <!-- ========================================
+     PREFERÊNCIAS DE APRENDIZADO - BASE 6
+======================================== -->
+
+<fieldset class="preferencias-estudo">
+
+    <!-- ========== TÍTULO DAS PREFERÊNCIAS ========== -->
+
+    <legend>
+        Como você prefere estudar?
+    </legend>
+
+    <p class="preferencias-descricao">
+        Escolha os recursos que podem facilitar
+        seu aprendizado na Base 6.
+    </p>
+
+    <!-- ========== OPÇÕES DE ACESSIBILIDADE ========== -->
+
+    <div class="lista-preferencias">
+
+        <!-- ========== VÍDEOS COM LEGENDAS ========== -->
+        <label class="opcao-preferencia">
+
+            <input
+                type="radio"
+                name="preferencia_estudo"
+                value="legendas"
+            >
+
+            <span>Vídeos com legendas</span>
+
+        </label>
+
+
+        <!-- ========== APOIO EM LIBRAS ========== -->
+        <label class="opcao-preferencia">
+
+            <input
+                type="radio"
+                name="preferencia_estudo"
+                value="libras"
+            >
+
+            <span>Apoio em Libras</span>
+
+        </label>
+
+
+        <!-- ========== TEXTOS MAIORES ========== -->
+        <label class="opcao-preferencia">
+
+            <input
+                type="radio"
+                name="preferencia_estudo"
+                value="textos_maiores"
+            >
+
+            <span>Textos maiores</span>
+
+        </label>
+
+
+        <!-- ========== CONFIGURAÇÕES PADRÃO ========== -->
+        <label class="opcao-preferencia">
+
+            <input
+                type="radio"
+                name="preferencia_estudo"
+                value="padrao"
+                checked
+            >
+
+            <span>Usar configurações padrão</span>
+
+        </label>
+
+    </div>
+
+    <!-- ========== INFORMAÇÃO COMPLEMENTAR ========== -->
+
+    <p class="preferencias-rodape">
+        Você poderá alterar suas preferências
+        posteriormente.
+    </p>
+
+</fieldset>
+
+
                     <!-- ========== BOTÃO CADASTRAR ========== -->
                     <!-- Visual: ainda não envia dados -->
 
@@ -232,11 +329,7 @@
 
                     </button>
 
-                    <p class="aviso-formulario">
-                        Cadastro em desenvolvimento.
-                        Nenhum dado será enviado nesta versão.
-                    </p>
-
+                
                 </form>
 
 

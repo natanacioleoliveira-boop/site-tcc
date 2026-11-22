@@ -1,0 +1,1582 @@
+
+/* ========================================
+   BASE 6 - MINHAS METAS
+   ARQUIVO: minhas-metas.css
+======================================== */
+
+
+/* ========================================
+   1. IDENTIDADE VISUAL
+======================================== */
+
+.pagina-metas {
+    --metas-fundo: #f8f1e8;
+    --metas-texto: #1e4031;
+    --metas-suave: #627468;
+
+    --metas-verde-escuro: #214938;
+    --metas-verde-medio: #58866b;
+    --metas-verde-claro: #e1edd6;
+    --metas-limao: #c7f238;
+
+    --metas-creme: #fff8ed;
+    --metas-lavanda: #e9e2f3;
+    --metas-coral: #f3dece;
+    --metas-azul: #e4edf2;
+
+    background: var(--metas-fundo);
+}
+
+
+/* ========== BASE DOS ELEMENTOS ========== */
+
+.pagina-metas *,
+.pagina-metas *::before,
+.pagina-metas *::after {
+    box-sizing: border-box;
+}
+
+.pagina-metas input,
+.pagina-metas select,
+.pagina-metas textarea,
+.pagina-metas button {
+    font: inherit;
+}
+
+
+/* ========================================
+   2. ESTRUTURA DA PÁGINA
+======================================== */
+
+.pagina-metas .painel-layout {
+    display: grid;
+
+    width: min(1400px, calc(100% - 48px));
+
+    grid-template-columns: 230px minmax(0, 1fr);
+
+    gap: 32px;
+    padding-top: 43px;
+}
+
+.metas-conteudo {
+    display: flex;
+    flex-direction: column;
+
+    gap: 36px;
+
+    min-width: 0;
+}
+
+
+/* ========================================
+   3. ITEM ATIVO DO MENU
+======================================== */
+
+.pagina-metas .metas-link-ativo {
+    background: var(--metas-limao);
+    color: #173528;
+
+    border-radius: 13px;
+
+    font-weight: 800;
+}
+
+.pagina-metas .metas-link-ativo:hover {
+    background: #ddfa8c;
+    color: #173528;
+}
+
+
+/* ========================================
+   4. CAMINHO DE NAVEGAÇÃO
+======================================== */
+
+.metas-caminho {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 11px;
+    margin-bottom: 28px;
+
+    color: #748176;
+    font-size: 0.85rem;
+}
+
+.metas-caminho a {
+    color: #397250;
+    font-weight: 700;
+}
+
+.metas-caminho a:hover {
+    text-decoration: underline;
+}
+
+
+/* ========================================
+   5. APRESENTAÇÃO DA PÁGINA
+======================================== */
+
+.metas-apresentacao {
+    padding: 5px 0 10px;
+}
+
+.metas-apresentacao-linha {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 32px;
+}
+
+.metas-apresentacao-linha > div:first-child {
+    max-width: 700px;
+}
+
+
+/* ========== ETIQUETAS ========== */
+
+.metas-etiqueta {
+    margin-bottom: 10px;
+
+    color: #568164;
+
+    font-size: 0.73rem;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+
+/* ========== TÍTULO PRINCIPAL ========== */
+
+.metas-apresentacao h1 {
+    color: var(--metas-texto);
+
+    font-size: clamp(2.4rem, 4vw, 4rem);
+    font-weight: 800;
+
+    letter-spacing: -1.8px;
+    line-height: 1.13;
+}
+
+.metas-apresentacao h1 span {
+    color: #789558;
+}
+
+
+/* ========== DESCRIÇÃO ========== */
+
+.metas-introducao {
+    max-width: 650px;
+
+    margin-top: 20px;
+
+    color: var(--metas-suave);
+
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   6. DECORAÇÃO DA APRESENTAÇÃO
+======================================== */
+
+.metas-decoracao {
+    position: relative;
+
+    display: grid;
+    place-items: center;
+
+    width: 150px;
+    height: 150px;
+
+    flex-shrink: 0;
+}
+
+.metas-alvo {
+    display: grid;
+    place-items: center;
+
+    width: 132px;
+    height: 132px;
+
+    background: #dce9d3;
+    color: #6e996b;
+
+    border: 4px solid #b7d4b0;
+    border-radius: 43% 57% 46% 54%;
+
+    font-size: 7rem;
+    line-height: 1;
+
+    transform: rotate(-12deg);
+
+    box-shadow: 11px 12px 0 #eee1cd;
+}
+
+.metas-estrela {
+    position: absolute;
+
+    top: -5px;
+    right: -5px;
+
+    color: #d59b6e;
+
+    font-size: 3rem;
+}
+
+
+/* ========================================
+   7. MURAL DE OBJETIVOS
+======================================== */
+
+.metas-mural {
+    overflow: hidden;
+
+    padding: 35px;
+
+    background:
+        radial-gradient(
+            circle at 92% 12%,
+            rgba(173, 211, 148, 0.20),
+            transparent 45%
+        ),
+        var(--metas-verde-escuro);
+
+    color: #ffffff;
+
+    border-radius: 28px 28px 56px 28px;
+
+    box-shadow:
+        0 13px 28px rgba(30, 67, 49, 0.12);
+}
+
+.metas-mural-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.metas-mural-conteudo > div:first-child {
+    max-width: 610px;
+}
+
+.metas-mural .metas-etiqueta {
+    color: var(--metas-limao);
+}
+
+.metas-mural h2 {
+    margin-bottom: 14px;
+
+    color: #ffffff;
+
+    font-size: clamp(1.8rem, 3vw, 2.65rem);
+    line-height: 1.2;
+}
+
+.metas-mural-conteudo p:last-child {
+    color: #dce9e0;
+
+    font-size: 0.95rem;
+    line-height: 1.75;
+}
+
+
+/* ========================================
+   8. DECORAÇÃO DO MURAL
+======================================== */
+
+.metas-mural-ilustracao {
+    position: relative;
+
+    width: 120px;
+    height: 120px;
+
+    flex-shrink: 0;
+}
+
+.metas-mural-circulo {
+    display: grid;
+    place-items: center;
+
+    width: 110px;
+    height: 110px;
+
+    background: #c7f238;
+    color: #275038;
+
+    border-radius: 48% 52% 42% 58%;
+
+    font-size: 4rem;
+
+    transform: rotate(12deg);
+}
+
+.metas-mural-circulo-menor {
+    position: absolute;
+
+    bottom: -5px;
+    left: -15px;
+
+    display: grid;
+    place-items: center;
+
+    width: 55px;
+    height: 55px;
+
+    background: #f2cba9;
+    color: #9d6d49;
+
+    border: 4px solid #214938;
+    border-radius: 50%;
+
+    font-size: 2.4rem;
+}
+
+
+/* ========================================
+   9. INDICADORES DO MURAL
+======================================== */
+
+.metas-indicadores {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 0;
+
+    margin-top: 32px;
+    padding-top: 25px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.metas-indicadores > div {
+    min-width: 0;
+    padding: 5px 22px;
+}
+
+.metas-indicadores > div:first-child {
+    padding-left: 0;
+}
+
+.metas-indicadores > div + div {
+    border-left: 1px solid rgba(255, 255, 255, 0.20);
+}
+
+.metas-indicadores dt {
+    margin-bottom: 11px;
+
+    color: #d1e7d5;
+
+    font-size: 0.83rem;
+    font-weight: 700;
+}
+
+.metas-indicadores dd {
+    margin: 0;
+
+    color: #f6ffdb;
+
+    font-size: clamp(1.6rem, 2.6vw, 2.3rem);
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+
+/* ========================================
+   10. TÍTULOS DAS SEÇÕES
+======================================== */
+
+.metas-secao-topo {
+    margin-bottom: 25px;
+}
+
+.metas-secao-topo h2 {
+    color: var(--metas-texto);
+
+    font-size: clamp(1.6rem, 2.7vw, 2.2rem);
+    line-height: 1.3;
+}
+
+.metas-secao-topo p:last-child {
+    max-width: 680px;
+
+    margin-top: 11px;
+
+    color: var(--metas-suave);
+
+    font-size: 0.94rem;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   11. ESTADO SEM METAS
+======================================== */
+
+.metas-estado-vazio {
+    display: flex;
+    align-items: center;
+
+    gap: 28px;
+    padding: 32px;
+
+    background: #fffdf8;
+
+    border: 1px dashed #b9d2b4;
+    border-radius: 25px;
+}
+
+.metas-vazio-simbolo {
+    display: grid;
+    place-items: center;
+
+    width: 100px;
+    height: 100px;
+
+    flex-shrink: 0;
+
+    background: #e4efd9;
+    color: #638b68;
+
+    border-radius: 30px;
+
+    font-size: 4rem;
+}
+
+.metas-estado-vazio h3 {
+    margin-bottom: 12px;
+
+    color: #28543a;
+
+    font-size: 1.35rem;
+    line-height: 1.35;
+}
+
+.metas-estado-vazio p {
+    max-width: 590px;
+
+    color: #67766b;
+
+    font-size: 0.93rem;
+    line-height: 1.8;
+}
+
+
+/* ========== LINK CRIAR PRIMEIRA META ========== */
+
+.metas-link-criar {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 13px;
+    margin-top: 20px;
+    padding: 12px 19px;
+
+    background: #e1edcf;
+    color: #27583b;
+
+    border-radius: 30px;
+
+    font-size: 0.88rem;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.metas-link-criar:hover {
+    background: #d1e7b8;
+}
+
+
+/* ========================================
+   12. LISTA DE METAS ATIVAS
+======================================== */
+
+.metas-lista {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+
+/* ========================================
+   13. CARTÃO DE META
+======================================== */
+
+.metas-cartao {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+    padding: 26px;
+
+    background: #fffefa;
+
+    border: 1px solid #e5e4d9;
+    border-radius: 24px;
+
+    box-shadow:
+        0 9px 25px rgba(37, 70, 48, 0.04);
+}
+
+
+/* ========== TOPO DO CARTÃO ========== */
+
+.metas-cartao-topo {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.metas-cartao-categoria {
+    display: inline-block;
+
+    margin-bottom: 11px;
+    padding: 7px 12px;
+
+    background: #e7efd9;
+    color: #557450;
+
+    border-radius: 30px;
+
+    font-size: 0.75rem;
+    font-weight: 800;
+}
+
+.metas-cartao-titulo {
+    color: #254735;
+
+    font-size: 1.32rem;
+    line-height: 1.35;
+
+    overflow-wrap: anywhere;
+}
+
+.metas-cartao-icone {
+    display: grid;
+    place-items: center;
+
+    width: 44px;
+    height: 44px;
+
+    flex-shrink: 0;
+
+    background: #f2deca;
+    color: #ab7957;
+
+    border-radius: 13px;
+
+    font-size: 1.6rem;
+}
+
+
+/* ========================================
+   14. VALORES DOS CARTÕES
+======================================== */
+
+.metas-cartao-valores {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 16px;
+    margin-bottom: 21px;
+}
+
+.metas-cartao-valores > div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.metas-cartao-valores span {
+    color: #6b7b6c;
+
+    font-size: 0.81rem;
+}
+
+.metas-cartao-valores strong {
+    color: #284c38;
+
+    font-size: 1.3rem;
+    font-weight: 800;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* ========================================
+   15. BARRA DE PROGRESSO
+======================================== */
+
+.metas-progresso-area {
+    margin-bottom: 19px;
+}
+
+.metas-progresso {
+    display: block;
+
+    width: 100%;
+    height: 13px;
+
+    overflow: hidden;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    border: none;
+    border-radius: 30px;
+
+    background: #e8eee3;
+}
+
+
+/* ========== TRILHO ========== */
+
+.metas-progresso::-webkit-progress-bar {
+    background: #e8eee3;
+    border-radius: 30px;
+}
+
+
+/* ========== PREENCHIMENTO ========== */
+
+.metas-progresso::-webkit-progress-value {
+    background: #7eb46f;
+    border-radius: 30px;
+}
+
+.metas-progresso::-moz-progress-bar {
+    background: #7eb46f;
+    border-radius: 30px;
+}
+
+
+/* ========== TEXTOS DA BARRA ========== */
+
+.metas-progresso-textos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    gap: 7px 12px;
+    margin-top: 10px;
+
+    color: #627967;
+
+    font-size: 0.79rem;
+    font-weight: 700;
+}
+
+.metas-cartao-prazo {
+    margin-bottom: 19px;
+
+    color: #748071;
+
+    font-size: 0.83rem;
+}
+
+
+/* ========================================
+   16. BOTÕES DO CARTÃO
+======================================== */
+
+.metas-cartao-acoes {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 9px;
+    margin-top: auto;
+}
+
+.metas-cartao-acoes button,
+.metas-cartao-opcoes button {
+    min-height: 40px;
+
+    padding: 10px 13px;
+
+    border: 1px solid transparent;
+    border-radius: 12px;
+
+    font-size: 0.79rem;
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+
+/* ========== AÇÃO PRINCIPAL ========== */
+
+.metas-acao-primaria {
+    background: #2b6545;
+    color: #ffffff;
+}
+
+.metas-acao-primaria:hover {
+    background: #387a56;
+}
+
+
+/* ========== AÇÕES SECUNDÁRIAS ========== */
+
+.metas-acao-secundaria {
+    background: #eaf0e6;
+    color: #3d6048;
+}
+
+.metas-acao-secundaria:hover {
+    background: #dde9d8;
+}
+
+
+/* ========== PAUSAR E CONCLUIR ========== */
+
+.metas-cartao-opcoes {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 19px;
+    padding-top: 14px;
+
+    border-top: 1px solid #e8ede4;
+}
+
+.metas-cartao-opcoes button {
+    padding-inline: 4px;
+
+    background: transparent;
+    color: #627969;
+
+    font-size: 0.78rem;
+}
+
+.metas-cartao-opcoes button:hover {
+    color: #28583c;
+    text-decoration: underline;
+}
+
+
+/* ========================================
+   17. FORMULÁRIO DE CRIAÇÃO
+======================================== */
+
+.metas-criacao {
+    padding: 35px;
+
+    background: #f5e1ce;
+
+    border: 1px solid #ead0b7;
+    border-radius: 29px;
+}
+
+.metas-criacao .metas-etiqueta {
+    color: #9b6647;
+}
+
+
+/* ========== CAMPOS EM COLUNAS ========== */
+
+.metas-formulario {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 21px;
+}
+
+.metas-campo {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+    gap: 9px;
+}
+
+.metas-campo-largo {
+    grid-column: 1 / -1;
+}
+
+
+/* ========== RÓTULOS ========== */
+
+.metas-campo label {
+    color: #624b3c;
+
+    font-size: 0.89rem;
+    font-weight: 800;
+}
+
+
+/* ========== INPUT, SELECT E TEXTAREA ========== */
+
+.metas-campo input,
+.metas-campo select,
+.metas-campo textarea {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    background: #fffefa;
+    color: #254637;
+
+    border: 1px solid #d4bda8;
+    border-radius: 13px;
+
+    font-size: 0.93rem;
+}
+
+.metas-campo input,
+.metas-campo select {
+    min-height: 50px;
+}
+
+.metas-campo textarea {
+    min-height: 100px;
+
+    resize: vertical;
+    line-height: 1.6;
+}
+
+
+/* ========== FOCOS ========== */
+
+.metas-campo input:focus,
+.metas-campo select:focus,
+.metas-campo textarea:focus {
+    outline: 3px solid #c5aa88;
+    outline-offset: 2px;
+
+    border-color: #8a6c51;
+}
+
+
+/* ========================================
+   18. BOTÕES E MENSAGENS DE FORMULÁRIO
+======================================== */
+
+.metas-formulario-rodape {
+    grid-column: 1 / -1;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 15px;
+    padding-top: 5px;
+}
+
+.metas-botao-salvar {
+    min-height: 49px;
+
+    padding: 13px 23px;
+
+    background: #24583d;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 13px;
+
+    font-size: 0.91rem;
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+.metas-botao-salvar:hover:not(:disabled) {
+    background: #34744f;
+}
+
+
+/* ========== BOTÃO DESATIVADO ========== */
+
+.metas-botao-salvar:disabled,
+.metas-botao-simular:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+
+/* ========== MENSAGENS DO SISTEMA ========== */
+
+.metas-mensagem-formulario {
+    padding: 13px 16px;
+
+    background: #e4f0dd;
+    color: #2e6542;
+
+    border: 1px solid #bcd9b2;
+    border-radius: 12px;
+
+    font-size: 0.84rem;
+    line-height: 1.6;
+}
+
+.metas-mensagem-formulario.erro {
+    background: #f9e4df;
+    color: #8b4c40;
+
+    border-color: #ebc2b8;
+}
+
+
+/* ========================================
+   19. PLANEJAMENTO DAS METAS
+======================================== */
+
+.metas-planejamento {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+    gap: 30px;
+
+    padding: 34px;
+
+    background: #e9e2f3;
+
+    border: 1px solid #d9cfe8;
+    border-radius: 27px;
+}
+
+.metas-planejamento .metas-etiqueta {
+    color: #8570a6;
+}
+
+.metas-planejamento h2 {
+    margin-bottom: 15px;
+
+    color: #4e436a;
+
+    font-size: clamp(1.55rem, 2.5vw, 2.1rem);
+    line-height: 1.3;
+}
+
+.metas-planejamento-texto > p:last-child {
+    color: #6d6480;
+
+    font-size: 0.94rem;
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   20. PLANEJAMENTO SEM METAS
+======================================== */
+
+.metas-planejamento-vazio {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    gap: 12px;
+    padding: 27px;
+
+    background: rgba(255, 255, 255, 0.6);
+
+    border-radius: 20px;
+}
+
+.metas-planejamento-vazio span {
+    color: #9682b6;
+
+    font-size: 3.4rem;
+    line-height: 1;
+}
+
+.metas-planejamento-vazio p {
+    color: #716888;
+
+    font-size: 0.91rem;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   21. SIMULADOR DE PRAZO
+======================================== */
+
+.metas-simulador {
+    display: flex;
+    flex-direction: column;
+
+    gap: 17px;
+    padding: 25px;
+
+    background: rgba(255, 255, 255, 0.75);
+
+    border-radius: 20px;
+}
+
+.metas-simulador .metas-campo label {
+    color: #544871;
+}
+
+.metas-simulador .metas-campo input,
+.metas-simulador .metas-campo select {
+    border-color: #c5b7dc;
+}
+
+
+/* ========== BOTÃO SIMULAR ========== */
+
+.metas-botao-simular {
+    min-height: 49px;
+
+    padding: 13px 20px;
+
+    background: #65528b;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 13px;
+
+    font-size: 0.89rem;
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+.metas-botao-simular:hover:not(:disabled) {
+    background: #7c65a5;
+}
+
+
+/* ========== RESULTADO ========== */
+
+.metas-simulador-resultado {
+    display: flex;
+    flex-direction: column;
+
+    gap: 9px;
+    padding: 20px;
+
+    background: #f0eaf8;
+
+    border-radius: 15px;
+
+    text-align: center;
+}
+
+.metas-simulador-resultado span {
+    color: #74658f;
+
+    font-size: 0.85rem;
+}
+
+.metas-simulador-resultado strong {
+    color: #514072;
+
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.metas-simulador-resultado small {
+    color: #75698b;
+
+    font-size: 0.78rem;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   22. JANELAS DE MOVIMENTAÇÃO E EDIÇÃO
+======================================== */
+
+.metas-dialogo {
+    width: min(500px, calc(100% - 30px));
+
+    max-height: 90vh;
+    overflow-y: auto;
+
+    margin: auto;
+    padding: 30px;
+
+    background: #fffdf8;
+    color: #254637;
+
+    border: 1px solid #dbe5d7;
+    border-radius: 24px;
+
+    box-shadow:
+        0 25px 70px rgba(24, 48, 35, 0.22);
+}
+
+.metas-dialogo::backdrop {
+    background: rgba(11, 34, 24, 0.6);
+}
+
+.metas-dialogo-formulario {
+    display: flex;
+    flex-direction: column;
+
+    gap: 19px;
+}
+
+.metas-dialogo h2 {
+    color: #244d36;
+
+    font-size: 1.55rem;
+    line-height: 1.3;
+}
+
+.metas-dialogo-formulario > p:not(.metas-mensagem-formulario) {
+    color: #6b7a70;
+
+    font-size: 0.91rem;
+    line-height: 1.6;
+}
+
+
+/* ========== BOTÕES DO DIÁLOGO ========== */
+
+.metas-dialogo-acoes {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 11px;
+    margin-top: 5px;
+}
+
+.metas-botao-cancelar {
+    min-height: 49px;
+
+    padding: 13px 19px;
+
+    background: #e9eee5;
+    color: #365a43;
+
+    border: 1px solid #d6e0d2;
+    border-radius: 13px;
+
+    font-weight: 800;
+    cursor: pointer;
+}
+
+
+/* ========================================
+   23. METAS PAUSADAS E CONCLUÍDAS
+======================================== */
+
+.metas-historico {
+    padding: 32px;
+
+    border: 1px solid transparent;
+    border-radius: 25px;
+}
+
+.metas-pausadas {
+    background: #e8edf3;
+    border-color: #d5e0eb;
+}
+
+.metas-concluidas {
+    background: #e4eedb;
+    border-color: #d2e1c8;
+}
+
+
+/* ========== TÍTULOS ========== */
+
+.metas-historico h2 {
+    margin-bottom: 11px;
+
+    color: #2f4b41;
+
+    font-size: clamp(1.5rem, 2.6vw, 2rem);
+}
+
+.metas-pausadas .metas-etiqueta {
+    color: #607d9a;
+}
+
+.metas-concluidas .metas-etiqueta {
+    color: #52825b;
+}
+
+.metas-historico-topo p:last-child {
+    max-width: 680px;
+
+    color: #687b73;
+
+    font-size: 0.93rem;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   24. ESTADOS VAZIOS DO HISTÓRICO
+======================================== */
+
+.metas-historico-vazio {
+    margin-top: 22px;
+    padding: 20px 22px;
+
+    background: rgba(255, 255, 255, 0.65);
+
+    border-radius: 15px;
+
+    color: #65796e;
+
+    font-size: 0.89rem;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   25. LISTA DE METAS DO HISTÓRICO
+======================================== */
+
+.metas-lista-historico {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin: 22px 0 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.metas-historico-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+    padding: 20px;
+
+    background: rgba(255, 255, 255, 0.8);
+
+    border-radius: 15px;
+}
+
+.metas-historico-nome {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #2a513b;
+
+    font-size: 1rem;
+    overflow-wrap: anywhere;
+}
+
+.metas-historico-descricao {
+    color: #6c7f70;
+
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+.metas-botao-retomar {
+    min-height: 40px;
+
+    padding: 10px 16px;
+
+    background: #d8e7d3;
+    color: #336443;
+
+    border: none;
+    border-radius: 11px;
+
+    font-size: 0.82rem;
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+
+/* ========================================
+   26. ORIENTAÇÃO FINAL
+======================================== */
+
+.metas-orientacao {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 20px;
+    padding: 27px 30px;
+
+    background: #f3e3d5;
+
+    border-left: 5px solid #ce9773;
+    border-radius: 14px 24px 24px 14px;
+}
+
+.metas-orientacao-icone {
+    color: #bc805c;
+
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.metas-orientacao h2 {
+    margin-bottom: 11px;
+
+    color: #72513e;
+
+    font-size: 1.18rem;
+}
+
+.metas-orientacao p {
+    color: #806654;
+
+    font-size: 0.93rem;
+    line-height: 1.75;
+}
+
+
+/* ========================================
+   27. VOLTAR À MINHA ÁREA
+======================================== */
+
+.metas-voltar {
+    align-self: flex-start;
+
+    padding: 10px 0;
+
+    color: #376d50;
+
+    font-size: 0.91rem;
+    font-weight: 800;
+}
+
+.metas-voltar:hover {
+    text-decoration: underline;
+}
+
+
+/* ========================================
+   28. ESTADOS OCULTOS
+======================================== */
+
+/*
+   O JavaScript deverá alternar os estados
+   vazios e as listas com metas reais.
+*/
+
+.pagina-metas [hidden] {
+    display: none !important;
+}
+
+
+/* ========================================
+   29. RESPONSIVIDADE - TABLETS
+======================================== */
+
+@media (max-width: 1100px) {
+
+    /* ========== ESTRUTURA ========== */
+
+    .pagina-metas .painel-layout {
+        grid-template-columns: 205px minmax(0, 1fr);
+
+        gap: 22px;
+    }
+
+
+    /* ========== MURAL ========== */
+
+    .metas-mural-ilustracao {
+        display: none;
+    }
+
+
+    /* ========== CARTÕES ========== */
+
+    .metas-lista {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* ========== PLANEJAMENTO ========== */
+
+    .metas-planejamento {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* ========================================
+   30. RESPONSIVIDADE - CELULARES
+======================================== */
+
+@media (max-width: 760px) {
+
+    /* ========== ESTRUTURA PRINCIPAL ========== */
+
+    .pagina-metas .painel-layout {
+        width: calc(100% - 32px);
+
+        grid-template-columns: 1fr;
+
+        gap: 24px;
+        padding-top: 25px;
+    }
+
+
+    /* ========== APRESENTAÇÃO ========== */
+
+    .metas-apresentacao h1 {
+        font-size: clamp(2.3rem, 8vw, 3.1rem);
+    }
+
+    .metas-decoracao {
+        display: none;
+    }
+
+
+    /* ========== MURAL ========== */
+
+    .metas-mural {
+        padding: 27px 23px;
+
+        border-radius: 25px;
+    }
+
+    .metas-indicadores {
+        grid-template-columns: 1fr;
+    }
+
+    .metas-indicadores > div,
+    .metas-indicadores > div:first-child {
+        padding: 16px 0;
+    }
+
+    .metas-indicadores > div + div {
+        border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+
+    /* ========== ESTADO VAZIO ========== */
+
+    .metas-estado-vazio {
+        flex-direction: column;
+        align-items: flex-start;
+
+        padding: 24px;
+    }
+
+    .metas-vazio-simbolo {
+        width: 78px;
+        height: 78px;
+
+        font-size: 3.2rem;
+    }
+
+
+    /* ========== FORMULÁRIO ========== */
+
+    .metas-criacao {
+        padding: 25px;
+    }
+
+    .metas-formulario {
+        grid-template-columns: 1fr;
+    }
+
+    .metas-campo-largo,
+    .metas-formulario-rodape {
+        grid-column: auto;
+    }
+
+
+    /* ========== PLANEJAMENTO ========== */
+
+    .metas-planejamento {
+        padding: 25px;
+    }
+
+
+    /* ========== HISTÓRICO ========== */
+
+    .metas-historico {
+        padding: 25px;
+    }
+
+    .metas-historico-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+
+    /* ========== ORIENTAÇÃO ========== */
+
+    .metas-orientacao {
+        padding: 22px;
+    }
+
+}
+
+
+/* ========================================
+   31. CELULARES PEQUENOS
+======================================== */
+
+@media (max-width: 420px) {
+
+    .metas-cartao {
+        padding: 20px;
+    }
+
+    .metas-cartao-valores {
+        grid-template-columns: 1fr;
+    }
+
+    .metas-dialogo {
+        padding: 23px;
+    }
+
+    .metas-dialogo-acoes {
+        flex-direction: column;
+    }
+
+    .metas-dialogo-acoes button {
+        width: 100%;
+    }
+
+}
+
+
+/* ========================================
+   32. ACESSIBILIDADE
+======================================== */
+
+.pagina-metas a:focus-visible,
+.pagina-metas button:focus-visible {
+    outline: 3px solid #6e9c72;
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .pagina-metas * {
+        scroll-behavior: auto;
+    }
+
+}

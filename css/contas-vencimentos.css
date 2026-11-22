@@ -1,0 +1,1373 @@
+
+/* ========================================
+   BASE 6 - CONTAS E VENCIMENTOS
+   ARQUIVO: contas-vencimentos.css
+======================================== */
+
+
+/* ========================================
+   1. IDENTIDADE VISUAL
+======================================== */
+
+.pagina-contas {
+    --cv-fundo: #f7f1e8;
+    --cv-texto: #1b3b30;
+    --cv-suave: #63746b;
+
+    --cv-petroleo: #20465a;
+    --cv-azul: #e3edf4;
+    --cv-verde: #dfeccc;
+    --cv-limao: #c7f238;
+
+    --cv-coral: #f3ddcd;
+    --cv-terracota: #ae7755;
+    --cv-lavanda: #e9e3f2;
+
+    background: var(--cv-fundo);
+}
+
+
+/* ========================================
+   2. ESTRUTURA PRINCIPAL
+======================================== */
+
+.pagina-contas .painel-layout {
+    display: grid;
+
+    width: min(1400px, calc(100% - 48px));
+
+    grid-template-columns: 230px minmax(0, 1fr);
+
+    gap: 32px;
+    padding-top: 43px;
+}
+
+.cv-conteudo {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+    gap: 36px;
+}
+
+
+/* ========================================
+   3. ITEM ATIVO DO MENU LATERAL
+======================================== */
+
+.pagina-contas .cv-link-ativo {
+    background: var(--cv-limao);
+    color: #173528;
+
+    border-radius: 13px;
+
+    font-weight: 800;
+}
+
+.pagina-contas .cv-link-ativo:hover {
+    background: #defb92;
+    color: #173528;
+}
+
+
+/* ========================================
+   4. CAMINHO DE NAVEGAÇÃO
+======================================== */
+
+.cv-caminho {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 10px;
+    margin-bottom: 28px;
+
+    color: #6b7b70;
+    font-size: 0.85rem;
+}
+
+.cv-caminho a {
+    color: #346e50;
+    font-weight: 700;
+}
+
+.cv-caminho a:hover {
+    text-decoration: underline;
+}
+
+
+/* ========================================
+   5. APRESENTAÇÃO DA PÁGINA
+======================================== */
+
+.cv-apresentacao {
+    padding: 5px 0 10px;
+}
+
+.cv-apresentacao-linha {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.cv-apresentacao-linha > div:first-child {
+    max-width: 690px;
+}
+
+
+/* ========== ETIQUETAS ========== */
+
+.cv-etiqueta {
+    margin-bottom: 10px;
+
+    color: #44745b;
+
+    font-size: 0.73rem;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+
+/* ========== TÍTULO ========== */
+
+.cv-apresentacao h1 {
+    color: var(--cv-texto);
+
+    font-size: clamp(2.4rem, 4vw, 4rem);
+    font-weight: 800;
+
+    letter-spacing: -1.8px;
+    line-height: 1.14;
+}
+
+.cv-apresentacao h1 span {
+    color: #54876b;
+}
+
+
+/* ========== INTRODUÇÃO ========== */
+
+.cv-introducao {
+    max-width: 650px;
+
+    margin-top: 19px;
+
+    color: var(--cv-suave);
+
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   6. DECORAÇÃO DA APRESENTAÇÃO
+======================================== */
+
+.cv-decoracao {
+    position: relative;
+
+    display: grid;
+    place-items: center;
+
+    width: 135px;
+    height: 145px;
+
+    flex-shrink: 0;
+
+    background: #dfebf2;
+
+    border: 3px solid #b5d1dd;
+    border-radius: 23px;
+
+    transform: rotate(8deg);
+
+    box-shadow: 12px 12px 0 #e6d9ca;
+}
+
+.cv-decoracao::before {
+    content: "";
+
+    position: absolute;
+    top: 17px;
+
+    width: 85%;
+    height: 13px;
+
+    border-top: 3px dashed #9dbbc9;
+}
+
+.cv-decoracao > span:first-child {
+    color: var(--cv-petroleo);
+
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+.cv-decoracao-estrela {
+    position: absolute;
+
+    top: -27px;
+    right: -24px;
+
+    color: #c88765;
+
+    font-size: 3.4rem;
+}
+
+
+/* ========================================
+   7. RESUMO DOS PAGAMENTOS
+======================================== */
+
+.cv-resumo {
+    padding: 33px 35px;
+
+    background:
+        radial-gradient(
+            circle at 95% 0%,
+            rgba(123, 173, 194, 0.25),
+            transparent 48%
+        ),
+        var(--cv-petroleo);
+
+    color: #ffffff;
+
+    border-radius: 28px 28px 48px 28px;
+
+    box-shadow: 0 12px 28px
+        rgba(32, 70, 90, 0.10);
+}
+
+
+/* ========== CABEÇALHO ========== */
+
+.cv-resumo-topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+    margin-bottom: 29px;
+}
+
+.cv-resumo .cv-etiqueta {
+    color: var(--cv-limao);
+}
+
+.cv-resumo h2 {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    line-height: 1.3;
+}
+
+.cv-periodo {
+    padding: 9px 16px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 30px;
+
+    color: #e3eef0;
+
+    font-size: 0.81rem;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+/* ========================================
+   8. INDICADORES FINANCEIROS
+======================================== */
+
+.cv-indicadores {
+    display: grid;
+
+    grid-template-columns: 1.4fr 1fr 1fr;
+
+    gap: 0;
+}
+
+.cv-indicador {
+    min-width: 0;
+    padding: 8px 23px;
+}
+
+.cv-indicador:first-child {
+    padding-left: 0;
+}
+
+.cv-indicador + .cv-indicador {
+    border-left: 1px solid #57798a;
+}
+
+.cv-indicador dt {
+    margin-bottom: 15px;
+
+    color: #dfebef;
+
+    font-size: 0.88rem;
+    font-weight: 700;
+}
+
+.cv-indicador dd {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: clamp(1.5rem, 2.6vw, 2.2rem);
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.cv-indicador-principal dd {
+    color: var(--cv-limao);
+
+    font-size: clamp(2rem, 3.5vw, 3.3rem);
+}
+
+.cv-indicador p {
+    margin-top: 13px;
+
+    color: #c2d5dc;
+
+    font-size: 0.82rem;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   9. CABEÇALHOS DAS SEÇÕES
+======================================== */
+
+.cv-secao-topo {
+    margin-bottom: 25px;
+}
+
+.cv-secao-topo h2 {
+    color: var(--cv-texto);
+
+    font-size: clamp(1.55rem, 2.7vw, 2.2rem);
+    line-height: 1.3;
+}
+
+.cv-secao-topo > p:last-child {
+    max-width: 680px;
+
+    margin-top: 11px;
+
+    color: var(--cv-suave);
+
+    font-size: 0.94rem;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   10. CALENDÁRIO + PRÓXIMOS VENCIMENTOS
+======================================== */
+
+.cv-agenda-grade {
+    display: grid;
+
+    grid-template-columns: minmax(0, 1.55fr) minmax(270px, 0.9fr);
+
+    align-items: start;
+
+    gap: 20px;
+}
+
+
+/* ========================================
+   11. CALENDÁRIO MENSAL
+======================================== */
+
+.cv-calendario {
+    min-width: 0;
+
+    padding: 27px;
+
+    background: #fffefa;
+
+    border: 1px solid #e5e2d8;
+    border-radius: 26px;
+
+    box-shadow: 0 8px 24px
+        rgba(36, 65, 55, 0.04);
+}
+
+
+/* ========== CABEÇALHO DO CALENDÁRIO ========== */
+
+.cv-calendario-topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+    margin-bottom: 24px;
+}
+
+.cv-calendario-topo h3 {
+    color: var(--cv-texto);
+
+    font-size: 1.42rem;
+    line-height: 1.25;
+}
+
+
+/* ========== BOTÕES DE NAVEGAÇÃO ========== */
+
+.cv-mes-acoes {
+    display: flex;
+    gap: 7px;
+}
+
+.cv-mes-acoes button {
+    display: grid;
+    place-items: center;
+
+    width: 35px;
+    height: 35px;
+
+    background: #e8f0eb;
+    color: #315c49;
+
+    border: 1px solid #d4e3da;
+    border-radius: 10px;
+
+    font-family: inherit;
+    font-size: 1.65rem;
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+.cv-mes-acoes button:hover:not(:disabled) {
+    background: #d8e7da;
+}
+
+.cv-mes-acoes button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+
+/* ========================================
+   12. TABELA DO CALENDÁRIO
+======================================== */
+
+.cv-calendario-rolagem {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.cv-calendario-tabela {
+    width: 100%;
+
+    border-collapse: separate;
+    border-spacing: 5px;
+
+    table-layout: fixed;
+    text-align: center;
+}
+
+
+/* ========== DIAS DA SEMANA ========== */
+
+.cv-calendario-tabela th {
+    padding: 11px 2px;
+
+    color: #6c8076;
+
+    font-size: 0.78rem;
+    font-weight: 800;
+}
+
+
+/* ========== CÉLULAS DOS DIAS ========== */
+
+.cv-calendario-tabela td {
+    position: relative;
+
+    height: 52px;
+    padding: 0;
+
+    background: #f1f5f1;
+
+    border: 1px solid transparent;
+    border-radius: 11px;
+
+    color: #2c5240;
+
+    font-size: 0.93rem;
+    font-weight: 700;
+}
+
+.cv-calendario-tabela td time {
+    display: grid;
+    place-items: center;
+
+    width: 100%;
+    min-height: 51px;
+}
+
+.cv-calendario-tabela .cv-dia-vazio {
+    background: transparent;
+}
+
+
+/* ========== DIA ATUAL ========== */
+
+/*
+   Adicionar a classe cv-dia-atual ao dia
+   correspondente durante a integração.
+*/
+
+.cv-calendario-tabela .cv-dia-atual {
+    background: #dcebcf;
+    border-color: #a6c48d;
+}
+
+
+/* ========== DIA COM CONTA PENDENTE ========== */
+
+.cv-calendario-tabela .cv-dia-com-pendencia {
+    background: #f5e0ce;
+}
+
+.cv-calendario-tabela .cv-dia-com-pendencia::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 7px;
+
+    width: 7px;
+    height: 7px;
+
+    background: #bd7d53;
+
+    border-radius: 50%;
+
+    transform: translateX(-50%);
+}
+
+
+/* ========== DIA COM CONTA PAGA ========== */
+
+.cv-calendario-tabela .cv-dia-com-pagamento {
+    background: #dcead8;
+}
+
+
+/* ========== DIA COM CONTA VENCIDA ========== */
+
+.cv-calendario-tabela .cv-dia-com-atraso {
+    background: #f4d9d6;
+}
+
+.cv-calendario-tabela .cv-dia-com-atraso::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 7px;
+
+    width: 7px;
+    height: 7px;
+
+    background: #b65d57;
+
+    border-radius: 50%;
+
+    transform: translateX(-50%);
+}
+
+
+/* ========================================
+   13. LEGENDA DO CALENDÁRIO
+======================================== */
+
+.cv-legenda {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 13px 20px;
+
+    margin-top: 23px;
+    padding-top: 18px;
+
+    border-top: 1px solid #e7eae3;
+}
+
+.cv-legenda span {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color: #62736b;
+    font-size: 0.8rem;
+}
+
+.cv-legenda i {
+    display: block;
+
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+}
+
+.cv-marca-pendente {
+    background: #bd7d53;
+}
+
+.cv-marca-pago {
+    background: #669276;
+}
+
+.cv-marca-atrasada {
+    background: #b65d57;
+}
+
+
+/* ========================================
+   14. CONTAS DO DIA SELECIONADO
+======================================== */
+
+.cv-dia-detalhes {
+    margin-top: 20px;
+    padding: 20px;
+
+    background: #eff4ee;
+
+    border: 1px solid #d9e5d7;
+    border-radius: 16px;
+}
+
+.cv-dia-detalhes h4 {
+    margin-bottom: 15px;
+
+    color: #315440;
+    font-size: 1rem;
+}
+
+
+/* ========================================
+   15. PRÓXIMOS VENCIMENTOS
+======================================== */
+
+.cv-proximas {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+    min-height: 100%;
+
+    padding: 27px;
+
+    background: #f4dfcf;
+
+    border: 1px solid #ebcfba;
+    border-radius: 26px;
+}
+
+.cv-proximas h3 {
+    color: #684737;
+
+    font-size: 1.45rem;
+    line-height: 1.3;
+}
+
+.cv-proximas-descricao {
+    margin-top: 12px;
+
+    color: #7c6253;
+
+    font-size: 0.92rem;
+    line-height: 1.65;
+}
+
+
+/* ========== SEM VENCIMENTOS ========== */
+
+.cv-estado-vazio {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 15px;
+
+    margin-top: 26px;
+    padding: 24px;
+
+    background: rgba(255, 255, 255, 0.65);
+
+    border-radius: 18px;
+}
+
+.cv-estado-vazio span {
+    color: #b27b5b;
+
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.cv-estado-vazio p {
+    color: #806655;
+
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   16. CADASTRAR UMA CONTA
+======================================== */
+
+.cv-cadastro {
+    padding: 35px;
+
+    background: #e2edd5;
+
+    border: 1px solid #cfdfc3;
+    border-radius: 28px;
+}
+
+
+/* ========== FORMULÁRIO EM COLUNAS ========== */
+
+.cv-formulario {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 22px 20px;
+}
+
+
+/* ========== CAMPOS ========== */
+
+.cv-campo {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+    gap: 9px;
+}
+
+.cv-campo-largo {
+    grid-column: 1 / -1;
+}
+
+.cv-campo label {
+    color: #2d513d;
+
+    font-size: 0.89rem;
+    font-weight: 800;
+}
+
+.cv-campo small {
+    color: #5d735d;
+
+    font-size: 0.8rem;
+    line-height: 1.6;
+}
+
+
+/* ========== INPUTS E SELECTS ========== */
+
+.cv-campo input,
+.cv-campo select {
+    width: 100%;
+    min-height: 50px;
+
+    padding: 12px 15px;
+
+    background: #fffefa;
+    color: #214332;
+
+    border: 1px solid #b1c8ad;
+    border-radius: 13px;
+
+    font-family: inherit;
+    font-size: 0.94rem;
+}
+
+.cv-campo input:focus,
+.cv-campo select:focus {
+    outline: 3px solid #a1c99c;
+    outline-offset: 2px;
+
+    border-color: #497c5c;
+}
+
+
+/* ========== RODAPÉ DO FORMULÁRIO ========== */
+
+.cv-formulario-rodape {
+    grid-column: 1 / -1;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    padding-top: 4px;
+}
+
+
+/* ========== BOTÃO SALVAR ========== */
+
+.cv-botao-salvar {
+    min-height: 50px;
+
+    padding: 14px 24px;
+
+    background: #1c4937;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 13px;
+
+    font-family: inherit;
+    font-size: 0.91rem;
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+.cv-botao-salvar:hover:not(:disabled) {
+    background: #2b674c;
+}
+
+.cv-botao-salvar:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+
+/* ========== RESULTADO DO FORMULÁRIO ========== */
+
+.cv-mensagem-formulario {
+    padding: 13px 16px;
+
+    background: #f8f7e9;
+    color: #3e624b;
+
+    border: 1px solid #c2d6b9;
+    border-radius: 12px;
+
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+.cv-mensagem-formulario.erro {
+    background: #f9e6e1;
+    color: #924c42;
+
+    border-color: #e8bfb6;
+}
+
+
+/* ========================================
+   17. SITUAÇÃO DAS CONTAS
+======================================== */
+
+.cv-situacao-grade {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    align-items: start;
+
+    gap: 18px;
+}
+
+
+/* ========== GRUPOS ========== */
+
+.cv-grupo {
+    min-width: 0;
+
+    padding: 25px;
+
+    border-radius: 23px;
+    border: 1px solid transparent;
+}
+
+.cv-grupo-pendentes {
+    background: #fff6e9;
+    border-color: #edddc7;
+}
+
+.cv-grupo-atrasadas {
+    background: #f6e1dd;
+    border-color: #eacbc6;
+}
+
+.cv-grupo-pagas {
+    background: #e5eee3;
+    border-color: #d3e0ce;
+}
+
+
+/* ========== TÍTULOS ========== */
+
+.cv-grupo h3 {
+    margin-bottom: 20px;
+
+    color: #314a3a;
+
+    font-size: 1.2rem;
+}
+
+.cv-grupo-atrasadas h3 {
+    color: #874c45;
+}
+
+
+/* ========== ESTADOS VAZIOS ========== */
+
+.cv-estado-lista {
+    padding: 22px 15px;
+
+    background: rgba(255, 255, 255, 0.58);
+
+    border-radius: 14px;
+
+    color: #68746d;
+
+    font-size: 0.85rem;
+    line-height: 1.65;
+}
+
+
+/* ========================================
+   18. LISTAS DE CONTAS
+======================================== */
+
+.cv-lista-contas {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin: 16px 0 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.cv-item-conta {
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+    padding: 17px;
+
+    background: rgba(255, 255, 255, 0.85);
+
+    border: 1px solid rgba(45, 73, 55, 0.1);
+    border-radius: 15px;
+}
+
+
+/* ========== INFORMAÇÕES DA CONTA ========== */
+
+.cv-item-informacoes {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.cv-item-nome {
+    color: #254433;
+
+    font-size: 0.95rem;
+}
+
+.cv-item-vencimento,
+.cv-item-situacao {
+    color: #63766b;
+
+    font-size: 0.8rem;
+}
+
+
+/* ========== VALOR E BOTÕES ========== */
+
+.cv-item-acoes {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    gap: 9px;
+}
+
+.cv-item-valor {
+    width: 100%;
+
+    color: #244f3a;
+    font-size: 1.15rem;
+}
+
+.cv-item-acoes button {
+    min-height: 36px;
+
+    padding: 9px 12px;
+
+    border: 1px solid transparent;
+    border-radius: 10px;
+
+    font-family: inherit;
+    font-size: 0.77rem;
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+.cv-item-confirmar {
+    background: #255f45;
+    color: #ffffff;
+}
+
+.cv-item-editar {
+    background: #e1e9df;
+    color: #365743;
+}
+
+
+/* ========================================
+   19. JANELA DE CONFIRMAÇÃO DE PAGAMENTO
+======================================== */
+
+.cv-dialogo {
+    width: min(500px, calc(100% - 30px));
+
+    max-height: 90vh;
+    overflow-y: auto;
+
+    margin: auto;
+    padding: 30px;
+
+    background: #fffdf8;
+    color: #244434;
+
+    border: 1px solid #dce4d7;
+    border-radius: 23px;
+
+    box-shadow: 0 20px 60px
+        rgba(17, 42, 31, 0.18);
+}
+
+.cv-dialogo::backdrop {
+    background: rgba(9, 30, 23, 0.55);
+}
+
+.cv-dialogo .cv-formulario {
+    grid-template-columns: 1fr;
+}
+
+.cv-dialogo h2 {
+    color: #244434;
+    font-size: 1.55rem;
+}
+
+.cv-dialogo #cv-conta-selecionada {
+    color: #687a6e;
+    font-size: 0.9rem;
+}
+
+
+/* ========== BOTÕES DO DIÁLOGO ========== */
+
+.cv-dialogo-acoes {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+.cv-dialogo-cancelar {
+    min-height: 48px;
+
+    padding: 12px 20px;
+
+    background: #ecefe7;
+    color: #345241;
+
+    border: 1px solid #d8dfd2;
+    border-radius: 12px;
+
+    font-family: inherit;
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+
+/* ========================================
+   20. ORIENTAÇÃO FINANCEIRA
+======================================== */
+
+.cv-orientacao {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 20px;
+    padding: 27px 30px;
+
+    background: #e9e3f2;
+
+    border-left: 5px solid #9680b5;
+    border-radius: 14px 24px 24px 14px;
+}
+
+.cv-orientacao-icone {
+    color: #8a70ae;
+
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.cv-orientacao h2 {
+    margin-bottom: 11px;
+
+    color: #4c4265;
+    font-size: 1.22rem;
+}
+
+.cv-orientacao p {
+    color: #665d78;
+
+    font-size: 0.94rem;
+    line-height: 1.75;
+}
+
+
+/* ========================================
+   21. VOLTAR À MINHA ÁREA
+======================================== */
+
+.cv-voltar {
+    align-self: flex-start;
+
+    padding: 10px 0;
+
+    color: #326a4d;
+
+    font-size: 0.92rem;
+    font-weight: 800;
+}
+
+.cv-voltar:hover {
+    text-decoration: underline;
+}
+
+
+/* ========================================
+   22. VISIBILIDADE DOS ELEMENTOS
+======================================== */
+
+.pagina-contas [hidden] {
+    display: none !important;
+}
+
+
+/* ========================================
+   23. RESPONSIVIDADE - TABLETS
+======================================== */
+
+@media (max-width: 1100px) {
+
+    .pagina-contas .painel-layout {
+        grid-template-columns: 205px minmax(0, 1fr);
+
+        gap: 22px;
+    }
+
+    .cv-agenda-grade {
+        grid-template-columns: 1fr;
+    }
+
+    .cv-situacao-grade {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .cv-grupo-pagas {
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+/* ========================================
+   24. RESPONSIVIDADE - CELULARES
+======================================== */
+
+@media (max-width: 760px) {
+
+    /* ========== ESTRUTURA ========== */
+
+    .pagina-contas .painel-layout {
+        width: calc(100% - 32px);
+
+        grid-template-columns: 1fr;
+
+        gap: 24px;
+        padding-top: 24px;
+    }
+
+
+    /* ========== APRESENTAÇÃO ========== */
+
+    .cv-apresentacao h1 {
+        font-size: clamp(2.25rem, 8vw, 3.1rem);
+    }
+
+    .cv-decoracao {
+        display: none;
+    }
+
+
+    /* ========== RESUMO ========== */
+
+    .cv-resumo {
+        padding: 25px 22px;
+    }
+
+    .cv-resumo-topo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cv-indicadores {
+        grid-template-columns: 1fr;
+    }
+
+    .cv-indicador,
+    .cv-indicador:first-child {
+        padding: 22px 0;
+    }
+
+    .cv-indicador + .cv-indicador {
+        border-left: none;
+        border-top: 1px solid #57798a;
+    }
+
+
+    /* ========== CALENDÁRIO ========== */
+
+    .cv-calendario {
+        padding: 17px;
+    }
+
+    .cv-calendario-tabela {
+        border-spacing: 3px;
+    }
+
+    .cv-calendario-tabela th {
+        font-size: 0.69rem;
+    }
+
+    .cv-calendario-tabela td {
+        height: 42px;
+
+        font-size: 0.8rem;
+    }
+
+    .cv-calendario-tabela td time {
+        min-height: 42px;
+    }
+
+
+    /* ========== PRÓXIMOS VENCIMENTOS ========== */
+
+    .cv-proximas {
+        padding: 24px;
+    }
+
+
+    /* ========== FORMULÁRIO ========== */
+
+    .cv-cadastro {
+        padding: 25px;
+    }
+
+    .cv-formulario {
+        grid-template-columns: 1fr;
+    }
+
+    .cv-campo-largo,
+    .cv-formulario-rodape {
+        grid-column: auto;
+    }
+
+
+    /* ========== SITUAÇÃO DAS CONTAS ========== */
+
+    .cv-situacao-grade {
+        grid-template-columns: 1fr;
+    }
+
+    .cv-grupo-pagas {
+        grid-column: auto;
+    }
+
+
+    /* ========== ORIENTAÇÃO ========== */
+
+    .cv-orientacao {
+        padding: 22px;
+    }
+
+}
+
+
+/* ========================================
+   25. CELULARES PEQUENOS
+======================================== */
+
+@media (max-width: 400px) {
+
+    .cv-calendario-tabela {
+        border-spacing: 1px;
+    }
+
+    .cv-calendario-tabela td {
+        border-radius: 7px;
+    }
+
+    .cv-calendario-topo h3 {
+        font-size: 1.15rem;
+    }
+
+}
+
+
+/* ========================================
+   26. ACESSIBILIDADE
+======================================== */
+
+.pagina-contas a:focus-visible,
+.pagina-contas button:focus-visible {
+    outline: 3px solid #56856c;
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .pagina-contas * {
+        scroll-behavior: auto;
+    }
+
+}

@@ -1,0 +1,1342 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <!-- ========================================
+         1. CONFIGURAÇÕES INICIAIS
+    ======================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Organize contas e acompanhe vencimentos na Base 6.">
+
+    <title>Contas e Vencimentos | Base 6</title>
+
+
+    <!-- ========== FONTES ========== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- ========== ESTILOS ========== -->
+
+    <link rel="stylesheet"
+          href="../css/minha-area.css">
+
+    <link rel="stylesheet"
+          href="../css/contas-vencimentos.css">
+
+</head>
+
+
+<body class="pagina-contas">
+
+    <!-- ========== ACESSIBILIDADE ========== -->
+
+    <a href="#conteudo" class="pular-conteudo">
+        Pular para o conteúdo principal
+    </a>
+
+
+    <!-- ========================================
+         2. CABEÇALHO - BASE 6
+    ======================================== -->
+
+    <header class="cabecalho">
+
+        <div class="container cabecalho-conteudo">
+
+
+            <!-- ========== COROA BASE 6 ========== -->
+
+            <a href="inicio.html"
+               class="base6-coroa-link"
+               aria-label="Voltar à página inicial da Base 6">
+
+                <svg class="base6-coroa-icone"
+                     viewBox="0 0 80 50"
+                     fill="none"
+                     aria-hidden="true">
+
+                    <path
+                        d="M5 37 L13 12 L30 26 L42 5 L55 26 L72 12 L77 37 Z"
+                        stroke="currentColor"
+                        stroke-width="5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    />
+
+                    <path
+                        d="M8 44 L75 44"
+                        stroke="currentColor"
+                        stroke-width="5"
+                        stroke-linecap="round"
+                    />
+
+                </svg>
+
+            </a>
+
+
+            <!-- ========== MENU SUPERIOR ========== -->
+
+            <nav class="menu-principal"
+                 aria-label="Menu principal">
+
+                <a href="inicio.html">
+                    Início
+                </a>
+
+                <a href="aulas.html">
+                    Aulas
+                </a>
+
+                <a href="minha-area.html"
+                   class="ativo">
+                    Minha Área
+                </a>
+
+                <a href="comunidade.html">
+                    Comunidade
+                </a>
+
+            </nav>
+
+
+            <!-- ========== PERFIL ========== -->
+            <!-- O destino será atualizado com a autenticação. -->
+
+            <a href="login.html"
+               class="perfil-usuario"
+               aria-label="Entrar ou acessar seu perfil">
+
+                <span class="perfil-icone"
+                      aria-hidden="true">
+
+                    <svg viewBox="0 0 24 24"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="1.8">
+
+                        <circle cx="12" cy="8" r="4"/>
+
+                        <path d="M4 21v-2a8 8 0 0 1 16 0v2"/>
+
+                    </svg>
+
+                </span>
+
+                <span class="perfil-texto">
+                    Meu perfil
+                </span>
+
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- ========================================
+         3. CONTEÚDO PRINCIPAL
+    ======================================== -->
+
+    <main id="conteudo">
+
+        <div class="container painel-layout">
+
+
+            <!-- ========================================
+                 4. MENU LATERAL
+            ======================================== -->
+
+            <aside class="barra-lateral">
+
+                <nav aria-label="Navegação financeira">
+
+                    <p class="lateral-titulo">
+                        MINHA ÁREA
+                    </p>
+
+
+                    <!-- ========== OPÇÕES FINANCEIRAS ========== -->
+
+                    <ul class="lista-menu">
+
+                        <!-- RESUMO FINANCEIRO -->
+
+                        <li>
+                            <a href="resumo-financeiro.html"
+                               class="lateral-link">
+
+                                Resumo financeiro
+
+                            </a>
+                        </li>
+
+
+                        <!-- MINHA RENDA -->
+
+                        <li>
+                            <a href="minha-renda.html"
+                               class="lateral-link">
+
+                                Minha renda
+
+                            </a>
+                        </li>
+
+
+                        <!-- MEUS GASTOS -->
+
+                        <li>
+                            <a href="meus-gastos.html"
+                               class="lateral-link">
+
+                                Meus gastos
+
+                            </a>
+                        </li>
+
+
+                        <!-- PRA ONDE FOI MINHA GRANA -->
+
+                        <li>
+                            <a href="pra-onde-foi-minha-grana.html"
+                               class="lateral-link">
+
+                                Pra onde foi minha grana?
+
+                            </a>
+                        </li>
+
+
+                        <!-- CONTAS E VENCIMENTOS -->
+
+                        <li>
+                            <a href="contas-vencimentos.html"
+                               class="lateral-link cv-link-ativo"
+                               aria-current="page">
+
+                                Contas e vencimentos
+
+                            </a>
+                        </li>
+
+
+                        <!-- MINHAS METAS -->
+
+                        <li>
+                            <a href="minhas-metas.html"
+                               class="lateral-link">
+
+                                Minhas metas
+
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </nav>
+
+
+                <!-- ========== MENSAGEM LATERAL ========== -->
+
+                <div class="lateral-mensagem">
+
+                    <span aria-hidden="true">
+                        ✦
+                    </span>
+
+                    <p>
+                        Planejar os vencimentos
+                        ajuda a organizar o mês,
+                        um passo de cada vez.
+                    </p>
+
+                </div>
+
+            </aside>
+
+
+            <!-- ========================================
+                 5. CONTEÚDO DE CONTAS E VENCIMENTOS
+            ======================================== -->
+
+            <div class="conteudo-area cv-conteudo">
+
+
+                <!-- ========================================
+                     6. APRESENTAÇÃO DA PÁGINA
+                ======================================== -->
+
+                <section class="cv-apresentacao"
+                         aria-labelledby="cv-titulo">
+
+                    <!-- ========== CAMINHO ========== -->
+
+                    <nav class="cv-caminho"
+                         aria-label="Localização atual">
+
+                        <a href="minha-area.html">
+                            Minha Área
+                        </a>
+
+                        <span aria-hidden="true">
+                            /
+                        </span>
+
+                        <span aria-current="page">
+                            Contas e Vencimentos
+                        </span>
+
+                    </nav>
+
+
+                    <!-- ========== TÍTULO E DESCRIÇÃO ========== -->
+
+                    <div class="cv-apresentacao-linha">
+
+                        <div>
+
+                            <p class="cv-etiqueta">
+                                SUA AGENDA FINANCEIRA
+                            </p>
+
+                            <h1 id="cv-titulo">
+                                Suas contas,
+                                <span>no seu tempo.</span>
+                            </h1>
+
+                            <p class="cv-introducao">
+                                Saiba o que precisa pagar,
+                                acompanhe os vencimentos
+                                e organize seus compromissos
+                                sem perder nenhuma data.
+                            </p>
+
+                        </div>
+
+
+                        <!-- ========== DECORAÇÃO ========== -->
+
+                        <div class="cv-decoracao"
+                             aria-hidden="true">
+
+                            <span>31</span>
+
+                            <span class="cv-decoracao-estrela">
+                                ✳
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ========================================
+                     7. RESUMO DOS PAGAMENTOS
+                ======================================== -->
+
+                <section class="cv-resumo"
+                         aria-labelledby="cv-resumo-titulo">
+
+                    <header class="cv-resumo-topo">
+
+                        <div>
+
+                            <p class="cv-etiqueta">
+                                VISÃO DO MÊS
+                            </p>
+
+                            <h2 id="cv-resumo-titulo">
+                                Seus compromissos
+                            </h2>
+
+                        </div>
+
+                        <span class="cv-periodo"
+                              id="cv-periodo-resumo">
+
+                            Mês selecionado
+
+                        </span>
+
+                    </header>
+
+
+                    <!-- ========== INDICADORES ========== -->
+
+                    <dl class="cv-indicadores">
+
+
+                        <!-- TOTAL PENDENTE -->
+
+                        <div class="cv-indicador cv-indicador-principal">
+
+                            <dt>
+                                Ainda falta pagar
+                            </dt>
+
+                            <dd id="cv-total-pendente">
+                                R$ —
+                            </dd>
+
+                            <p>
+                                Total das contas pendentes
+                                neste período.
+                            </p>
+
+                        </div>
+
+
+                        <!-- CONTAS PAGAS -->
+
+                        <div class="cv-indicador">
+
+                            <dt>
+                                Contas pagas
+                            </dt>
+
+                            <dd id="cv-total-pago">
+                                R$ —
+                            </dd>
+
+                            <p>
+                                Pagamentos já confirmados.
+                            </p>
+
+                        </div>
+
+
+                        <!-- CONTAS PRÓXIMAS -->
+
+                        <div class="cv-indicador">
+
+                            <dt>
+                                Próximos vencimentos
+                            </dt>
+
+                            <dd id="cv-quantidade-proximas">
+                                —
+                            </dd>
+
+                            <p>
+                                Contas com vencimento
+                                nos próximos sete dias.
+                            </p>
+
+                        </div>
+
+                    </dl>
+
+                </section>
+
+
+                <!-- ========================================
+                     8. CALENDÁRIO E AGENDA
+                ======================================== -->
+
+                <section class="cv-planejamento"
+                         aria-labelledby="cv-planejamento-titulo">
+
+                    <header class="cv-secao-topo">
+
+                        <p class="cv-etiqueta">
+                            OLHE O MÊS INTEIRO
+                        </p>
+
+                        <h2 id="cv-planejamento-titulo">
+                            Seu calendário financeiro
+                        </h2>
+
+                        <p>
+                            Visualize os dias do mês
+                            e encontre seus compromissos
+                            por data.
+                        </p>
+
+                    </header>
+
+
+                    <!-- ========== COLUNAS DA AGENDA ========== -->
+
+                    <div class="cv-agenda-grade">
+
+
+                        <!-- ========================================
+                             8.1. CALENDÁRIO MENSAL
+                        ======================================== -->
+
+                        <section class="cv-calendario"
+                                 aria-labelledby="cv-mes-titulo">
+
+                            <!-- ========== CABEÇALHO DO MÊS ========== -->
+
+                            <header class="cv-calendario-topo">
+
+                                <div>
+
+                                    <p class="cv-etiqueta">
+                                        CALENDÁRIO
+                                    </p>
+
+                                    <h3 id="cv-mes-titulo">
+                                        Novembro de 2026
+                                    </h3>
+
+                                </div>
+
+                                <!-- Navegação será ligada ao JS. -->
+
+                                <div class="cv-mes-acoes">
+
+                                    <button
+                                        type="button"
+                                        id="cv-mes-anterior"
+                                        aria-label="Mês anterior"
+                                        disabled>
+                                        ‹
+                                    </button>
+
+                                    <button
+                                        type="button"
+                                        id="cv-proximo-mes"
+                                        aria-label="Próximo mês"
+                                        disabled>
+                                        ›
+                                    </button>
+
+                                </div>
+
+                            </header>
+
+
+                            <!-- ========== TABELA DO CALENDÁRIO ========== -->
+                            <!--
+                                A estrutura inicial representa
+                                novembro de 2026.
+
+                                O JavaScript deverá gerar os
+                                dias do período selecionado
+                                e indicar datas com contas.
+
+                                Não há vencimentos fictícios.
+                            -->
+
+                            <div class="cv-calendario-rolagem">
+
+                                <table class="cv-calendario-tabela"
+                                       aria-label="Calendário de novembro de 2026">
+
+                                    <thead>
+
+                                        <tr>
+
+                                            <th scope="col">
+                                                Dom
+                                            </th>
+
+                                            <th scope="col">
+                                                Seg
+                                            </th>
+
+                                            <th scope="col">
+                                                Ter
+                                            </th>
+
+                                            <th scope="col">
+                                                Qua
+                                            </th>
+
+                                            <th scope="col">
+                                                Qui
+                                            </th>
+
+                                            <th scope="col">
+                                                Sex
+                                            </th>
+
+                                            <th scope="col">
+                                                Sáb
+                                            </th>
+
+                                        </tr>
+
+                                    </thead>
+
+
+                                    <!-- ========== DIAS DO MÊS ========== -->
+
+                                    <tbody id="cv-calendario-dias">
+
+                                        <tr>
+                                            <td><time datetime="2026-11-01">1</time></td>
+                                            <td><time datetime="2026-11-02">2</time></td>
+                                            <td><time datetime="2026-11-03">3</time></td>
+                                            <td><time datetime="2026-11-04">4</time></td>
+                                            <td><time datetime="2026-11-05">5</time></td>
+                                            <td><time datetime="2026-11-06">6</time></td>
+                                            <td><time datetime="2026-11-07">7</time></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><time datetime="2026-11-08">8</time></td>
+                                            <td><time datetime="2026-11-09">9</time></td>
+                                            <td><time datetime="2026-11-10">10</time></td>
+                                            <td><time datetime="2026-11-11">11</time></td>
+                                            <td><time datetime="2026-11-12">12</time></td>
+                                            <td><time datetime="2026-11-13">13</time></td>
+                                            <td><time datetime="2026-11-14">14</time></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><time datetime="2026-11-15">15</time></td>
+                                            <td><time datetime="2026-11-16">16</time></td>
+                                            <td><time datetime="2026-11-17">17</time></td>
+                                            <td><time datetime="2026-11-18">18</time></td>
+                                            <td><time datetime="2026-11-19">19</time></td>
+                                            <td><time datetime="2026-11-20">20</time></td>
+                                            <td><time datetime="2026-11-21">21</time></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><time datetime="2026-11-22">22</time></td>
+                                            <td><time datetime="2026-11-23">23</time></td>
+                                            <td><time datetime="2026-11-24">24</time></td>
+                                            <td><time datetime="2026-11-25">25</time></td>
+                                            <td><time datetime="2026-11-26">26</time></td>
+                                            <td><time datetime="2026-11-27">27</time></td>
+                                            <td><time datetime="2026-11-28">28</time></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><time datetime="2026-11-29">29</time></td>
+                                            <td><time datetime="2026-11-30">30</time></td>
+                                            <td class="cv-dia-vazio"></td>
+                                            <td class="cv-dia-vazio"></td>
+                                            <td class="cv-dia-vazio"></td>
+                                            <td class="cv-dia-vazio"></td>
+                                            <td class="cv-dia-vazio"></td>
+                                        </tr>
+
+                                    </tbody>
+
+                                </table>
+
+                            </div>
+
+
+                            <!-- ========== LEGENDA DO CALENDÁRIO ========== -->
+
+                            <div class="cv-legenda">
+
+                                <span>
+                                    <i class="cv-marca-pendente"
+                                       aria-hidden="true"></i>
+                                    Pendente
+                                </span>
+
+                                <span>
+                                    <i class="cv-marca-pago"
+                                       aria-hidden="true"></i>
+                                    Paga
+                                </span>
+
+                                <span>
+                                    <i class="cv-marca-atrasada"
+                                       aria-hidden="true"></i>
+                                    Atrasada
+                                </span>
+
+                            </div>
+
+
+                            <!-- ========== CONTAS DO DIA SELECIONADO ========== -->
+
+                            <div class="cv-dia-detalhes"
+                                 id="cv-dia-detalhes"
+                                 hidden>
+
+                                <h4 id="cv-dia-detalhes-titulo">
+                                    Contas do dia
+                                </h4>
+
+                                <ul id="cv-dia-detalhes-lista"
+                                    class="cv-lista-contas">
+                                </ul>
+
+                            </div>
+
+                        </section>
+
+
+                        <!-- ========================================
+                             8.2. PRÓXIMOS VENCIMENTOS
+                        ======================================== -->
+
+                        <aside class="cv-proximas"
+                               aria-labelledby="cv-proximas-titulo">
+
+                            <p class="cv-etiqueta">
+                                FIQUE DE OLHO
+                            </p>
+
+                            <h3 id="cv-proximas-titulo">
+                                Próximos vencimentos
+                            </h3>
+
+                            <p class="cv-proximas-descricao">
+                                Acompanhe as contas
+                                que estão chegando.
+                            </p>
+
+
+                            <!-- ========== SEM CONTAS PRÓXIMAS ========== -->
+
+                            <div class="cv-estado-vazio"
+                                 id="cv-proximas-vazio">
+
+                                <span aria-hidden="true">
+                                    ◷
+                                </span>
+
+                                <p>
+                                    Nenhuma conta com
+                                    vencimento próximo.
+                                </p>
+
+                            </div>
+
+
+                            <!-- ========== CONTAS PRÓXIMAS ========== -->
+
+                            <ul class="cv-lista-contas"
+                                id="cv-lista-proximas"
+                                hidden>
+                            </ul>
+
+                        </aside>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ========================================
+                     9. CADASTRAR UMA CONTA
+                ======================================== -->
+
+                <section class="cv-cadastro"
+                         aria-labelledby="cv-cadastro-titulo">
+
+                    <header class="cv-secao-topo">
+
+                        <p class="cv-etiqueta">
+                            ORGANIZE SEUS PAGAMENTOS
+                        </p>
+
+                        <h2 id="cv-cadastro-titulo">
+                            Vamos colocar na agenda?
+                        </h2>
+
+                        <p>
+                            Cadastre uma conta para
+                            acompanhar o vencimento
+                            e confirmar o pagamento
+                            quando ele acontecer.
+                        </p>
+
+                    </header>
+
+
+                    <!-- ========== FORMULÁRIO DE CADASTRO ========== -->
+
+                    <form class="cv-formulario"
+                          id="cv-form-cadastro">
+
+                        <!-- ========== NOME DA CONTA ========== -->
+
+                        <div class="cv-campo cv-campo-largo">
+
+                            <label for="cv-conta-nome">
+                                Nome da conta
+                            </label>
+
+                            <input
+                                type="text"
+                                id="cv-conta-nome"
+                                name="descricao"
+                                maxlength="100"
+                                placeholder="Ex.: aluguel, internet, energia..."
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- ========== VALOR DA CONTA ========== -->
+
+                        <div class="cv-campo">
+
+                            <label for="cv-conta-valor">
+                                Valor da conta (R$)
+                            </label>
+
+                            <input
+                                type="number"
+                                id="cv-conta-valor"
+                                name="valor"
+                                min="0.01"
+                                step="0.01"
+                                inputmode="decimal"
+                                placeholder="0,00"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- ========== DATA DE VENCIMENTO ========== -->
+
+                        <div class="cv-campo">
+
+                            <label for="cv-conta-vencimento">
+                                Data de vencimento
+                            </label>
+
+                            <input
+                                type="date"
+                                id="cv-conta-vencimento"
+                                name="vencimento"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- ========== CATEGORIA ========== -->
+
+                        <div class="cv-campo">
+
+                            <label for="cv-conta-categoria">
+                                Categoria
+                            </label>
+
+                            <select
+                                id="cv-conta-categoria"
+                                name="categoria"
+                                required>
+
+                                <option value="">
+                                    Selecione uma categoria
+                                </option>
+
+                                <option value="moradia">
+                                    Moradia
+                                </option>
+
+                                <option value="alimentacao">
+                                    Alimentação
+                                </option>
+
+                                <option value="transporte">
+                                    Transporte
+                                </option>
+
+                                <option value="saude">
+                                    Saúde
+                                </option>
+
+                                <option value="educacao">
+                                    Educação
+                                </option>
+
+                                <option value="lazer">
+                                    Lazer
+                                </option>
+
+                                <option value="servicos">
+                                    Serviços e assinaturas
+                                </option>
+
+                                <option value="dividas">
+                                    Dívidas e parcelas
+                                </option>
+
+                                <option value="outros">
+                                    Outros
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- ========== TIPO DE GASTO ========== -->
+
+                        <div class="cv-campo">
+
+                            <label for="cv-conta-tipo">
+                                Tipo de gasto
+                            </label>
+
+                            <select
+                                id="cv-conta-tipo"
+                                name="tipo"
+                                required>
+
+                                <option value="">
+                                    Selecione
+                                </option>
+
+                                <option value="fixo">
+                                    Fixo
+                                </option>
+
+                                <option value="variavel">
+                                    Variável
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- ========== RECORRÊNCIA ========== -->
+
+                        <div class="cv-campo cv-campo-largo">
+
+                            <label for="cv-conta-recorrencia">
+                                Essa conta se repete?
+                            </label>
+
+                            <select
+                                id="cv-conta-recorrencia"
+                                name="recorrencia"
+                                required>
+
+                                <option value="unica">
+                                    Não, é uma conta única
+                                </option>
+
+                                <option value="mensal">
+                                    Sim, todos os meses
+                                </option>
+
+                            </select>
+
+<!-- ========== EXPLICAÇÃO DA RECORRÊNCIA ========== -->
+
+<small>
+    Marque a opção mensal para organizar
+    contas que se repetem todos os meses.
+</small>
+
+
+                        </div>
+
+
+                        <!-- ========== BOTÃO DE CADASTRO ========== -->
+
+                        <div class="cv-formulario-rodape">
+
+                            <!--
+                                Habilitar quando o salvamento
+                                estiver implementado.
+                            -->
+
+                            <button
+                                type="submit"
+                                class="cv-botao-salvar"
+                                id="cv-salvar-conta"
+                                disabled>
+
+                                Cadastrar conta
+
+                            </button>
+
+                            <!-- ========== MENSAGEM DE RESULTADO ========== -->
+
+                            <p class="cv-mensagem-formulario"
+                               id="cv-mensagem-cadastro"
+                               role="status"
+                               aria-live="polite"
+                               hidden>
+                            </p>
+
+                        </div>
+
+                    </form>
+
+                </section>
+
+
+                <!-- ========================================
+                     10. SITUAÇÃO DAS CONTAS
+                ======================================== -->
+
+                <section class="cv-situacao"
+                         aria-labelledby="cv-situacao-titulo">
+
+                    <header class="cv-secao-topo">
+
+                        <p class="cv-etiqueta">
+                            TUDO NO SEU LUGAR
+                        </p>
+
+                        <h2 id="cv-situacao-titulo">
+                            Como estão suas contas?
+                        </h2>
+
+                        <p>
+                            Confira os pagamentos pendentes,
+                            atrasados e já concluídos.
+                        </p>
+
+                    </header>
+
+
+                    <!-- ========== GRUPOS DE PAGAMENTOS ========== -->
+
+                    <div class="cv-situacao-grade">
+
+
+                        <!-- ========== CONTAS PENDENTES ========== -->
+
+                        <section class="cv-grupo cv-grupo-pendentes"
+                                 aria-labelledby="cv-pendentes-titulo">
+
+                            <h3 id="cv-pendentes-titulo">
+                                A pagar
+                            </h3>
+
+                            <div class="cv-estado-lista"
+                                 id="cv-pendentes-vazio">
+
+                                Nenhuma conta pendente.
+                            </div>
+
+                            <ul class="cv-lista-contas"
+                                id="cv-lista-pendentes"
+                                hidden>
+                            </ul>
+
+                        </section>
+
+
+                        <!-- ========== CONTAS ATRASADAS ========== -->
+
+                        <section class="cv-grupo cv-grupo-atrasadas"
+                                 aria-labelledby="cv-atrasadas-titulo">
+
+                            <h3 id="cv-atrasadas-titulo">
+                                Vencidas
+                            </h3>
+
+                            <div class="cv-estado-lista"
+                                 id="cv-atrasadas-vazio">
+
+                                Nenhuma conta vencida.
+                            </div>
+
+                            <ul class="cv-lista-contas"
+                                id="cv-lista-atrasadas"
+                                hidden>
+                            </ul>
+
+                        </section>
+
+
+                        <!-- ========== CONTAS PAGAS ========== -->
+
+                        <section class="cv-grupo cv-grupo-pagas"
+                                 aria-labelledby="cv-pagas-titulo">
+
+                            <h3 id="cv-pagas-titulo">
+                                Pagas
+                            </h3>
+
+                            <div class="cv-estado-lista"
+                                 id="cv-pagas-vazio">
+
+                                Nenhum pagamento confirmado
+                                neste período.
+                            </div>
+
+                            <ul class="cv-lista-contas"
+                                id="cv-lista-pagas"
+                                hidden>
+                            </ul>
+
+                        </section>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ========================================
+                     11. MODELO DE ITEM DE CONTA
+                ======================================== -->
+
+                <!--
+                    Este template NÃO aparece na tela.
+
+                    O JavaScript poderá copiar este modelo
+                    para criar contas nas listas acima.
+
+                    Cada conta precisará ter um ID real,
+                    descrição, valor, vencimento e situação.
+
+                    "Marcar como paga" deve atualizar
+                    o mesmo registro em Meus Gastos,
+                    sem criar uma despesa duplicada.
+
+                    Após marcar como paga, será necessário
+                    registrar data e valor efetivamente pago.
+                -->
+
+                <template id="cv-modelo-item-conta">
+
+                    <li class="cv-item-conta">
+
+                        <div class="cv-item-informacoes">
+
+                            <strong class="cv-item-nome"></strong>
+
+                            <span class="cv-item-vencimento"></span>
+
+                            <span class="cv-item-situacao"></span>
+
+                        </div>
+
+                        <div class="cv-item-acoes">
+
+                            <strong class="cv-item-valor"></strong>
+
+                            <button
+                                type="button"
+                                class="cv-item-confirmar"
+                                data-acao="confirmar-pagamento">
+
+                                Marcar como paga
+
+                            </button>
+
+                            <button
+                                type="button"
+                                class="cv-item-editar"
+                                data-acao="editar-conta">
+
+                                Editar
+
+                            </button>
+
+                        </div>
+
+                    </li>
+
+                </template>
+
+
+                <!-- ========================================
+                     12. CONFIRMAÇÃO DE PAGAMENTO
+                ======================================== -->
+
+                <!--
+                    Este formulário será exibido para a
+                    conta selecionada quando a integração
+                    estiver pronta.
+
+                    O sistema deve registrar a data
+                    e o valor efetivamente pago.
+                -->
+
+                <dialog class="cv-dialogo"
+                        id="cv-dialogo-pagamento"
+                        aria-labelledby="cv-dialogo-titulo">
+
+                    <form class="cv-formulario"
+                          id="cv-form-pagamento">
+
+                        <h2 id="cv-dialogo-titulo">
+                            Confirmar pagamento
+                        </h2>
+
+                        <p id="cv-conta-selecionada">
+                            Conta selecionada
+                        </p>
+
+                        <input
+                            type="hidden"
+                            id="cv-pagamento-conta-id"
+                            name="conta_id"
+                        >
+
+
+                        <!-- ========== VALOR PAGO ========== -->
+
+                        <div class="cv-campo">
+
+                            <label for="cv-pagamento-valor">
+                                Valor pago (R$)
+                            </label>
+
+                            <input
+                                type="number"
+                                id="cv-pagamento-valor"
+                                name="valor_pago"
+                                min="0.01"
+                                step="0.01"
+                                inputmode="decimal"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- ========== DATA DO PAGAMENTO ========== -->
+
+                        <div class="cv-campo">
+
+                            <label for="cv-pagamento-data">
+                                Data do pagamento
+                            </label>
+
+                            <input
+                                type="date"
+                                id="cv-pagamento-data"
+                                name="data_pagamento"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- ========== AÇÕES ========== -->
+
+                        <div class="cv-dialogo-acoes">
+
+                            <button
+                                type="button"
+                                class="cv-dialogo-cancelar"
+                                id="cv-cancelar-pagamento">
+
+                                Cancelar
+
+                            </button>
+
+                            <button
+                                type="submit"
+                                class="cv-botao-salvar"
+                                id="cv-confirmar-pagamento"
+                                disabled>
+
+                                Confirmar pagamento
+
+                            </button>
+
+                        </div>
+
+                        <p class="cv-mensagem-formulario"
+                           id="cv-mensagem-pagamento"
+                           role="status"
+                           aria-live="polite"
+                           hidden>
+                        </p>
+
+                    </form>
+
+                </dialog>
+
+
+                <!-- ========================================
+                     13. ORIENTAÇÃO FINANCEIRA
+                ======================================== -->
+
+                <aside class="cv-orientacao">
+
+                    <span class="cv-orientacao-icone"
+                          aria-hidden="true">
+                        ✦
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Uma conta não espera a outra.
+                        </h2>
+
+                        <p>
+                            Quando muitos vencimentos
+                            ficam próximos, pode ser difícil
+                            organizar o dinheiro do mês.
+
+                            Conhecer essas datas ajuda
+                            a planejar pagamentos e entender
+                            quais compromissos precisam
+                            de atenção primeiro.
+                        </p>
+
+                    </div>
+
+                </aside>
+
+
+                <!-- ========== VOLTAR À MINHA ÁREA ========== -->
+
+                <a href="minha-area.html"
+                   class="cv-voltar">
+
+                    ← Voltar à Minha Área
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- ========================================
+         14. RODAPÉ
+    ======================================== -->
+
+    <footer class="rodape">
+
+        <div class="container rodape-conteudo">
+
+            <p>
+                Base 6 — Educação financeira para todos.
+            </p>
+
+            <a href="inicio.html">
+                Voltar ao início
+            </a>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>

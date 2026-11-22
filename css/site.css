@@ -1168,3 +1168,298 @@ button.botao-principal:not(:disabled):hover {
     }
 
 }
+
+
+
+
+/* ========================================
+   PREFERÊNCIAS DE APRENDIZADO - BASE 6
+======================================== */
+
+/* ========== QUADRO DAS PREFERÊNCIAS ========== */
+
+.preferencias-estudo {
+    min-width: 0;
+    margin-top: 15px;
+    padding: 25px;
+
+    background: #f0f5f6;
+
+    border: 1px solid #d1e0e3;
+    border-radius: 16px;
+}
+
+
+/* ========== TÍTULO ========== */
+
+.preferencias-estudo legend {
+    padding: 0 8px;
+
+    color: #173529;
+
+    font-size: 1.12rem;
+    font-weight: 800;
+}
+
+
+/* ========== DESCRIÇÃO ========== */
+
+.preferencias-descricao {
+    margin-bottom: 20px;
+
+    color: #53665b;
+
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+
+/* ========== LISTA DE OPÇÕES ========== */
+
+.lista-preferencias {
+    display: flex;
+    flex-direction: column;
+
+    gap: 11px;
+}
+
+
+/* ========== CADA OPÇÃO ========== */
+
+.opcao-preferencia {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+    padding: 13px 15px;
+
+    background: #ffffff;
+
+    border: 1px solid #d9e3df;
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+/* ========== EFEITO AO PASSAR O MOUSE ========== */
+
+.opcao-preferencia:hover {
+    background: #eaf3e9;
+    border-color: #85ac8b;
+}
+
+
+/* ========== BOTÕES DE SELEÇÃO ========== */
+
+.opcao-preferencia input {
+    width: 19px;
+    height: 19px;
+
+    flex-shrink: 0;
+
+    accent-color: #39764d;
+
+    cursor: pointer;
+}
+
+
+/* ========== TEXTO DAS OPÇÕES ========== */
+
+.opcao-preferencia span {
+    color: #263e32;
+
+    font-size: 0.92rem;
+    font-weight: 600;
+}
+
+
+/* ========== OPÇÃO SELECIONADA ========== */
+
+.opcao-preferencia:has(input:checked) {
+    background: #e9f5df;
+    border-color: #84af75;
+}
+
+
+/* ========== FOCO PELO TECLADO ========== */
+
+.opcao-preferencia:focus-within {
+    outline: 2px solid #39764d;
+    outline-offset: 3px;
+}
+
+
+/* ========== INFORMAÇÃO FINAL ========== */
+
+.preferencias-rodape {
+    margin-top: 18px;
+
+    color: #62766b;
+
+    font-size: 0.8rem;
+    line-height: 1.6;
+}
+
+
+/* ========== RESPONSIVIDADE - CELULAR ========== */
+
+@media (max-width: 600px) {
+
+    .preferencias-estudo {
+        padding: 18px;
+    }
+
+    .opcao-preferencia {
+        padding: 12px;
+    }
+
+}
+
+
+/* ========== REDUÇÃO DE MOVIMENTOS ========== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .opcao-preferencia {
+        transition: none;
+    }
+
+}
+
+
+
+
+
+/* ========================================
+   AJUSTES VISUAIS - TELA DE LOGIN
+======================================== */
+
+/* ========== PAINEL DE BOAS-VINDAS ========== */
+
+.pagina-login .painel-conta {
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(199, 242, 56, 0.13),
+            transparent 45%
+        ),
+        #071b14;
+
+    border-radius: 28px;
+}
+
+
+/* ========== CARTÃO DO FORMULÁRIO ========== */
+
+.pagina-login .cartao-formulario {
+    border-radius: 28px;
+}
+
+
+/* ========== CAMPOS DO LOGIN ========== */
+
+.pagina-login .campo input {
+    border-radius: 13px;
+}
+
+
+/* ========== DESTAQUE INFERIOR ========== */
+
+.pagina-login .painel-destaque {
+    background: rgba(169, 201, 211, 0.12);
+
+    border: 1px solid rgba(169, 201, 211, 0.18);
+    border-radius: 18px;
+}
+
+
+
+
+
+/* ========================================
+   AJUSTE DE POSIÇÃO - CADASTRO
+======================================== */
+
+.pagina-cadastro .main-conta {
+    align-items: flex-start;
+    padding-top: 38px;
+}
+
+.pagina-cadastro .conta-conteudo {
+    align-items: flex-start;
+}
+
+.pagina-cadastro .painel-conta {
+    align-self: flex-start;
+    margin-top: 0;
+}
+
+/* ========== CELULAR ========== */
+
+@media (max-width: 700px) {
+    .pagina-cadastro .main-conta {
+        padding-top: 28px;
+    }
+}
+
+
+
+
+/* ========================================
+   COROA BASE 6 - CORREÇÃO DO CABEÇALHO
+======================================== */
+
+/* ========== LINK DA COROA ========== */
+
+.base6-coroa-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 76px;
+    height: 70px;
+
+    justify-self: start;
+    flex-shrink: 0;
+
+    text-decoration: none;
+}
+
+
+/* ========== DESENHO DA COROA ========== */
+
+.base6-coroa-link .base6-coroa-icone {
+    display: block;
+
+    width: 60px;
+    height: 42px;
+
+    color: #c7f238;
+
+    transform: rotate(-8deg);
+
+    filter: drop-shadow(
+        2px 3px 0 rgba(0, 0, 0, 0.4)
+    );
+}
+
+
+/* ========== EFEITO AO PASSAR O MOUSE ========== */
+
+.base6-coroa-link:hover .base6-coroa-icone {
+    transform: rotate(0deg) scale(1.06);
+}
+
+
+/* ========== ACESSIBILIDADE ========== */
+
+.base6-coroa-link:focus-visible {
+    outline: 3px solid #c7f238;
+    outline-offset: 3px;
+    border-radius: 12px;
+}

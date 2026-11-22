@@ -1,0 +1,1274 @@
+
+/* ========================================
+   BASE 6 - MEUS GASTOS
+   ARQUIVO: meus-gastos.css
+======================================== */
+
+
+/* ========================================
+   1. IDENTIDADE VISUAL
+======================================== */
+
+.pagina-gastos {
+    --gastos-fundo: #f7f0e7;
+    --gastos-texto: #19382b;
+    --gastos-suave: #637169;
+
+    --gastos-terracota: #a95f45;
+    --gastos-coral: #f4d8c7;
+    --gastos-petroleo: #193f49;
+
+    --gastos-azul: #dfedf1;
+    --gastos-lavanda: #e9e2f2;
+    --gastos-verde: #c7f238;
+    --gastos-bege: #fff8ec;
+
+    background: var(--gastos-fundo);
+}
+
+
+/* ========================================
+   2. ESTRUTURA PRINCIPAL
+======================================== */
+
+.pagina-gastos .painel-layout {
+    width: min(1400px, calc(100% - 48px));
+
+    grid-template-columns: 230px minmax(0, 1fr);
+
+    gap: 32px;
+    padding-top: 43px;
+}
+
+.gastos-conteudo {
+    display: flex;
+    flex-direction: column;
+
+    gap: 35px;
+
+    min-width: 0;
+}
+
+
+/* ========================================
+   3. MENU LATERAL - PÁGINA ATIVA
+======================================== */
+
+.pagina-gastos .gastos-link-ativo {
+    background: #c7f238;
+    color: #173528;
+
+    border-radius: 13px;
+    font-weight: 800;
+}
+
+.pagina-gastos .gastos-link-ativo:hover {
+    background: #ddfa8d;
+    color: #173528;
+}
+
+
+/* ========================================
+   4. APRESENTAÇÃO DA PÁGINA
+======================================== */
+
+.gastos-apresentacao {
+    padding: 6px 0 10px;
+}
+
+
+/* ========== CAMINHO DE NAVEGAÇÃO ========== */
+
+.gastos-caminho {
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+    margin-bottom: 28px;
+
+    color: #718076;
+    font-size: 0.86rem;
+}
+
+.gastos-caminho a {
+    color: #376e50;
+    font-weight: 700;
+}
+
+.gastos-caminho a:hover {
+    text-decoration: underline;
+}
+
+
+/* ========== TÍTULO E TEXTO ========== */
+
+.gastos-apresentacao-linha {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 28px;
+}
+
+.gastos-apresentacao-texto {
+    max-width: 700px;
+}
+
+.gastos-etiqueta {
+    margin-bottom: 10px;
+
+    color: #986447;
+
+    font-size: 0.73rem;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.gastos-apresentacao h1 {
+    color: #19392e;
+
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    font-weight: 800;
+
+    line-height: 1.13;
+    letter-spacing: -1.8px;
+}
+
+.gastos-apresentacao h1 span {
+    color: #a95f45;
+}
+
+.gastos-apresentacao-texto > p:last-child {
+    max-width: 650px;
+
+    margin-top: 22px;
+
+    color: #5d7064;
+
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   5. DECORAÇÃO DA APRESENTAÇÃO
+======================================== */
+
+.gastos-decoracao {
+    position: relative;
+
+    display: grid;
+    place-items: center;
+
+    width: 155px;
+    height: 155px;
+
+    flex-shrink: 0;
+}
+
+
+/* ========== CÍRCULO COM SÍMBOLO ========== */
+
+.gastos-decoracao-circulo {
+    display: grid;
+    place-items: center;
+
+    width: 125px;
+    height: 125px;
+
+    background: #f1d0b6;
+    color: #8e513e;
+
+    border-radius: 42% 58% 35% 65%;
+
+    font-size: 5rem;
+    font-weight: 800;
+
+    transform: rotate(-10deg);
+
+    box-shadow:
+        12px 12px 0 rgba(169, 95, 69, 0.12);
+}
+
+
+/* ========== ESTRELA DECORATIVA ========== */
+
+.gastos-decoracao-estrela {
+    position: absolute;
+
+    top: -5px;
+    right: 0;
+
+    color: #578e80;
+
+    font-size: 3rem;
+}
+
+
+/* ========================================
+   6. BALANÇO DO MÊS
+======================================== */
+
+.gastos-balanco {
+    padding: 35px;
+
+    background:
+        radial-gradient(
+            circle at 95% 5%,
+            rgba(255, 224, 183, 0.28),
+            transparent 45%
+        ),
+        #a95f45;
+
+    color: #ffffff;
+
+    border-radius: 29px 29px 60px 29px;
+
+    box-shadow:
+        0 12px 28px rgba(118, 73, 51, 0.12);
+}
+
+
+/* ========== CABEÇALHO DO BALANÇO ========== */
+
+.gastos-balanco-topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.gastos-balanco .gastos-etiqueta {
+    color: #fff0bc;
+}
+
+.gastos-balanco h2 {
+    color: #ffffff;
+
+    font-size: clamp(1.5rem, 2.4vw, 2rem);
+    line-height: 1.3;
+}
+
+.gastos-periodo {
+    padding: 9px 16px;
+
+    background: rgba(255, 255, 255, 0.16);
+    color: #ffffff;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 30px;
+
+    font-size: 0.82rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+
+/* ========================================
+   7. VALORES DOS GASTOS
+======================================== */
+
+.gastos-valores {
+    display: grid;
+
+    grid-template-columns: 1.35fr 1fr 1fr;
+    gap: 0;
+}
+
+.gastos-valores > div {
+    min-width: 0;
+    padding: 5px 23px;
+}
+
+.gastos-valores > div:first-child {
+    padding-left: 0;
+}
+
+.gastos-valores > div + div {
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+/* ========== TÍTULOS ========== */
+
+.gastos-valores dt {
+    margin-bottom: 15px;
+
+    color: #fff0e6;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+
+/* ========== VALORES ========== */
+
+.gastos-valores dd {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: clamp(1.5rem, 2.4vw, 2.1rem);
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.gastos-total dd {
+    color: #fff2c9;
+
+    font-size: clamp(2rem, 3.5vw, 3.3rem);
+}
+
+
+/* ========== DESCRIÇÕES ========== */
+
+.gastos-valores p {
+    margin-top: 12px;
+
+    color: #fff0e6;
+
+    font-size: 0.82rem;
+    line-height: 1.6;
+}
+
+
+/* ========== CONTAS PENDENTES ========== */
+
+.gastos-pendentes-resumo {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 12px 22px;
+
+    margin-top: 30px;
+    padding: 18px 22px;
+
+    background: rgba(70, 31, 19, 0.25);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+}
+
+.gastos-pendentes-resumo span {
+    font-size: 0.91rem;
+    font-weight: 700;
+}
+
+.gastos-pendentes-resumo strong {
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+.gastos-pendentes-resumo small {
+    color: #ffe4d4;
+
+    font-size: 0.78rem;
+}
+
+
+/* ========================================
+   8. CABEÇALHOS DAS SEÇÕES
+======================================== */
+
+.gastos-secao-topo {
+    margin-bottom: 24px;
+}
+
+.gastos-secao-topo h2 {
+    color: #19382b;
+
+    font-size: clamp(1.55rem, 2.7vw, 2.2rem);
+    line-height: 1.3;
+}
+
+.gastos-secao-topo > p:last-child {
+    max-width: 650px;
+
+    margin-top: 11px;
+
+    color: #617166;
+
+    font-size: 0.94rem;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   9. ADICIONAR GASTOS
+======================================== */
+
+.gastos-registros-grade {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    align-items: start;
+    gap: 20px;
+}
+
+
+/* ========== PAINÉIS EXPANSÍVEIS ========== */
+
+.gastos-registro {
+    min-width: 0;
+
+    overflow: hidden;
+
+    border: 1px solid transparent;
+    border-radius: 23px;
+}
+
+.registro-pago {
+    background: #e0eccf;
+    border-color: #cbdcb7;
+}
+
+.registro-pendente {
+    background: #f3ddca;
+    border-color: #eacdb5;
+}
+
+
+/* ========== ÁREA CLICÁVEL ========== */
+
+.gastos-registro summary {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    min-height: 91px;
+    padding: 23px;
+
+    color: #19382b;
+
+    font-size: 1.05rem;
+    font-weight: 800;
+
+    cursor: pointer;
+    list-style: none;
+}
+
+.gastos-registro summary::-webkit-details-marker {
+    display: none;
+}
+
+.gastos-registro summary::marker {
+    content: "";
+}
+
+.gastos-registro summary:hover {
+    background: rgba(255, 255, 255, 0.22);
+}
+
+
+/* ========== BOTÃO DE MAIS ========== */
+
+.gastos-mais {
+    display: grid;
+    place-items: center;
+
+    width: 43px;
+    height: 43px;
+
+    flex-shrink: 0;
+
+    background: rgba(255, 255, 255, 0.67);
+
+    border-radius: 50%;
+
+    font-size: 1.7rem;
+    line-height: 1;
+}
+
+.gastos-registro[open] .gastos-mais {
+    transform: rotate(45deg);
+}
+
+
+/* ========================================
+   10. FORMULÁRIOS
+======================================== */
+
+.gastos-formulario {
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+    padding: 24px;
+
+    background: #fffdf9;
+
+    border-top: 1px solid rgba(30, 55, 40, 0.12);
+}
+
+.gastos-campo {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.gastos-campo label {
+    color: #2c4a3b;
+
+    font-size: 0.87rem;
+    font-weight: 800;
+}
+
+
+/* ========== INPUTS E SELECT ========== */
+
+.gastos-campo input,
+.gastos-campo select {
+    width: 100%;
+    min-height: 49px;
+
+    padding: 12px 14px;
+
+    background: #ffffff;
+    color: #19382b;
+
+    border: 1px solid #b7c9bd;
+    border-radius: 12px;
+
+    font-family: inherit;
+    font-size: 0.94rem;
+}
+
+.gastos-campo input:focus,
+.gastos-campo select:focus {
+    outline: 2px solid #8fb59b;
+    outline-offset: 2px;
+
+    border-color: #4a7d60;
+}
+
+
+/* ========== BOTÃO SALVAR ========== */
+
+.gastos-salvar {
+    min-height: 49px;
+
+    padding: 13px 18px;
+
+    background: #193f49;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 13px;
+
+    font-family: inherit;
+    font-weight: 800;
+}
+
+.gastos-salvar:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+
+/* ========== AVISO DO FORMULÁRIO ========== */
+
+.gastos-aviso {
+    color: #647469;
+
+    font-size: 0.79rem;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   11. GASTOS POR CATEGORIA
+======================================== */
+
+.gastos-categorias {
+    padding: 35px;
+
+    background: #dfedf1;
+
+    border: 1px solid #cddfe5;
+    border-radius: 28px;
+}
+
+
+/* ========== CONTEÚDO DAS CATEGORIAS ========== */
+
+.gastos-categorias-corpo {
+    display: grid;
+
+    grid-template-columns: 0.85fr 1.15fr;
+
+    align-items: center;
+    gap: 35px;
+}
+
+
+/* ========== GRÁFICO VAZIO ========== */
+
+.gastos-grafico-vazio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 19px;
+    padding: 20px;
+
+    text-align: center;
+}
+
+.gastos-anel {
+    display: grid;
+    place-items: center;
+
+    width: 180px;
+    height: 180px;
+
+    background: transparent;
+
+    border: 23px dashed #abcdd5;
+    border-radius: 50%;
+}
+
+.gastos-anel span {
+    color: #53828f;
+
+    font-size: 2.1rem;
+    font-weight: 800;
+}
+
+.gastos-grafico-vazio p {
+    color: #557681;
+
+    font-size: 0.86rem;
+    font-weight: 700;
+}
+
+
+/* ========== LEGENDA DAS CATEGORIAS ========== */
+
+.gastos-legenda {
+    padding: 26px;
+
+    background: rgba(255, 255, 255, 0.62);
+
+    border-radius: 20px;
+}
+
+.legenda-titulo {
+    margin-bottom: 17px;
+
+    color: #244c57;
+
+    font-size: 0.97rem;
+    font-weight: 800;
+}
+
+.gastos-legenda ul {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 15px;
+
+    list-style: none;
+}
+
+.gastos-legenda li {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    color: #465f67;
+
+    font-size: 0.87rem;
+}
+
+
+/* ========== MARCADORES COLORIDOS ========== */
+
+.legenda-cor {
+    display: block;
+
+    width: 11px;
+    height: 11px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+}
+
+.cor-alimentacao {
+    background: #d78768;
+}
+
+.cor-moradia {
+    background: #598e7b;
+}
+
+.cor-transporte {
+    background: #729bc5;
+}
+
+.cor-saude {
+    background: #9e86bd;
+}
+
+.cor-outros {
+    background: #c6a765;
+}
+
+.legenda-aviso {
+    margin-top: 22px;
+
+    color: #627c82;
+
+    font-size: 0.8rem;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   12. HISTÓRICO DE GASTOS
+======================================== */
+
+.gastos-historico {
+    padding: 32px;
+
+    background: #fffdf8;
+
+    border: 1px solid #e8e2d8;
+    border-radius: 27px;
+}
+
+
+/* ========== FILTROS ========== */
+
+.gastos-filtros {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.gastos-filtros .gastos-campo {
+    flex: 1 1 160px;
+    max-width: 250px;
+}
+
+.gastos-filtros select {
+    background: #f8f7f2;
+}
+
+.gastos-filtro-aviso {
+    color: #69786e;
+
+    font-size: 0.78rem;
+    line-height: 1.5;
+}
+
+
+/* ========== TABELA ========== */
+
+.gastos-tabela-area {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.gastos-tabela {
+    width: 100%;
+
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.gastos-tabela thead {
+    background: #f2eee6;
+}
+
+.gastos-tabela th {
+    padding: 16px 14px;
+
+    color: #475a4d;
+
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+.gastos-tabela th:first-child {
+    border-radius: 12px 0 0 12px;
+}
+
+.gastos-tabela th:last-child {
+    border-radius: 0 12px 12px 0;
+}
+
+.gastos-tabela td {
+    padding: 20px 14px;
+
+    color: #637267;
+
+    font-size: 0.9rem;
+
+    border-bottom: 1px solid #eee9e1;
+}
+
+.gastos-tabela-vazia {
+    padding: 37px 15px !important;
+
+    color: #728075 !important;
+    text-align: center;
+}
+
+
+/* ========== LEGENDA SOMENTE PARA LEITORES DE TELA ========== */
+
+.gastos-sr-only {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    margin: -1px;
+    padding: 0;
+
+    overflow: hidden;
+
+    clip-path: inset(50%);
+    white-space: nowrap;
+
+    border: 0;
+}
+
+
+/* ========================================
+   13. COMPRAS PARCELADAS
+======================================== */
+
+.gastos-parcelas {
+    display: grid;
+
+    grid-template-columns: 1.15fr 0.85fr;
+
+    align-items: center;
+    gap: 30px;
+
+    padding: 33px;
+
+    background: #e9e2f2;
+
+    border: 1px solid #dacfea;
+    border-radius: 27px;
+}
+
+.gastos-parcelas h2 {
+    margin-bottom: 13px;
+
+    color: #4b4169;
+
+    font-size: clamp(1.5rem, 2.6vw, 2rem);
+    line-height: 1.3;
+}
+
+.gastos-parcelas-texto > p:not(.gastos-etiqueta) {
+    color: #675e7d;
+
+    font-size: 0.93rem;
+    line-height: 1.75;
+}
+
+.gastos-parcelas-nota {
+    margin-top: 17px;
+
+    font-size: 0.84rem !important;
+    font-weight: 700;
+}
+
+
+/* ========== ESTADO SEM PARCELAS ========== */
+
+.gastos-parcelas-estado {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 11px;
+    padding: 26px;
+
+    background: rgba(255, 255, 255, 0.65);
+
+    border-radius: 20px;
+}
+
+.gastos-parcelas-estado span {
+    color: #7869a2;
+
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.gastos-parcelas-estado strong {
+    color: #4b4169;
+
+    font-size: 1rem;
+}
+
+.gastos-parcelas-estado p {
+    color: #706584;
+
+    font-size: 0.88rem;
+}
+
+
+/* ========================================
+   14. HÁBITOS DE CONSUMO
+======================================== */
+
+.gastos-reflexao {
+    padding: 32px 35px;
+
+    background: #f9e5d1;
+
+    border: 1px solid #efd3bc;
+    border-radius: 27px;
+}
+
+.gastos-reflexao h2 {
+    margin-bottom: 15px;
+
+    color: #633f30;
+
+    font-size: clamp(1.5rem, 2.6vw, 2rem);
+}
+
+.gastos-reflexao header > p:last-child {
+    max-width: 700px;
+
+    color: #735a4b;
+
+    font-size: 0.94rem;
+    line-height: 1.75;
+}
+
+
+/* ========== LISTA DE PRIORIDADES ========== */
+
+.gastos-prioridades {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 22px;
+
+    margin-top: 30px;
+
+    list-style: none;
+}
+
+.gastos-prioridades li {
+    padding-top: 18px;
+
+    border-top: 2px solid #ddbfa5;
+}
+
+
+/* ========== MARCAS DE CADA PRIORIDADE ========== */
+
+.prioridade-marca {
+    display: block;
+
+    width: 34px;
+    height: 8px;
+
+    margin-bottom: 18px;
+
+    border-radius: 10px;
+}
+
+.marca-essencial {
+    background: #528c69;
+}
+
+.marca-planejavel {
+    background: #6e91b4;
+}
+
+.marca-ocasional {
+    background: #b47c61;
+}
+
+
+/* ========== TEXTOS DA REFLEXÃO ========== */
+
+.gastos-prioridades h3 {
+    margin-bottom: 10px;
+
+    color: #593d31;
+
+    font-size: 1.05rem;
+}
+
+.gastos-prioridades p {
+    color: #765e50;
+
+    font-size: 0.87rem;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   15. DICA FINANCEIRA
+======================================== */
+
+.gastos-dica {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 20px;
+    padding: 27px 30px;
+
+    background: #e6ebdb;
+
+    border-left: 5px solid #7ca17b;
+    border-radius: 14px 24px 24px 14px;
+}
+
+.gastos-dica-icone {
+    color: #518458;
+
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.gastos-dica h2 {
+    margin-bottom: 10px;
+
+    color: #34553e;
+
+    font-size: 1.2rem;
+}
+
+.gastos-dica p {
+    color: #576d5b;
+
+    font-size: 0.94rem;
+    line-height: 1.75;
+}
+
+
+/* ========================================
+   16. VOLTAR À MINHA ÁREA
+======================================== */
+
+.gastos-voltar {
+    align-self: flex-start;
+
+    padding: 10px 0;
+
+    color: #32674d;
+
+    font-size: 0.92rem;
+    font-weight: 800;
+}
+
+.gastos-voltar:hover {
+    text-decoration: underline;
+}
+
+
+/* ========================================
+   17. RESPONSIVIDADE - TABLETS
+======================================== */
+
+@media (max-width: 1050px) {
+
+    /* ========== ORGANIZAÇÃO PRINCIPAL ========== */
+
+    .pagina-gastos .painel-layout {
+        grid-template-columns: 205px minmax(0, 1fr);
+
+        gap: 22px;
+    }
+
+
+    /* ========== BALANÇO EM DUAS COLUNAS ========== */
+
+    .gastos-valores {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .gastos-total {
+        grid-column: 1 / -1;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .gastos-valores > div {
+        padding: 20px;
+    }
+
+    .gastos-valores > div:first-child {
+        padding-left: 20px;
+    }
+
+    .gastos-valores > div:nth-child(2) {
+        border-left: none;
+    }
+
+
+    /* ========== OUTRAS ÁREAS ========== */
+
+    .gastos-registros-grade,
+    .gastos-categorias-corpo,
+    .gastos-parcelas {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* ========================================
+   18. RESPONSIVIDADE - CELULARES
+======================================== */
+
+@media (max-width: 760px) {
+
+    /* ========== ESTRUTURA GERAL ========== */
+
+    .pagina-gastos .painel-layout {
+        width: calc(100% - 32px);
+
+        grid-template-columns: 1fr;
+
+        gap: 24px;
+        padding-top: 25px;
+    }
+
+
+    /* ========== APRESENTAÇÃO ========== */
+
+    .gastos-apresentacao h1 {
+        font-size: clamp(2.25rem, 8vw, 3.2rem);
+    }
+
+    .gastos-decoracao {
+        display: none;
+    }
+
+
+    /* ========== BALANÇO ========== */
+
+    .gastos-balanco {
+        padding: 26px 22px;
+
+        border-radius: 24px;
+    }
+
+    .gastos-balanco-topo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .gastos-valores {
+        grid-template-columns: 1fr;
+    }
+
+    .gastos-valores > div,
+    .gastos-valores > div:first-child {
+        grid-column: auto;
+
+        padding: 20px 0;
+
+        border-left: none;
+    }
+
+    .gastos-valores > div + div {
+        border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .gastos-total {
+        border-bottom: none;
+    }
+
+
+    /* ========== FORMULÁRIOS ========== */
+
+    .gastos-registros-grade {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* ========== CATEGORIAS ========== */
+
+    .gastos-categorias {
+        padding: 25px;
+    }
+
+    .gastos-anel {
+        width: 145px;
+        height: 145px;
+
+        border-width: 17px;
+    }
+
+    .gastos-legenda {
+        padding: 20px;
+    }
+
+
+    /* ========== HISTÓRICO ========== */
+
+    .gastos-historico {
+        padding: 23px;
+    }
+
+    .gastos-tabela {
+        min-width: 650px;
+    }
+
+
+    /* ========== PARCELAS E REFLEXÃO ========== */
+
+    .gastos-parcelas,
+    .gastos-reflexao {
+        padding: 25px;
+    }
+
+    .gastos-prioridades {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+
+    /* ========== DICA FINAL ========== */
+
+    .gastos-dica {
+        padding: 22px;
+    }
+
+}
+
+
+/* ========================================
+   19. ACESSIBILIDADE
+======================================== */
+
+.gastos-registro summary:focus-visible {
+    outline: 3px solid #3c7353;
+    outline-offset: -5px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .gastos-mais {
+        transition: none;
+    }
+
+}

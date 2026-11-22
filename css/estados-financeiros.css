@@ -1,0 +1,413 @@
+
+/* ========================================
+   BASE 6 - ESTADOS FINANCEIROS
+
+   ARQUIVO: estados-financeiros.css
+
+   Estilos compartilhados das páginas:
+   - Resumo Financeiro
+   - Minha Renda
+   - Meus Gastos
+   - Pra onde foi minha grana?
+======================================== */
+
+
+/* ========================================
+   1. VISIBILIDADE DOS ESTADOS
+======================================== */
+
+/*
+   Os elementos com hidden devem ficar
+   ocultos até que a programação tenha
+   dados para apresentá-los.
+*/
+
+.pagina-resumo [hidden],
+.pagina-renda [hidden],
+.pagina-gastos [hidden],
+.pagina-diagnostico [hidden] {
+    display: none !important;
+}
+
+
+/* ========================================
+   2. MENSAGENS DOS FORMULÁRIOS
+======================================== */
+
+/*
+   O JavaScript poderá usar estes elementos
+   para mostrar confirmações e erros reais.
+*/
+
+.mensagem-formulario {
+    margin-top: 8px;
+    padding: 13px 16px;
+
+    background: #e7f0df;
+    color: #28533c;
+
+    border: 1px solid #c8dfbd;
+    border-radius: 12px;
+
+    font-size: 0.86rem;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+
+/* ========== MENSAGEM DE ERRO ========== */
+
+.mensagem-formulario.erro {
+    background: #f8e4df;
+    color: #8a4638;
+
+    border-color: #e8bdb2;
+}
+
+
+/* ========== MENSAGEM DE SUCESSO ========== */
+
+.mensagem-formulario.sucesso {
+    background: #e3f0dd;
+    color: #28583b;
+
+    border-color: #b7d6a9;
+}
+
+
+/* ========================================
+   3. BOTÕES DE REGISTRO
+======================================== */
+
+/*
+   Os botões agora não possuem disabled
+   no HTML.
+
+   A programação deverá conectar cada
+   botão à ação correspondente.
+*/
+
+.rf-salvar,
+.renda-salvar,
+.gastos-salvar {
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.rf-salvar:hover,
+.renda-salvar:hover,
+.gastos-salvar:hover {
+    background: #285d56;
+}
+
+.rf-salvar:active,
+.renda-salvar:active,
+.gastos-salvar:active {
+    transform: scale(0.98);
+}
+
+.rf-salvar:focus-visible,
+.renda-salvar:focus-visible,
+.gastos-salvar:focus-visible {
+    outline: 3px solid #7cad84;
+    outline-offset: 3px;
+}
+
+
+/* ========== BOTÃO TEMPORARIAMENTE DESATIVADO ========== */
+
+.rf-salvar:disabled,
+.renda-salvar:disabled,
+.gastos-salvar:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+
+/* ========================================
+   4. LISTAS DE RESULTADOS REAIS
+======================================== */
+
+/*
+   Estas listas poderão receber registros
+   vindos do banco de dados.
+*/
+
+.lista-resultado {
+    display: flex;
+    flex-direction: column;
+
+    gap: 11px;
+
+    margin: 16px 0 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.lista-resultado li {
+    padding: 14px 16px;
+
+    background: rgba(255, 255, 255, 0.72);
+
+    border: 1px solid rgba(40, 70, 55, 0.10);
+    border-radius: 13px;
+
+    color: #294939;
+
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   5. RESULTADOS FINANCEIROS
+======================================== */
+
+.resultado-com-dados {
+    color: inherit;
+
+    font-size: 0.94rem;
+    line-height: 1.75;
+}
+
+
+/* ========================================
+   6. ESPAÇO PARA GRÁFICOS REAIS
+======================================== */
+
+/*
+   O JavaScript poderá inserir SVG, canvas
+   ou outro tipo de visualização aqui.
+
+   Nenhum gráfico fictício é mostrado.
+*/
+
+.grafico-com-dados {
+    width: 100%;
+    min-width: 0;
+    min-height: 180px;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+}
+
+.grafico-com-dados svg,
+.grafico-com-dados canvas {
+    display: block;
+
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* ========== MENSAGEM DO GRÁFICO VAZIO ========== */
+
+.mensagem-grafico {
+    max-width: 230px;
+
+    color: #6c6480;
+
+    font-size: 0.85rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+
+/* ========== EVOLUÇÃO DA RENDA ========== */
+
+.pagina-renda .renda-evolucao-ilustracao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+
+    min-height: 165px;
+    height: auto;
+
+    padding: 20px;
+
+    border: 1px dashed #b8abd1;
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.25);
+}
+
+
+/* ========================================
+   7. LINK PARA O DIAGNÓSTICO
+======================================== */
+
+.link-analise {
+    display: inline-flex;
+    align-items: center;
+
+    margin-top: 14px;
+
+    color: #34684e;
+
+    font-size: 0.88rem;
+    font-weight: 800;
+
+    text-decoration: none;
+}
+
+.link-analise:hover {
+    text-decoration: underline;
+}
+
+
+/* ========================================
+   8. FORMULÁRIO DE PARCELAMENTO
+======================================== */
+
+.pagina-gastos .formulario-parcela {
+    margin-top: 22px;
+
+    border-color: #d9c4df;
+}
+
+.pagina-gastos .formulario-parcela summary {
+    min-height: 74px;
+}
+
+
+/* ========================================
+   9. LINHA DO TEMPO SEM DADOS
+======================================== */
+
+.diagnostico-tempo-vazio {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 22px;
+    margin-top: 25px;
+    padding: 28px;
+
+    background: rgba(255, 255, 255, 0.75);
+
+    border: 1px solid #cfdeeb;
+    border-radius: 19px;
+}
+
+
+/* ========== ÍCONE ========== */
+
+.tempo-vazio-icone {
+    display: grid;
+    place-items: center;
+
+    width: 55px;
+    height: 55px;
+
+    flex-shrink: 0;
+
+    background: #d8e5f0;
+    color: #567da0;
+
+    border-radius: 16px;
+
+    font-size: 2.5rem;
+}
+
+
+/* ========== TÍTULO ========== */
+
+.diagnostico-tempo-vazio h3 {
+    margin-bottom: 10px;
+
+    color: #304d6c;
+
+    font-size: 1.2rem;
+}
+
+
+/* ========== DESCRIÇÃO ========== */
+
+.diagnostico-tempo-vazio p {
+    max-width: 600px;
+
+    color: #61778d;
+
+    font-size: 0.94rem;
+    line-height: 1.75;
+}
+
+
+/* ========== LINK DE ACESSO ========== */
+
+.diagnostico-tempo-vazio a {
+    display: inline-block;
+
+    margin-top: 18px;
+
+    color: #315e81;
+
+    font-size: 0.88rem;
+    font-weight: 800;
+}
+
+.diagnostico-tempo-vazio a:hover {
+    text-decoration: underline;
+}
+
+
+/* ========================================
+   10. PERFIL CLICÁVEL
+======================================== */
+
+/*
+   Mantém a aparência do perfil ao usar
+   um link HTML, sem alterar o cabeçalho.
+*/
+
+.pagina-resumo .perfil-usuario,
+.pagina-renda .perfil-usuario,
+.pagina-gastos .perfil-usuario,
+.pagina-diagnostico .perfil-usuario {
+    text-decoration: none;
+}
+
+
+/* ========================================
+   11. RESPONSIVIDADE
+======================================== */
+
+@media (max-width: 760px) {
+
+    .diagnostico-tempo-vazio {
+        flex-direction: column;
+        padding: 23px;
+    }
+
+    .lista-resultado li {
+        padding: 12px 14px;
+    }
+
+    .mensagem-formulario {
+        padding: 12px;
+    }
+
+}
+
+
+/* ========================================
+   12. REDUÇÃO DE MOVIMENTOS
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .rf-salvar,
+    .renda-salvar,
+    .gastos-salvar {
+        transition: none;
+    }
+
+}
+

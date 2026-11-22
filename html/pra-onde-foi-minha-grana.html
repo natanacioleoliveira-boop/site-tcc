@@ -1,0 +1,751 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!-- ========================================
+         1. CONFIGURAÇÕES INICIAIS
+    ======================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Entenda seu orçamento com o diagnóstico financeiro da Base 6.">
+
+    <title>Pra Onde Foi Minha Grana? | Base 6</title>
+
+    <!-- ========== FONTES ========== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- ========== ESTILOS ========== -->
+
+    <link rel="stylesheet"
+          href="../css/minha-area.css">
+
+    <link rel="stylesheet"
+          href="../css/pra-onde-foi-minha-grana.css">
+
+    <link rel="stylesheet"
+          href="../css/estados-financeiros.css">
+</head>
+
+
+<body class="pagina-diagnostico">
+
+    <!-- ========== ACESSIBILIDADE ========== -->
+
+    <a href="#conteudo" class="pular-conteudo">
+        Pular para o conteúdo principal
+    </a>
+
+
+    <!-- ========================================
+         2. CABEÇALHO
+    ======================================== -->
+
+    <header class="cabecalho">
+
+        <div class="container cabecalho-conteudo">
+
+            <!-- ========== COROA BASE 6 ========== -->
+
+            <a href="inicio.html"
+               class="base6-coroa-link"
+               aria-label="Voltar à página inicial da Base 6">
+
+                <svg class="base6-coroa-icone"
+                     viewBox="0 0 80 50"
+                     fill="none"
+                     aria-hidden="true">
+
+                    <path
+                        d="M5 37 L13 12 L30 26 L42 5 L55 26 L72 12 L77 37 Z"
+                        stroke="currentColor"
+                        stroke-width="5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"/>
+
+                    <path
+                        d="M8 44 L75 44"
+                        stroke="currentColor"
+                        stroke-width="5"
+                        stroke-linecap="round"/>
+                </svg>
+            </a>
+
+            <!-- ========== MENU SUPERIOR ========== -->
+
+            <nav class="menu-principal"
+                 aria-label="Menu principal">
+
+                <a href="inicio.html">Início</a>
+                <a href="aulas.html">Aulas</a>
+
+                <a href="minha-area.html"
+                   class="ativo">
+                    Minha Área
+                </a>
+
+                <a href="comunidade.html">
+                    Comunidade
+                </a>
+            </nav>
+
+            <!-- ========== PERFIL ========== -->
+
+            <a href="login.html"
+               class="perfil-usuario"
+               aria-label="Entrar ou acessar seu perfil">
+
+                <span class="perfil-icone"
+                      aria-hidden="true">
+
+                    <svg viewBox="0 0 24 24"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="1.8">
+
+                        <circle cx="12" cy="8" r="4"/>
+                        <path d="M4 21v-2a8 8 0 0 1 16 0v2"/>
+                    </svg>
+                </span>
+
+                <span class="perfil-texto">
+                    Meu perfil
+                </span>
+            </a>
+        </div>
+    </header>
+
+
+    <!-- ========================================
+         3. ESTRUTURA PRINCIPAL
+    ======================================== -->
+
+    <main id="conteudo">
+
+        <div class="container painel-layout">
+
+            <!-- ========================================
+                 4. MENU LATERAL
+            ======================================== -->
+
+            <aside class="barra-lateral">
+
+                <nav aria-label="Navegação financeira">
+
+                    <p class="lateral-titulo">
+                        MINHA ÁREA
+                    </p>
+
+                    <ul class="lista-menu">
+
+                        <!-- RESUMO -->
+
+                        <li>
+                            <a href="resumo-financeiro.html"
+                               class="lateral-link">
+                                Resumo financeiro
+                            </a>
+                        </li>
+
+                        <!-- RENDA -->
+
+                        <li>
+                            <a href="minha-renda.html"
+                               class="lateral-link">
+                                Minha renda
+                            </a>
+                        </li>
+
+                        <!-- GASTOS -->
+
+                        <li>
+                            <a href="meus-gastos.html"
+                               class="lateral-link">
+                                Meus gastos
+                            </a>
+                        </li>
+
+                        <!-- DIAGNÓSTICO -->
+
+                        <li>
+                            <a href="pra-onde-foi-minha-grana.html"
+                               class="lateral-link diagnostico-link-ativo"
+                               aria-current="page">
+
+                                Pra onde foi minha grana?
+                            </a>
+                        </li>
+
+                        <!-- CONTAS -->
+
+                        <li>
+                            <a href="contas-vencimentos.html"
+                               class="lateral-link">
+                                Contas e vencimentos
+                            </a>
+                        </li>
+
+                        <!-- METAS -->
+
+                        <li>
+                            <a href="minhas-metas.html"
+                               class="lateral-link">
+                                Minhas metas
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- ========== MENSAGEM LATERAL ========== -->
+
+                <div class="lateral-mensagem">
+                    <span aria-hidden="true">✦</span>
+
+                    <p>
+                        Entender sua realidade
+                        é o primeiro passo para
+                        fazer escolhas conscientes.
+                    </p>
+                </div>
+            </aside>
+
+
+            <!-- ========================================
+                 5. CONTEÚDO DO DIAGNÓSTICO
+            ======================================== -->
+
+            <div class="conteudo-area diagnostico-conteudo">
+
+                <!-- ========================================
+                     6. APRESENTAÇÃO
+                ======================================== -->
+
+                <section class="diagnostico-abertura"
+                         aria-labelledby="titulo-diagnostico">
+
+                    <nav class="diagnostico-caminho"
+                         aria-label="Localização atual">
+
+                        <a href="minha-area.html">
+                            Minha Área
+                        </a>
+
+                        <span aria-hidden="true">/</span>
+
+                        <span aria-current="page">
+                            Pra onde foi minha grana?
+                        </span>
+                    </nav>
+
+                    <div class="diagnostico-abertura-conteudo">
+
+                        <div>
+                            <p class="diagnostico-etiqueta">
+                                SEU RAIO-X FINANCEIRO
+                            </p>
+
+                            <h1 id="titulo-diagnostico">
+                                Seu dinheiro não sumiu.
+                                <span>
+                                    Bora entender pra onde foi?
+                                </span>
+                            </h1>
+
+                            <p>
+                                Descubra o que pode estar
+                                apertando seu orçamento
+                                e como as movimentações
+                                influenciam o resultado do mês.
+
+                                Sem julgamentos e sem complicação.
+                            </p>
+                        </div>
+
+                        <span class="diagnostico-decoracao"
+                              aria-hidden="true">?</span>
+                    </div>
+                </section>
+
+
+                <!-- ========================================
+                     7. RAIO-X DO MÊS
+                ======================================== -->
+
+                <section class="diagnostico-raiox"
+                         aria-labelledby="titulo-raiox">
+
+                    <header class="diagnostico-secao-topo">
+
+                        <div>
+                            <p class="diagnostico-etiqueta">
+                                VISÃO DO SEU DINHEIRO
+                            </p>
+
+                            <h2 id="titulo-raiox">
+                                O retrato do seu mês
+                            </h2>
+
+                            <p>
+                                Confira o que entrou,
+                                o que já saiu e os compromissos
+                                que ainda precisam ser pagos.
+                            </p>
+                        </div>
+
+                        <span class="diagnostico-periodo"
+                              id="diagnostico-periodo">
+                            Mês atual
+                        </span>
+                    </header>
+
+                    <!-- ========== INDICADORES ========== -->
+
+                    <dl class="diagnostico-numeros">
+
+                        <!-- RENDA RECEBIDA -->
+
+                        <div class="numero-recebido">
+                            <dt>Dinheiro recebido</dt>
+
+                            <dd id="diagnostico-renda">
+                                R$ —
+                            </dd>
+
+                            <p>Total que já entrou.</p>
+                        </div>
+
+                        <!-- DESPESAS PAGAS -->
+
+                        <div class="numero-pago">
+                            <dt>Despesas pagas</dt>
+
+                            <dd id="diagnostico-pago">
+                                R$ —
+                            </dd>
+
+                            <p>Total que já saiu.</p>
+                        </div>
+
+                        <!-- CONTAS PENDENTES -->
+
+                        <div class="numero-pendente">
+                            <dt>Contas a pagar</dt>
+
+                            <dd id="diagnostico-pendente">
+                                R$ —
+                            </dd>
+
+                            <p>
+                                Compromissos ainda pendentes.
+                            </p>
+                        </div>
+
+                        <!-- RESULTADO ESTIMADO -->
+
+                        <div class="numero-resultado">
+                            <dt>Resultado previsto</dt>
+
+                            <dd id="diagnostico-resultado-valor">
+                                R$ —
+                            </dd>
+
+                            <p>
+                                Estimativa considerando
+                                o dinheiro recebido e as
+                                despesas registradas do mês.
+                            </p>
+                        </div>
+                    </dl>
+
+                    <p class="diagnostico-nota">
+                        O dinheiro que você ainda não recebeu
+                        fica separado do saldo disponível.
+                        As contas já pagas não devem ser
+                        contabilizadas novamente.
+                    </p>
+                </section>
+
+
+                <!-- ========================================
+                     8. ENTENDA SEU RESULTADO
+                ======================================== -->
+
+                <section class="diagnostico-resultado"
+                         aria-labelledby="titulo-resultado">
+
+                    <div class="diagnostico-resultado-marca"
+                         aria-hidden="true">✳</div>
+
+                    <div>
+                        <p class="diagnostico-etiqueta">
+                            ENTENDA SEU RESULTADO
+                        </p>
+
+                        <h2 id="titulo-resultado">
+                            O que seus registros mostram?
+                        </h2>
+
+                        <!-- ESTADO SEM REGISTROS -->
+
+                        <p id="diagnostico-resultado-vazio">
+                            Para compreender sua situação,
+                            comece registrando o dinheiro
+                            que recebe e suas despesas.
+                        </p>
+
+                        <!-- ESTADO COM REGISTROS -->
+
+                        <p id="diagnostico-resultado-texto"
+                           class="resultado-com-dados"
+                           aria-live="polite"
+                           hidden>
+                        </p>
+
+                        <div class="diagnostico-acoes">
+
+                            <a href="minha-renda.html">
+                                Conferir minha renda
+                            </a>
+
+                            <a href="meus-gastos.html">
+                                Conferir meus gastos
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <!-- ========================================
+                     9. LINHA DO TEMPO FINANCEIRA
+                ======================================== -->
+
+                <section class="diagnostico-tempo"
+                         aria-labelledby="titulo-tempo">
+
+                    <header class="diagnostico-secao-topo">
+
+                        <div>
+                            <p class="diagnostico-etiqueta">
+                                ACOMPANHE SEU MÊS
+                            </p>
+
+                            <h2 id="titulo-tempo">
+                                Quando o dinheiro apertou?
+                            </h2>
+
+                            <p>
+                                Acompanhe os momentos em que
+                                ocorreram recebimentos,
+                                despesas e vencimentos.
+                            </p>
+                        </div>
+                    </header>
+
+                    <!-- ========== SEM MOVIMENTAÇÕES ========== -->
+
+                    <div class="diagnostico-tempo-vazio"
+                         id="tempo-sem-dados">
+
+                        <span class="tempo-vazio-icone"
+                              aria-hidden="true">◷</span>
+
+                        <div>
+                            <h3>
+                                Sua linha do tempo começa aqui!
+                            </h3>
+
+                            <p>
+                                Registre suas movimentações
+                                para acompanhar como o
+                                dinheiro circulou durante o mês.
+                            </p>
+
+                            <a href="minha-renda.html">
+                                Registrar minha renda →
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- ========== COM MOVIMENTAÇÕES ========== -->
+                    <!--
+                        O JavaScript criará os itens da
+                        lista, organizados por data.
+                    -->
+
+                    <ol class="diagnostico-linha-tempo"
+                        id="linha-tempo-movimentacoes"
+                        aria-label="Movimentações do mês"
+                        hidden>
+                    </ol>
+                </section>
+
+
+                <!-- ========================================
+                     10. POSSÍVEIS FATORES DO ORÇAMENTO
+                ======================================== -->
+
+                <section class="diagnostico-causas"
+                         aria-labelledby="titulo-causas">
+
+                    <header class="diagnostico-secao-topo">
+
+                        <div>
+                            <p class="diagnostico-etiqueta">
+                                VAMOS ENTENDER MELHOR
+                            </p>
+
+                            <h2 id="titulo-causas">
+                                O que está apertando
+                                meu orçamento?
+                            </h2>
+
+                            <p>
+                                Conheça alguns fatores que
+                                podem influenciar o resultado
+                                financeiro de um mês.
+                            </p>
+                        </div>
+                    </header>
+
+                    <!-- ========== EXEMPLOS EDUCATIVOS ========== -->
+                    <!--
+                        Estes exemplos não são um
+                        diagnóstico do usuário.
+                    -->
+
+                    <div id="diagnostico-fatores-exemplos">
+
+                        <div class="diagnostico-fatores">
+
+                            <!-- DESPESAS ESSENCIAIS -->
+
+                            <article class="fator fator-essenciais">
+
+                                <span class="fator-numero">
+                                    01
+                                </span>
+
+                                <h3>
+                                    Despesas essenciais
+                                </h3>
+
+                                <p>
+                                    Moradia, alimentação,
+                                    saúde e transporte podem
+                                    representar grande parte
+                                    da renda disponível.
+                                </p>
+                            </article>
+
+                            <!-- VENCIMENTOS -->
+
+                            <article class="fator fator-vencimentos">
+
+                                <span class="fator-numero">
+                                    02
+                                </span>
+
+                                <h3>
+                                    Contas muito próximas
+                                </h3>
+
+                                <p>
+                                    Vários pagamentos na
+                                    mesma época podem
+                                    dificultar a organização.
+                                </p>
+                            </article>
+
+                            <!-- RENDA VARIÁVEL -->
+
+                            <article class="fator fator-renda">
+
+                                <span class="fator-numero">
+                                    03
+                                </span>
+
+                                <h3>
+                                    Mudanças na renda
+                                </h3>
+
+                                <p>
+                                    Um mês com menos
+                                    recebimentos pode
+                                    afetar o planejamento.
+                                </p>
+                            </article>
+                        </div>
+
+                        <p class="causas-observacao">
+                            Esses são exemplos gerais.
+                            Eles não significam que essas
+                            situações estejam acontecendo
+                            com você.
+                        </p>
+                    </div>
+
+                    <!-- ========== ANÁLISE PERSONALIZADA ========== -->
+
+                    <div id="diagnostico-fatores-reais"
+                         hidden>
+
+                        <div class="diagnostico-fatores"
+                             id="diagnostico-fatores-lista">
+                        </div>
+                    </div>
+                </section>
+
+
+                <!-- ========================================
+                     11. PRÓXIMOS PASSOS
+                ======================================== -->
+
+                <section class="diagnostico-proximos"
+                         aria-labelledby="titulo-proximos">
+
+                    <header>
+                        <p class="diagnostico-etiqueta">
+                            UM PASSO DE CADA VEZ
+                        </p>
+
+                        <h2 id="titulo-proximos">
+                            E agora, o que posso fazer?
+                        </h2>
+
+                        <p>
+                            Organizar suas finanças começa
+                            por conhecer os próprios registros.
+                        </p>
+                    </header>
+
+                    <ol class="proximos-lista">
+
+                        <!-- ========== PRIMEIRO PASSO ========== -->
+
+                        <li>
+                            <span aria-hidden="true">01</span>
+
+                            <div>
+                                <h3>
+                                    Confira seus recebimentos
+                                </h3>
+
+                                <p>
+                                    Verifique se todas
+                                    as suas fontes de renda
+                                    foram consideradas.
+                                </p>
+
+                                <a href="minha-renda.html">
+                                    Ir para Minha Renda →
+                                </a>
+                            </div>
+                        </li>
+
+                        <!-- ========== SEGUNDO PASSO ========== -->
+
+                        <li>
+                            <span aria-hidden="true">02</span>
+
+                            <div>
+                                <h3>
+                                    Revise suas despesas
+                                </h3>
+
+                                <p>
+                                    Confira tanto os gastos
+                                    pagos quanto as contas
+                                    que ainda vão vencer.
+                                </p>
+
+                                <a href="meus-gastos.html">
+                                    Ir para Meus Gastos →
+                                </a>
+                            </div>
+                        </li>
+
+                        <!-- ========== TERCEIRO PASSO ========== -->
+
+                        <li>
+                            <span aria-hidden="true">03</span>
+
+                            <div>
+                                <h3>
+                                    Entenda sua realidade
+                                </h3>
+
+                                <p>
+                                    Nem sempre o problema
+                                    é gastar demais.
+                                    A renda pode ser insuficiente
+                                    para cobrir as necessidades.
+                                </p>
+                            </div>
+                        </li>
+                    </ol>
+                </section>
+
+
+                <!-- ========================================
+                     12. MENSAGEM FINAL
+                ======================================== -->
+
+                <aside class="diagnostico-mensagem">
+
+                    <span aria-hidden="true">✦</span>
+
+                    <p>
+                        Cuidar do dinheiro não é sobre
+                        acertar tudo de primeira.
+
+                        É sobre entender sua realidade,
+                        reconhecer suas necessidades
+                        e encontrar caminhos possíveis.
+                    </p>
+                </aside>
+
+                <!-- ========== VOLTAR ========== -->
+
+                <a href="minha-area.html"
+                   class="diagnostico-voltar">
+                    ← Voltar à Minha Área
+                </a>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- ========================================
+         13. RODAPÉ
+    ======================================== -->
+
+    <footer class="rodape">
+
+        <div class="container rodape-conteudo">
+            <p>
+                Base 6 — Educação financeira para todos.
+            </p>
+
+            <a href="inicio.html">
+                Voltar ao início
+            </a>
+        </div>
+    </footer>
+
+</body>
+</html>

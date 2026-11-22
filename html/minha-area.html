@@ -1,0 +1,680 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!-- ========================================
+         1. CONFIGURAÇÕES INICIAIS
+    ======================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Minha Área Financeira Base 6. Organize sua renda, gastos e metas no seu ritmo.">
+
+    <title>Minha Área Financeira | Base 6</title>
+
+
+    <!-- ========== FONTES DO SITE ========== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- ========== CONEXÃO COM CSS ========== -->
+
+    <link rel="stylesheet"
+          href="../css/minha-area.css">
+
+</head>
+
+
+<body>
+
+    <!-- ========== ACESSIBILIDADE ========== -->
+
+    <a href="#conteudo"
+       class="pular-conteudo">
+
+        Pular para o conteúdo principal
+
+    </a>
+
+
+    <!-- ========================================
+         2. CABEÇALHO - BASE 6
+    ======================================== -->
+
+    <header class="cabecalho">
+
+        <div class="container cabecalho-conteudo">
+
+
+            <!-- ========== COROA BASE 6 ========== -->
+
+            <a href="inicio.html"
+               class="base6-coroa-link"
+               aria-label="Voltar à página inicial da Base 6">
+
+                <svg class="base6-coroa-icone"
+                     viewBox="0 0 80 50"
+                     fill="none"
+                     aria-hidden="true">
+
+                    <path
+                        d="M5 37 L13 12 L30 26 L42 5 L55 26 L72 12 L77 37 Z"
+                        stroke="currentColor"
+                        stroke-width="5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    />
+
+                    <path
+                        d="M8 44 L75 44"
+                        stroke="currentColor"
+                        stroke-width="5"
+                        stroke-linecap="round"
+                    />
+
+                </svg>
+
+            </a>
+
+
+            <!-- ========== MENU SUPERIOR ========== -->
+
+            <nav class="menu-principal"
+                 aria-label="Navegação principal">
+
+                <a href="inicio.html">
+                    Início
+                </a>
+
+                <a href="aulas.html">
+                    Aulas
+                </a>
+
+                <a href="minha-area.html"
+                   class="ativo"
+                   aria-current="page">
+
+                    Minha Área
+
+                </a>
+
+                <a href="comunidade.html">
+                    Comunidade
+                </a>
+
+            </nav>
+
+
+            <!-- ========== PERFIL DO USUÁRIO ========== -->
+
+            <!--
+                Espaço reservado para mostrar
+                o perfil de quem estiver conectado.
+
+                O nome e a fotografia reais serão
+                integrados futuramente.
+            -->
+
+            <div class="perfil-usuario"
+                 aria-label="Espaço do perfil do usuário">
+
+                <span class="perfil-icone"
+                      aria-hidden="true">
+
+                    <svg viewBox="0 0 24 24"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="1.8">
+
+                        <circle cx="12" cy="8" r="4"/>
+
+                        <path d="M4 21v-2a8 8 0 0 1 16 0v2"/>
+
+                    </svg>
+
+                </span>
+
+                <span class="perfil-texto">
+                    Meu perfil
+                </span>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ========================================
+         3. ÁREA FINANCEIRA - ESTRUTURA
+    ======================================== -->
+
+    <main id="conteudo">
+
+        <div class="container painel-layout">
+
+
+            <!-- ========================================
+                 4. MENU LATERAL
+            ======================================== -->
+
+            <aside class="barra-lateral">
+
+                <nav aria-label="Minha Área Financeira">
+
+                    <!-- ========== TÍTULO DO MENU ========== -->
+
+                    <p class="lateral-titulo">
+                        MINHA ÁREA
+                    </p>
+
+
+                    
+<!-- ========== OPÇÕES DO MENU LATERAL ========== -->
+
+
+<!-- ========================================
+     MENU LATERAL - MINHA ÁREA FINANCEIRA
+======================================== -->
+
+<ul class="lista-menu">
+    
+    
+<!-- ========== RESUMO FINANCEIRO ========== -->
+
+<li>
+    <a href="resumo-financeiro.html"
+       class="lateral-link">
+
+        Resumo financeiro
+
+    </a>
+</li>
+
+
+
+    <!-- ========== MINHA RENDA ========== -->
+    <li>
+        <a href="minha-renda.html"
+           class="lateral-link">
+            Minha renda
+        </a>
+    </li>
+
+    <!-- ========== MEUS GASTOS ========== -->
+    <li>
+        <a href="meus-gastos.html" class="lateral-link">
+    Meus gastos
+</a>
+    </li>
+
+    <!-- ========== PRA ONDE FOI MINHA GRANA ========== -->
+    <li>
+        <a href="pra-onde-foi-minha-grana.html"
+   class="lateral-link">
+    Pra onde foi minha grana?
+</a>
+    </li>
+
+    <!-- ========== CONTAS E VENCIMENTOS ========== -->
+    <li>
+        <a href="contas-vencimentos.html"
+           class="lateral-link">
+            Contas e vencimentos
+        </a>
+    </li>
+
+    <!-- ========== MINHAS METAS ========== -->
+    <li>
+        <a href="minhas-metas.html"
+           class="lateral-link">
+            Minhas metas
+        </a>
+    </li>
+
+</ul>
+
+
+                </nav>
+
+
+                <!-- ========== MENSAGEM LATERAL ========== -->
+
+                <div class="lateral-mensagem">
+
+                    <span aria-hidden="true">
+                        ✦
+                    </span>
+
+                    <p>
+                        Cada pequeno passo
+                        também é uma conquista.
+                    </p>
+
+                </div>
+
+            </aside>
+
+
+            <!-- ========================================
+                 5. CONTEÚDO DA MINHA ÁREA
+            ======================================== -->
+
+            <div class="conteudo-area">
+
+
+                <!-- ========================================
+                     6. APRESENTAÇÃO - RESUMO
+                ======================================== -->
+
+                <section class="boas-vindas"
+                         id="boas-vindas"
+                         edby="titulo-area">
+
+                    <div class="boas-vindas-texto">
+
+                        <p class="etiqueta">
+                            SEU ESPAÇO FINANCEIRO
+                        </p>
+
+                        <h1 id="titulo-area">
+
+                            Sua grana,
+                            <span>no controle.</span>
+
+                        </h1>
+
+                        <p>
+                            Aqui você pode acompanhar
+                            o que recebe, entender seus
+                            gastos e planejar seus objetivos.
+
+                            Sem complicação e no seu ritmo.
+                        </p>
+
+                    </div>
+
+
+                    <!-- ========== DETALHE DECORATIVO ========== -->
+
+                    <div class="decoracao-boas-vindas"
+                         aria-hidden="true">
+
+                        <span class="decoracao-circulo">
+                            <span>6</span>
+                        </span>
+
+                        <span class="decoracao-estrela">
+                            ✳
+                        </span>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ========================================
+                     7. RESUMO FINANCEIRO DO MÊS
+                ======================================== -->
+
+                
+
+
+                <!-- ========================================
+                     8. PRIMEIROS PASSOS
+                ======================================== -->
+
+                <section class="primeiros-passos"
+                         aria-labelledby="titulo-passos">
+
+                    <header class="secao-cabecalho">
+
+                        <div>
+
+                            <p class="subtitulo-secao">
+                                BORA COMEÇAR?
+                            </p>
+
+                            <h2 id="titulo-passos">
+                                Por onde começar?
+                            </h2>
+
+                            <p>
+                                Não precisa fazer tudo de uma vez.
+                                Comece pelo que faz sentido para você.
+                            </p>
+
+                        </div>
+
+                    </header>
+
+
+                    <!-- ========== GUIA EM TRÊS PASSOS ========== -->
+
+                    <ol class="lista-passos">
+
+
+                        <!-- PASSO 1 -->
+
+                        <li class="passo">
+
+                            <span class="numero-passo">
+                                01
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Conte quanto entra
+                                </h3>
+
+                                <p>
+                                    Registre seu salário,
+                                    trabalhos extras e outras
+                                    fontes de renda.
+                                </p>
+
+                            </div>
+
+                        </li>
+
+
+                        <!-- PASSO 2 -->
+
+                        <li class="passo">
+
+                            <span class="numero-passo">
+                                02
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Anote seus gastos
+                                </h3>
+
+                                <p>
+                                    Conheça suas despesas
+                                    do dia a dia, das maiores
+                                    às menores.
+                                </p>
+
+                            </div>
+
+                        </li>
+
+
+                        <!-- PASSO 3 -->
+
+                        <li class="passo">
+
+                            <span class="numero-passo">
+                                03
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Entenda o resultado
+                                </h3>
+
+                                <p>
+                                    Compare o que entrou e saiu
+                                    e descubra o que merece
+                                    mais atenção.
+                                </p>
+
+                            </div>
+
+                        </li>
+
+                    </ol>
+
+                </section>
+
+
+                <!-- ========================================
+                     9. ESPAÇOS DA ÁREA FINANCEIRA
+                ======================================== -->
+
+                <section class="espacos-financeiros"
+                         aria-labelledby="titulo-espacos">
+
+                    <header class="secao-cabecalho">
+
+                        <div>
+
+                            <p class="subtitulo-secao">
+                                EXPLORE SUA ÁREA
+                            </p>
+
+                            <h2 id="titulo-espacos">
+                                Cada coisa no seu lugar.
+                            </h2>
+
+                            <p>
+                                Conheça os espaços que estamos
+                                preparando para ajudar você
+                                a organizar sua vida financeira.
+                            </p>
+
+                        </div>
+
+                    </header>
+
+
+                    <!-- ========== CARTÕES DAS FUNCIONALIDADES ========== -->
+
+                    <div class="grade-espacos">
+
+
+                        <!-- ========== MINHA RENDA ========== -->
+
+                        <article class="espaco-card"
+                                 id="minha-renda">
+                                 
+
+<!-- ========== ACESSAR DIAGNÓSTICO FINANCEIRO ========== -->
+
+<a href="pra-onde-foi-minha-grana.html"
+   class="link-diagnostico">
+
+    Descobrir pra onde foi minha grana
+
+    <span aria-hidden="true">→</span>
+
+</a>
+
+
+
+<!-- ========== ACESSAR PÁGINA MEUS GASTOS ========== -->
+
+<a href="meus-gastos.html"
+   class="link-espaco-gastos">
+
+    Acessar Meus Gastos
+
+    <span aria-hidden="true">→</span>
+
+</a>
+
+
+                              
+<!-- ========== ACESSAR PÁGINA MINHA RENDA ========== -->
+
+<a href="minha-renda.html"
+   class="link-espaco-renda">
+
+    Acessar Minha Renda
+    <span aria-hidden="true">→</span>
+
+</a>
+
+                            <h3>
+                                Minha renda
+                            </h3>
+
+                            <p>
+                                Organize tudo que você recebe,
+                                seja uma renda fixa ou variável.
+                            </p>
+
+
+                        </article>
+
+
+                        <!-- ========== MEUS GASTOS ========== -->
+
+                        <article class="espaco-card"
+                                 id="meus-gastos">
+
+                           
+
+                            <h3>
+                                Meus gastos
+                            </h3>
+
+                            <p>
+                                Descubra quanto você gasta
+                                e com quais despesas.
+                            </p>
+
+                           
+                        </article>
+
+
+                        <!-- ========== PRA ONDE FOI MINHA GRANA ========== -->
+
+                        <article class="espaco-card espaco-destaque"
+                                 id="pra-onde-foi">
+
+                            
+
+                            <h3>
+                                Pra onde foi minha grana?
+                            </h3>
+
+                            <p>
+                                Entenda por que às vezes
+                                o dinheiro termina antes
+                                do mês e quais despesas
+                                mais pesam no orçamento.
+                            </p>
+
+                           
+                        </article>
+
+
+                        <!-- ========== CONTAS E VENCIMENTOS ========== -->
+
+                        <article class="espaco-card"
+                                 id="contas-vencimentos">
+
+                            
+
+                            <h3>
+                                Contas e vencimentos
+                            </h3>
+
+                            <p>
+                                Acompanhe pagamentos,
+                                parcelas e datas importantes.
+                            </p>
+
+                           
+
+                        </article>
+
+
+                        <!-- ========== MINHAS METAS ========== -->
+
+                        <article class="espaco-card"
+                                 id="minhas-metas">
+
+                            
+
+                            <h3>
+                                Minhas metas
+                            </h3>
+
+                            <p>
+                                Organize seus objetivos
+                                e planeje os próximos passos
+                                respeitando sua realidade.
+                            </p>
+
+                           
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ========================================
+                     10. MENSAGEM FINAL
+                ======================================== -->
+
+                <aside class="mensagem-final">
+
+                    <span aria-hidden="true">
+                        ✦
+                    </span>
+
+                    <p>
+                        Cuidar do seu dinheiro não significa
+                        ter muito. Significa entender sua
+                        realidade e fazer escolhas possíveis.
+                    </p>
+
+                </aside>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- ========================================
+         11. RODAPÉ - BASE 6
+    ======================================== -->
+
+    <footer class="rodape">
+
+        <div class="container rodape-conteudo">
+
+            <p>
+                Base 6 — Educação financeira para todos.
+            </p>
+
+            <a href="inicio.html">
+                Voltar ao início
+            </a>
+
+        </div>
+
+    </footer>
+
+
+
+
+</body>
+</html>
