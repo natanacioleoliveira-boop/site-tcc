@@ -1,30 +1,25 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
     <!-- ========== CONFIGURAÇÕES INICIAIS ========== -->
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-          content="Entre na sua conta Base 6 e continue sua jornada de aprendizado.">
+    <meta name="description" content="Entre na sua conta Base 6 e continue sua jornada de aprendizado.">
 
     <title>Entrar | Base 6</title>
 
 
     <!-- ========== FONTES DO SITE ========== -->
 
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Sedgwick+Ave+Display&display=swap"
-          rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Sedgwick+Ave+Display&display=swap"
+        rel="stylesheet">
 
 
     <!-- ========== CONEXÃO COM CSS ========== -->
@@ -51,39 +46,23 @@
 
             <!-- ========== LOGO BASE 6 ========== -->
 
-           <a href="inicio.html"
-   class="logo-coroa-link"
-   aria-label="Voltar para a página inicial">
+            <a href="inicio.html" class="logo-coroa-link" aria-label="Voltar para a página inicial">
 
-    <svg class="logo-coroa-simples"
-         viewBox="0 0 80 50"
-         fill="none"
-         aria-hidden="true">
+                <svg class="logo-coroa-simples" viewBox="0 0 80 50" fill="none" aria-hidden="true">
 
-        <path
-            d="M5 37 L13 12 L30 26 L42 5 L55 26 L72 12 L77 37 Z"
-            stroke="currentColor"
-            stroke-width="5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-        />
+                    <path d="M5 37 L13 12 L30 26 L42 5 L55 26 L72 12 L77 37 Z" stroke="currentColor" stroke-width="5"
+                        stroke-linecap="round" stroke-linejoin="round" />
 
-        <path
-            d="M8 44 L75 44"
-            stroke="currentColor"
-            stroke-width="5"
-            stroke-linecap="round"
-        />
+                    <path d="M8 44 L75 44" stroke="currentColor" stroke-width="5" stroke-linecap="round" />
 
-    </svg>
+                </svg>
 
-</a>
+            </a>
 
 
             <!-- ========== VOLTAR AO SITE ========== -->
 
-            <a href="inicio.html"
-               class="voltar-site">
+            <a href="inicio.html" class="voltar-site">
 
                 ← Voltar ao site
 
@@ -107,8 +86,7 @@
                  3. LADO ESQUERDO - APRESENTAÇÃO
             ======================================== -->
 
-            <section class="painel-conta"
-                     aria-labelledby="titulo-boas-vindas">
+            <section class="painel-conta" aria-labelledby="titulo-boas-vindas">
 
                 <!-- ========== ETIQUETA SUPERIOR ========== -->
 
@@ -166,8 +144,7 @@
                  4. LADO DIREITO - LOGIN
             ======================================== -->
 
-            <section class="cartao-formulario"
-                     aria-labelledby="titulo-login">
+            <section class="cartao-formulario" aria-labelledby="titulo-login">
 
 
                 <!-- ========== TÍTULO DO FORMULÁRIO ========== -->
@@ -193,26 +170,19 @@
                      5. FORMULÁRIO DE LOGIN
                 ======================================== -->
 
-                <form class="formulario"
-                      id="formulario-login">
+                <form class="formulario" id="formulario-login">
 
 
                     <!-- ========== NOME OU E-MAIL ========== -->
 
                     <div class="campo">
 
-                        <label for="login-identificador">
+                        <label for="email">
                             Nome de usuário ou e-mail
                         </label>
 
-                        <input
-                            type="text"
-                            id="login-identificador"
-                            name="identificador"
-                            placeholder="Digite seu usuário ou e-mail"
-                            autocomplete="username"
-                            required
-                        >
+                        <input type="email" id="login-identificador" name="identificador"
+                            placeholder="Digite seu e-mail" autocomplete="email" required>
 
                     </div>
 
@@ -225,14 +195,8 @@
                             Senha
                         </label>
 
-                        <input
-                            type="password"
-                            id="login-senha"
-                            name="senha"
-                            placeholder="Digite sua senha"
-                            autocomplete="current-password"
-                            required
-                        >
+                        <input type="password" id="login-senha" name="senha" placeholder="Digite sua senha"
+                            autocomplete="current-password" required>
 
                     </div>
 
@@ -240,11 +204,7 @@
                     <!-- ========== BOTÃO ENTRAR ========== -->
                     <!-- Será ativado com o sistema de autenticação -->
 
-                    <button
-                        type="submit"
-                        class="botao-principal botao-largo"
-                        disabled
-                    >
+                    <button type="submit" class="botao-principal botao-largo">
 
                         Entrar na minha conta
 
@@ -294,7 +254,8 @@
 
     </main>
 
-
+    <script type="module" src="../js/login.js"></script>
 
 </body>
+
 </html>

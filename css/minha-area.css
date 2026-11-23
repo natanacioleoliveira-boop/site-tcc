@@ -213,6 +213,55 @@ a:focus-visible {
    6. PERFIL DO USUÁRIO
 ======================================== */
 
+.perfil-container {
+    position: relative;
+}
+
+button.perfil-usuario {
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+}
+
+.menu-perfil {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    min-width: 180px;
+    padding: 8px;
+    background: #173d2e;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}
+
+.menu-perfil[hidden] {
+    display: none;
+}
+
+#botao-sair {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    color: #ffffff;
+    text-align: left;
+    font: inherit;
+    cursor: pointer;
+}
+
+#botao-sair:hover,
+#botao-sair:focus-visible {
+    background: #285440;
+}
+
+#botao-perfil:focus-visible,
+#botao-sair:focus-visible {
+    outline: 3px solid #b5ef39;
+    outline-offset: 3px;
+}
+
 .perfil-usuario {
     display: inline-flex;
     align-items: center;

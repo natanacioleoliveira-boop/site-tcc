@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -8,36 +7,34 @@
     ======================================== -->
 
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-          content="Organize seus recebimentos na Base 6.">
+    <meta name="description" content="Organize seus recebimentos na Base 6.">
 
     <title>Minha Renda | Base 6</title>
 
     <!-- ========== FONTES ========== -->
 
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap"
-          rel="stylesheet">
+        rel="stylesheet">
 
     <!-- ========== ESTILOS ========== -->
 
-    <link rel="stylesheet"
-          href="../css/minha-area.css">
+    <link rel="stylesheet" href="../css/minha-area.css">
 
-    <link rel="stylesheet"
-          href="../css/minha-renda.css">
+    <link rel="stylesheet" href="../css/minha-renda.css">
 
-    <link rel="stylesheet"
-          href="../css/estados-financeiros.css">
+    <link rel="stylesheet" href="../css/estados-financeiros.css">
+
+    <style>
+        body {
+            visibility: hidden;
+        }
+    </style>
 </head>
 
 
@@ -60,40 +57,25 @@
 
             <!-- ========== COROA BASE 6 ========== -->
 
-            <a href="inicio.html"
-               class="base6-coroa-link"
-               aria-label="Voltar à página inicial da Base 6">
+            <a href="inicio.html" class="base6-coroa-link" aria-label="Voltar à página inicial da Base 6">
 
-                <svg class="base6-coroa-icone"
-                     viewBox="0 0 80 50"
-                     fill="none"
-                     aria-hidden="true">
+                <svg class="base6-coroa-icone" viewBox="0 0 80 50" fill="none" aria-hidden="true">
 
-                    <path
-                        d="M5 37 L13 12 L30 26 L42 5 L55 26 L72 12 L77 37 Z"
-                        stroke="currentColor"
-                        stroke-width="5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"/>
+                    <path d="M5 37 L13 12 L30 26 L42 5 L55 26 L72 12 L77 37 Z" stroke="currentColor" stroke-width="5"
+                        stroke-linecap="round" stroke-linejoin="round" />
 
-                    <path
-                        d="M8 44 L75 44"
-                        stroke="currentColor"
-                        stroke-width="5"
-                        stroke-linecap="round"/>
+                    <path d="M8 44 L75 44" stroke="currentColor" stroke-width="5" stroke-linecap="round" />
                 </svg>
             </a>
 
             <!-- ========== MENU SUPERIOR ========== -->
 
-            <nav class="menu-principal"
-                 aria-label="Menu principal">
+            <nav class="menu-principal" aria-label="Menu principal">
 
                 <a href="inicio.html">Início</a>
                 <a href="aulas.html">Aulas</a>
 
-                <a href="minha-area.html"
-                   class="ativo">
+                <a href="minha-area.html" class="ativo">
                     Minha Área
                 </a>
 
@@ -104,27 +86,32 @@
 
             <!-- ========== PERFIL ========== -->
 
-            <a href="login.html"
-               class="perfil-usuario"
-               aria-label="Entrar ou acessar seu perfil">
 
-                <span class="perfil-icone"
-                      aria-hidden="true">
+            <div class="perfil-container">
 
-                    <svg viewBox="0 0 24 24"
-                         fill="none"
-                         stroke="currentColor"
-                         stroke-width="1.8">
+                <button type="button" class="perfil-usuario" id="botao-perfil" aria-expanded="false"
+                    aria-controls="menu-perfil">
+                    <span class="perfil-icone" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
 
-                        <circle cx="12" cy="8" r="4"/>
-                        <path d="M4 21v-2a8 8 0 0 1 16 0v2"/>
-                    </svg>
-                </span>
+                            <circle cx="12" cy="8" r="4" />
+                            <path d="M4 21v-2a8 8 0 0 1 16 0v2" />
+                        </svg>
+                    </span>
 
-                <span class="perfil-texto">
-                    Meu perfil
-                </span>
-            </a>
+                    <span class="perfil-texto">
+                        Meu perfil
+                    </span>
+                </button>
+
+                <div class="menu-perfil" id="menu-perfil" hidden>
+                    <button type="button" id="botao-sair">
+                        Sair da conta
+                    </button>
+                </div>
+
+            </div>
+
         </div>
     </header>
 
@@ -154,8 +141,7 @@
                         <!-- RESUMO -->
 
                         <li>
-                            <a href="resumo-financeiro.html"
-                               class="lateral-link">
+                            <a href="resumo-financeiro.html" class="lateral-link">
                                 Resumo financeiro
                             </a>
                         </li>
@@ -163,9 +149,7 @@
                         <!-- RENDA -->
 
                         <li>
-                            <a href="minha-renda.html"
-                               class="lateral-link renda-link-ativo"
-                               aria-current="page">
+                            <a href="minha-renda.html" class="lateral-link renda-link-ativo" aria-current="page">
                                 Minha renda
                             </a>
                         </li>
@@ -173,8 +157,7 @@
                         <!-- GASTOS -->
 
                         <li>
-                            <a href="meus-gastos.html"
-                               class="lateral-link">
+                            <a href="meus-gastos.html" class="lateral-link">
                                 Meus gastos
                             </a>
                         </li>
@@ -182,8 +165,7 @@
                         <!-- DIAGNÓSTICO -->
 
                         <li>
-                            <a href="pra-onde-foi-minha-grana.html"
-                               class="lateral-link">
+                            <a href="pra-onde-foi-minha-grana.html" class="lateral-link">
                                 Pra onde foi minha grana?
                             </a>
                         </li>
@@ -191,8 +173,7 @@
                         <!-- CONTAS -->
 
                         <li>
-                            <a href="contas-vencimentos.html"
-                               class="lateral-link">
+                            <a href="contas-vencimentos.html" class="lateral-link">
                                 Contas e vencimentos
                             </a>
                         </li>
@@ -200,8 +181,7 @@
                         <!-- METAS -->
 
                         <li>
-                            <a href="minhas-metas.html"
-                               class="lateral-link">
+                            <a href="minhas-metas.html" class="lateral-link">
                                 Minhas metas
                             </a>
                         </li>
@@ -231,11 +211,9 @@
                      6. APRESENTAÇÃO
                 ======================================== -->
 
-                <section class="renda-apresentacao"
-                         aria-labelledby="titulo-minha-renda">
+                <section class="renda-apresentacao" aria-labelledby="titulo-minha-renda">
 
-                    <nav class="renda-caminho"
-                         aria-label="Localização atual">
+                    <nav class="renda-caminho" aria-label="Localização atual">
 
                         <a href="minha-area.html">
                             Minha Área
@@ -268,8 +246,7 @@
                             </p>
                         </div>
 
-                        <span class="renda-detalhe"
-                              aria-hidden="true">↙</span>
+                        <span class="renda-detalhe" aria-hidden="true">↙</span>
                     </header>
                 </section>
 
@@ -278,8 +255,7 @@
                      7. VISÃO GERAL DA RENDA
                 ======================================== -->
 
-                <section class="renda-visao"
-                         aria-labelledby="titulo-visao">
+                <section class="renda-visao" aria-labelledby="titulo-visao">
 
                     <header class="renda-visao-topo">
 
@@ -293,8 +269,7 @@
                             </h2>
                         </div>
 
-                        <span class="renda-mes"
-                              id="renda-periodo">
+                        <span class="renda-mes" id="renda-periodo">
                             Mês atual
                         </span>
                     </header>
@@ -355,8 +330,7 @@
                      8. DINHEIRO PREVISTO
                 ======================================== -->
 
-                <section class="renda-prevista"
-                         aria-labelledby="titulo-prevista">
+                <section class="renda-prevista" aria-labelledby="titulo-prevista">
 
                     <div>
                         <p class="renda-etiqueta">
@@ -393,8 +367,7 @@
                      9. REGISTRAR RECEBIMENTOS
                 ======================================== -->
 
-                <section class="renda-registros"
-                         aria-labelledby="titulo-registros">
+                <section class="renda-registros" aria-labelledby="titulo-registros">
 
                     <header class="renda-secao-topo">
 
@@ -419,26 +392,20 @@
                         <details class="renda-registro renda-recebida">
 
                             <summary>
-                                <span class="renda-registro-icone"
-                                      aria-hidden="true">+</span>
+                                <span class="renda-registro-icone" aria-hidden="true">+</span>
 
                                 Registrar dinheiro recebido
                             </summary>
 
-                            <form class="renda-formulario"
-                                  id="form-renda-recebida">
+                            <form class="renda-formulario" id="form-renda-recebida">
 
                                 <div class="renda-campo">
                                     <label for="recebido-descricao">
                                         De onde veio o dinheiro?
                                     </label>
 
-                                    <input type="text"
-                                           id="recebido-descricao"
-                                           name="descricao"
-                                           maxlength="100"
-                                           placeholder="Salário, venda, bico..."
-                                           required>
+                                    <input type="text" id="recebido-descricao" name="descricao" maxlength="100"
+                                        placeholder="Salário, venda, bico..." required>
                                 </div>
 
                                 <div class="renda-campo">
@@ -446,9 +413,7 @@
                                         Tipo de renda
                                     </label>
 
-                                    <select id="recebido-tipo"
-                                            name="tipo"
-                                            required>
+                                    <select id="recebido-tipo" name="tipo" required>
 
                                         <option value="">
                                             Selecione
@@ -469,13 +434,8 @@
                                         Valor recebido (R$)
                                     </label>
 
-                                    <input type="number"
-                                           id="recebido-valor"
-                                           name="valor"
-                                           min="0.01"
-                                           step="0.01"
-                                           inputmode="decimal"
-                                           required>
+                                    <input type="number" id="recebido-valor" name="valor" min="0.01" step="0.01"
+                                        inputmode="decimal" required>
                                 </div>
 
                                 <div class="renda-campo">
@@ -483,24 +443,16 @@
                                         Quando recebeu?
                                     </label>
 
-                                    <input type="date"
-                                           id="recebido-data"
-                                           name="data"
-                                           required>
+                                    <input type="date" id="recebido-data" name="data" required>
                                 </div>
 
-                                <button type="button"
-                                        class="renda-salvar"
-                                        id="salvar-renda-recebida"
-                                        data-acao="registrar-renda">
+                                <button type="submit" class="renda-salvar" id="salvar-renda-recebida"
+                                    data-acao="registrar-renda">
                                     Salvar recebimento
                                 </button>
 
-                                <p class="mensagem-formulario"
-                                   id="mensagem-renda-recebida"
-                                   role="status"
-                                   aria-live="polite"
-                                   hidden></p>
+                                <p class="mensagem-formulario" id="mensagem-renda-recebida" role="status"
+                                    aria-live="polite" hidden></p>
                             </form>
                         </details>
 
@@ -510,26 +462,20 @@
                         <details class="renda-registro renda-futura">
 
                             <summary>
-                                <span class="renda-registro-icone"
-                                      aria-hidden="true">+</span>
+                                <span class="renda-registro-icone" aria-hidden="true">+</span>
 
                                 Registrar dinheiro previsto
                             </summary>
 
-                            <form class="renda-formulario"
-                                  id="form-renda-prevista">
+                            <form class="renda-formulario" id="form-renda-prevista">
 
                                 <div class="renda-campo">
                                     <label for="previsto-descricao">
                                         De onde virá o dinheiro?
                                     </label>
 
-                                    <input type="text"
-                                           id="previsto-descricao"
-                                           name="descricao"
-                                           maxlength="100"
-                                           placeholder="Pagamento, trabalho..."
-                                           required>
+                                    <input type="text" id="previsto-descricao" name="descricao" maxlength="100"
+                                        placeholder="Pagamento, trabalho..." required>
                                 </div>
 
                                 <div class="renda-campo">
@@ -537,9 +483,7 @@
                                         Tipo de renda
                                     </label>
 
-                                    <select id="previsto-tipo"
-                                            name="tipo"
-                                            required>
+                                    <select id="previsto-tipo" name="tipo" required>
 
                                         <option value="">
                                             Selecione
@@ -560,13 +504,8 @@
                                         Valor esperado (R$)
                                     </label>
 
-                                    <input type="number"
-                                           id="previsto-valor"
-                                           name="valor"
-                                           min="0.01"
-                                           step="0.01"
-                                           inputmode="decimal"
-                                           required>
+                                    <input type="number" id="previsto-valor" name="valor" min="0.01" step="0.01"
+                                        inputmode="decimal" required>
                                 </div>
 
                                 <div class="renda-campo">
@@ -574,24 +513,16 @@
                                         Quando espera receber?
                                     </label>
 
-                                    <input type="date"
-                                           id="previsto-data"
-                                           name="data_prevista"
-                                           required>
+                                    <input type="date" id="previsto-data" name="data_prevista" required>
                                 </div>
 
-                                <button type="button"
-                                        class="renda-salvar"
-                                        id="salvar-renda-prevista"
-                                        data-acao="registrar-previsao">
+                                <button type="submit" class="renda-salvar" id="salvar-renda-prevista"
+                                    data-acao="registrar-previsao">
                                     Salvar previsão
                                 </button>
 
-                                <p class="mensagem-formulario"
-                                   id="mensagem-renda-prevista"
-                                   role="status"
-                                   aria-live="polite"
-                                   hidden></p>
+                                <p class="mensagem-formulario" id="mensagem-renda-prevista" role="status"
+                                    aria-live="polite" hidden></p>
                             </form>
                         </details>
                     </div>
@@ -602,8 +533,7 @@
                      10. HISTÓRICO DE RECEBIMENTOS
                 ======================================== -->
 
-                <section class="renda-historico"
-                         aria-labelledby="titulo-historico">
+                <section class="renda-historico" aria-labelledby="titulo-historico">
 
                     <header class="renda-secao-topo">
 
@@ -635,6 +565,7 @@
                                     <th scope="col">Tipo</th>
                                     <th scope="col">Data</th>
                                     <th scope="col">Valor</th>
+                                    <th scope="col">Ações</th>
                                 </tr>
                             </thead>
 
@@ -643,8 +574,7 @@
                                 <!-- SEM REGISTROS -->
 
                                 <tr id="renda-historico-vazio">
-                                    <td colspan="4"
-                                        class="renda-tabela-vazia">
+                                    <td colspan="5" class="renda-tabela-vazia">
 
                                         Você ainda não registrou
                                         nenhum recebimento.
@@ -665,8 +595,7 @@
                      11. RECEBIMENTOS PENDENTES
                 ======================================== -->
 
-                <section class="renda-pendentes"
-                         aria-labelledby="titulo-pendentes">
+                <section class="renda-pendentes" aria-labelledby="titulo-pendentes">
 
                     <div>
                         <p class="renda-etiqueta">
@@ -685,12 +614,11 @@
 
                     <!-- SEM PREVISÕES -->
 
-                    <div class="renda-pendentes-vazio"
-                         id="renda-pendentes-vazio">
+                    <div class="renda-pendentes-vazio" id="renda-pendentes-vazio">
 
                         <span aria-hidden="true">◷</span>
 
-                        <p>
+                        <p id="renda-pendentes-vazio">
                             Nenhum recebimento previsto
                             por enquanto.
                         </p>
@@ -698,9 +626,7 @@
 
                     <!-- COM PREVISÕES -->
 
-                    <ul id="renda-pendentes-lista"
-                        class="lista-resultado"
-                        hidden>
+                    <ul id="renda-pendentes-lista" class="lista-resultado" hidden>
                     </ul>
                 </section>
 
@@ -709,8 +635,7 @@
                      12. EVOLUÇÃO DA RENDA
                 ======================================== -->
 
-                <section class="renda-evolucao"
-                         aria-labelledby="titulo-evolucao">
+                <section class="renda-evolucao" aria-labelledby="titulo-evolucao">
 
                     <div class="renda-evolucao-texto">
 
@@ -728,8 +653,7 @@
                             mudanças na sua renda.
                         </p>
 
-                        <p class="renda-evolucao-aviso"
-                           id="renda-evolucao-vazio">
+                        <p class="renda-evolucao-aviso" id="renda-evolucao-vazio">
 
                             Registre seus recebimentos
                             para acompanhar sua evolução.
@@ -738,18 +662,14 @@
 
                     <!-- ÁREA DO GRÁFICO REAL -->
 
-                    <div class="renda-evolucao-ilustracao"
-                         id="renda-grafico-container">
+                    <div class="renda-evolucao-ilustracao" id="renda-grafico-container">
 
-                        <p class="mensagem-grafico"
-                           id="renda-grafico-mensagem">
+                        <p class="mensagem-grafico" id="renda-grafico-mensagem">
                             Nenhum período com dados.
                         </p>
 
-                        <div id="renda-grafico-real"
-                             class="grafico-com-dados"
-                             aria-label="Gráfico de evolução da renda"
-                             hidden>
+                        <div id="renda-grafico-real" class="grafico-com-dados" aria-label="Gráfico de evolução da renda"
+                            hidden>
                         </div>
                     </div>
                 </section>
@@ -761,8 +681,7 @@
 
                 <aside class="renda-dica">
 
-                    <span class="renda-dica-icone"
-                          aria-hidden="true">✦</span>
+                    <span class="renda-dica-icone" aria-hidden="true">✦</span>
 
                     <div>
                         <h2>
@@ -785,8 +704,7 @@
 
                 <!-- ========== VOLTAR ========== -->
 
-                <a href="minha-area.html"
-                   class="renda-voltar">
+                <a href="minha-area.html" class="renda-voltar">
                     ← Voltar à Minha Área
                 </a>
             </div>
@@ -811,6 +729,8 @@
         </div>
     </footer>
 
+    <script type="module" src="../js/auth.js"></script>
+    <script type="module" src="../js/minha-renda.js"></script>
 </body>
-</html>
 
+</html>

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -9,34 +8,32 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-          content="Minha Área Financeira Base 6. Organize sua renda, gastos e metas no seu ritmo.">
+    <meta name="description" content="Minha Área Financeira Base 6. Organize sua renda, gastos e metas no seu ritmo.">
 
     <title>Minha Área Financeira | Base 6</title>
 
 
     <!-- ========== FONTES DO SITE ========== -->
 
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet"
-    >
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
 
     <!-- ========== CONEXÃO COM CSS ========== -->
 
-    <link rel="stylesheet"
-          href="../css/minha-area.css">
+    <link rel="stylesheet" href="../css/minha-area.css">
+
+    <style>
+        body {
+            visibility: hidden;
+        }
+    </style>
 
 </head>
 
@@ -45,8 +42,7 @@
 
     <!-- ========== ACESSIBILIDADE ========== -->
 
-    <a href="#conteudo"
-       class="pular-conteudo">
+    <a href="#conteudo" class="pular-conteudo">
 
         Pular para o conteúdo principal
 
@@ -64,29 +60,14 @@
 
             <!-- ========== COROA BASE 6 ========== -->
 
-            <a href="inicio.html"
-               class="base6-coroa-link"
-               aria-label="Voltar à página inicial da Base 6">
+            <a href="inicio.html" class="base6-coroa-link" aria-label="Voltar à página inicial da Base 6">
 
-                <svg class="base6-coroa-icone"
-                     viewBox="0 0 80 50"
-                     fill="none"
-                     aria-hidden="true">
+                <svg class="base6-coroa-icone" viewBox="0 0 80 50" fill="none" aria-hidden="true">
 
-                    <path
-                        d="M5 37 L13 12 L30 26 L42 5 L55 26 L72 12 L77 37 Z"
-                        stroke="currentColor"
-                        stroke-width="5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                    />
+                    <path d="M5 37 L13 12 L30 26 L42 5 L55 26 L72 12 L77 37 Z" stroke="currentColor" stroke-width="5"
+                        stroke-linecap="round" stroke-linejoin="round" />
 
-                    <path
-                        d="M8 44 L75 44"
-                        stroke="currentColor"
-                        stroke-width="5"
-                        stroke-linecap="round"
-                    />
+                    <path d="M8 44 L75 44" stroke="currentColor" stroke-width="5" stroke-linecap="round" />
 
                 </svg>
 
@@ -95,8 +76,7 @@
 
             <!-- ========== MENU SUPERIOR ========== -->
 
-            <nav class="menu-principal"
-                 aria-label="Navegação principal">
+            <nav class="menu-principal" aria-label="Navegação principal">
 
                 <a href="inicio.html">
                     Início
@@ -106,9 +86,7 @@
                     Aulas
                 </a>
 
-                <a href="minha-area.html"
-                   class="ativo"
-                   aria-current="page">
+                <a href="minha-area.html" class="ativo" aria-current="page">
 
                     Minha Área
 
@@ -131,32 +109,34 @@
                 integrados futuramente.
             -->
 
-            <div class="perfil-usuario"
-                 aria-label="Espaço do perfil do usuário">
 
-                <span class="perfil-icone"
-                      aria-hidden="true">
+            <div class="perfil-container">
 
-                    <svg viewBox="0 0 24 24"
-                         fill="none"
-                         stroke="currentColor"
-                         stroke-width="1.8">
+                <button type="button" class="perfil-usuario" id="botao-perfil" aria-expanded="false"
+                    aria-controls="menu-perfil">
 
-                        <circle cx="12" cy="8" r="4"/>
+                    <span class="perfil-icone" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
 
-                        <path d="M4 21v-2a8 8 0 0 1 16 0v2"/>
+                            <circle cx="12" cy="8" r="4" />
+                            <path d="M4 21v-2a8 8 0 0 1 16 0v2" />
 
-                    </svg>
+                        </svg>
+                    </span>
 
-                </span>
+                    <span class="perfil-texto">
+                        Meu perfil
+                    </span>
 
-                <span class="perfil-texto">
-                    Meu perfil
-                </span>
+                </button>
+
+                <div class="menu-perfil" id="menu-perfil" hidden>
+                    <button type="button" id="botao-sair">
+                        Sair da conta
+                    </button>
+                </div>
 
             </div>
-
-        </div>
 
     </header>
 
@@ -185,70 +165,65 @@
                     </p>
 
 
-                    
-<!-- ========== OPÇÕES DO MENU LATERAL ========== -->
+
+                    <!-- ========== OPÇÕES DO MENU LATERAL ========== -->
 
 
-<!-- ========================================
+                    <!-- ========================================
      MENU LATERAL - MINHA ÁREA FINANCEIRA
 ======================================== -->
 
-<ul class="lista-menu">
-    
-    
-<!-- ========== RESUMO FINANCEIRO ========== -->
-
-<li>
-    <a href="resumo-financeiro.html"
-       class="lateral-link">
-
-        Resumo financeiro
-
-    </a>
-</li>
+                    <ul class="lista-menu">
 
 
+                        <!-- ========== RESUMO FINANCEIRO ========== -->
 
-    <!-- ========== MINHA RENDA ========== -->
-    <li>
-        <a href="minha-renda.html"
-           class="lateral-link">
-            Minha renda
-        </a>
-    </li>
+                        <li>
+                            <a href="resumo-financeiro.html" class="lateral-link">
 
-    <!-- ========== MEUS GASTOS ========== -->
-    <li>
-        <a href="meus-gastos.html" class="lateral-link">
-    Meus gastos
-</a>
-    </li>
+                                Resumo financeiro
 
-    <!-- ========== PRA ONDE FOI MINHA GRANA ========== -->
-    <li>
-        <a href="pra-onde-foi-minha-grana.html"
-   class="lateral-link">
-    Pra onde foi minha grana?
-</a>
-    </li>
+                            </a>
+                        </li>
 
-    <!-- ========== CONTAS E VENCIMENTOS ========== -->
-    <li>
-        <a href="contas-vencimentos.html"
-           class="lateral-link">
-            Contas e vencimentos
-        </a>
-    </li>
 
-    <!-- ========== MINHAS METAS ========== -->
-    <li>
-        <a href="minhas-metas.html"
-           class="lateral-link">
-            Minhas metas
-        </a>
-    </li>
 
-</ul>
+                        <!-- ========== MINHA RENDA ========== -->
+                        <li>
+                            <a href="minha-renda.html" class="lateral-link">
+                                Minha renda
+                            </a>
+                        </li>
+
+                        <!-- ========== MEUS GASTOS ========== -->
+                        <li>
+                            <a href="meus-gastos.html" class="lateral-link">
+                                Meus gastos
+                            </a>
+                        </li>
+
+                        <!-- ========== PRA ONDE FOI MINHA GRANA ========== -->
+                        <li>
+                            <a href="pra-onde-foi-minha-grana.html" class="lateral-link">
+                                Pra onde foi minha grana?
+                            </a>
+                        </li>
+
+                        <!-- ========== CONTAS E VENCIMENTOS ========== -->
+                        <li>
+                            <a href="contas-vencimentos.html" class="lateral-link">
+                                Contas e vencimentos
+                            </a>
+                        </li>
+
+                        <!-- ========== MINHAS METAS ========== -->
+                        <li>
+                            <a href="minhas-metas.html" class="lateral-link">
+                                Minhas metas
+                            </a>
+                        </li>
+
+                    </ul>
 
 
                 </nav>
@@ -283,9 +258,7 @@
                      6. APRESENTAÇÃO - RESUMO
                 ======================================== -->
 
-                <section class="boas-vindas"
-                         id="boas-vindas"
-                         edby="titulo-area">
+                <section class="boas-vindas" id="boas-vindas" edby="titulo-area">
 
                     <div class="boas-vindas-texto">
 
@@ -313,8 +286,7 @@
 
                     <!-- ========== DETALHE DECORATIVO ========== -->
 
-                    <div class="decoracao-boas-vindas"
-                         aria-hidden="true">
+                    <div class="decoracao-boas-vindas" aria-hidden="true">
 
                         <span class="decoracao-circulo">
                             <span>6</span>
@@ -333,15 +305,14 @@
                      7. RESUMO FINANCEIRO DO MÊS
                 ======================================== -->
 
-                
+
 
 
                 <!-- ========================================
                      8. PRIMEIROS PASSOS
                 ======================================== -->
 
-                <section class="primeiros-passos"
-                         aria-labelledby="titulo-passos">
+                <section class="primeiros-passos" aria-labelledby="titulo-passos">
 
                     <header class="secao-cabecalho">
 
@@ -453,8 +424,7 @@
                      9. ESPAÇOS DA ÁREA FINANCEIRA
                 ======================================== -->
 
-                <section class="espacos-financeiros"
-                         aria-labelledby="titulo-espacos">
+                <section class="espacos-financeiros" aria-labelledby="titulo-espacos">
 
                     <header class="secao-cabecalho">
 
@@ -486,45 +456,41 @@
 
                         <!-- ========== MINHA RENDA ========== -->
 
-                        <article class="espaco-card"
-                                 id="minha-renda">
-                                 
+                        <article class="espaco-card" id="minha-renda">
 
-<!-- ========== ACESSAR DIAGNÓSTICO FINANCEIRO ========== -->
 
-<a href="pra-onde-foi-minha-grana.html"
-   class="link-diagnostico">
+                            <!-- ========== ACESSAR DIAGNÓSTICO FINANCEIRO ========== -->
 
-    Descobrir pra onde foi minha grana
+                            <a href="pra-onde-foi-minha-grana.html" class="link-diagnostico">
 
-    <span aria-hidden="true">→</span>
+                                Descobrir pra onde foi minha grana
 
-</a>
+                                <span aria-hidden="true">→</span>
+
+                            </a>
 
 
 
-<!-- ========== ACESSAR PÁGINA MEUS GASTOS ========== -->
+                            <!-- ========== ACESSAR PÁGINA MEUS GASTOS ========== -->
 
-<a href="meus-gastos.html"
-   class="link-espaco-gastos">
+                            <a href="meus-gastos.html" class="link-espaco-gastos">
 
-    Acessar Meus Gastos
+                                Acessar Meus Gastos
 
-    <span aria-hidden="true">→</span>
+                                <span aria-hidden="true">→</span>
 
-</a>
+                            </a>
 
 
-                              
-<!-- ========== ACESSAR PÁGINA MINHA RENDA ========== -->
 
-<a href="minha-renda.html"
-   class="link-espaco-renda">
+                            <!-- ========== ACESSAR PÁGINA MINHA RENDA ========== -->
 
-    Acessar Minha Renda
-    <span aria-hidden="true">→</span>
+                            <a href="minha-renda.html" class="link-espaco-renda">
 
-</a>
+                                Acessar Minha Renda
+                                <span aria-hidden="true">→</span>
+
+                            </a>
 
                             <h3>
                                 Minha renda
@@ -541,10 +507,9 @@
 
                         <!-- ========== MEUS GASTOS ========== -->
 
-                        <article class="espaco-card"
-                                 id="meus-gastos">
+                        <article class="espaco-card" id="meus-gastos">
 
-                           
+
 
                             <h3>
                                 Meus gastos
@@ -555,16 +520,15 @@
                                 e com quais despesas.
                             </p>
 
-                           
+
                         </article>
 
 
                         <!-- ========== PRA ONDE FOI MINHA GRANA ========== -->
 
-                        <article class="espaco-card espaco-destaque"
-                                 id="pra-onde-foi">
+                        <article class="espaco-card espaco-destaque" id="pra-onde-foi">
 
-                            
+
 
                             <h3>
                                 Pra onde foi minha grana?
@@ -577,16 +541,15 @@
                                 mais pesam no orçamento.
                             </p>
 
-                           
+
                         </article>
 
 
                         <!-- ========== CONTAS E VENCIMENTOS ========== -->
 
-                        <article class="espaco-card"
-                                 id="contas-vencimentos">
+                        <article class="espaco-card" id="contas-vencimentos">
 
-                            
+
 
                             <h3>
                                 Contas e vencimentos
@@ -597,17 +560,16 @@
                                 parcelas e datas importantes.
                             </p>
 
-                           
+
 
                         </article>
 
 
                         <!-- ========== MINHAS METAS ========== -->
 
-                        <article class="espaco-card"
-                                 id="minhas-metas">
+                        <article class="espaco-card" id="minhas-metas">
 
-                            
+
 
                             <h3>
                                 Minhas metas
@@ -619,7 +581,7 @@
                                 respeitando sua realidade.
                             </p>
 
-                           
+
 
                         </article>
 
@@ -674,7 +636,8 @@
     </footer>
 
 
-
+<script type="module" src="../js/auth.js" ></script>
 
 </body>
+
 </html>

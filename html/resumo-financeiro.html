@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -8,36 +7,34 @@
     ======================================== -->
 
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-          content="Acompanhe suas finanças no Resumo Financeiro da Base 6.">
+    <meta name="description" content="Acompanhe suas finanças no Resumo Financeiro da Base 6.">
 
     <title>Resumo Financeiro | Base 6</title>
 
     <!-- ========== FONTES ========== -->
 
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap"
-          rel="stylesheet">
+        rel="stylesheet">
 
     <!-- ========== ESTILOS ========== -->
 
-    <link rel="stylesheet"
-          href="../css/minha-area.css">
+    <link rel="stylesheet" href="../css/minha-area.css">
 
-    <link rel="stylesheet"
-          href="../css/resumo-financeiro.css">
+    <link rel="stylesheet" href="../css/resumo-financeiro.css">
 
-    <link rel="stylesheet"
-          href="../css/estados-financeiros.css">
+    <link rel="stylesheet" href="../css/estados-financeiros.css">
+
+    <style>
+        body {
+            visibility: hidden;
+        }
+    </style>
 </head>
 
 
@@ -60,40 +57,25 @@
 
             <!-- ========== COROA BASE 6 ========== -->
 
-            <a href="inicio.html"
-               class="base6-coroa-link"
-               aria-label="Voltar à página inicial da Base 6">
+            <a href="inicio.html" class="base6-coroa-link" aria-label="Voltar à página inicial da Base 6">
 
-                <svg class="base6-coroa-icone"
-                     viewBox="0 0 80 50"
-                     fill="none"
-                     aria-hidden="true">
+                <svg class="base6-coroa-icone" viewBox="0 0 80 50" fill="none" aria-hidden="true">
 
-                    <path
-                        d="M5 37 L13 12 L30 26 L42 5 L55 26 L72 12 L77 37 Z"
-                        stroke="currentColor"
-                        stroke-width="5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"/>
+                    <path d="M5 37 L13 12 L30 26 L42 5 L55 26 L72 12 L77 37 Z" stroke="currentColor" stroke-width="5"
+                        stroke-linecap="round" stroke-linejoin="round" />
 
-                    <path
-                        d="M8 44 L75 44"
-                        stroke="currentColor"
-                        stroke-width="5"
-                        stroke-linecap="round"/>
+                    <path d="M8 44 L75 44" stroke="currentColor" stroke-width="5" stroke-linecap="round" />
                 </svg>
             </a>
 
             <!-- ========== MENU SUPERIOR ========== -->
 
-            <nav class="menu-principal"
-                 aria-label="Menu principal">
+            <nav class="menu-principal" aria-label="Menu principal">
 
                 <a href="inicio.html">Início</a>
                 <a href="aulas.html">Aulas</a>
 
-                <a href="minha-area.html"
-                   class="ativo">
+                <a href="minha-area.html" class="ativo">
                     Minha Área
                 </a>
 
@@ -102,27 +84,32 @@
 
             <!-- ========== PERFIL ========== -->
 
-            <a href="login.html"
-               class="perfil-usuario"
-               aria-label="Entrar ou acessar seu perfil">
 
-                <span class="perfil-icone"
-                      aria-hidden="true">
+            <div class="perfil-container">
 
-                    <svg viewBox="0 0 24 24"
-                         fill="none"
-                         stroke="currentColor"
-                         stroke-width="1.8">
+                <button type="button" class="perfil-usuario" id="botao-perfil" aria-expanded="false"
+                    aria-controls="menu-perfil">
+                    <span class="perfil-icone" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
 
-                        <circle cx="12" cy="8" r="4"/>
-                        <path d="M4 21v-2a8 8 0 0 1 16 0v2"/>
-                    </svg>
-                </span>
+                            <circle cx="12" cy="8" r="4" />
+                            <path d="M4 21v-2a8 8 0 0 1 16 0v2" />
+                        </svg>
+                    </span>
 
-                <span class="perfil-texto">
-                    Meu perfil
-                </span>
-            </a>
+                    <span class="perfil-texto">
+                        Meu perfil
+                    </span>
+                </button>
+
+                <div class="menu-perfil" id="menu-perfil" hidden>
+                    <button type="button" id="botao-sair">
+                        Sair da conta
+                    </button>
+                </div>
+
+            </div>
+
         </div>
     </header>
 
@@ -152,9 +139,7 @@
                         <!-- RESUMO FINANCEIRO -->
 
                         <li>
-                            <a href="resumo-financeiro.html"
-                               class="lateral-link rf-link-ativo"
-                               aria-current="page">
+                            <a href="resumo-financeiro.html" class="lateral-link rf-link-ativo" aria-current="page">
                                 Resumo financeiro
                             </a>
                         </li>
@@ -162,8 +147,7 @@
                         <!-- MINHA RENDA -->
 
                         <li>
-                            <a href="minha-renda.html"
-                               class="lateral-link">
+                            <a href="minha-renda.html" class="lateral-link">
                                 Minha renda
                             </a>
                         </li>
@@ -171,8 +155,7 @@
                         <!-- MEUS GASTOS -->
 
                         <li>
-                            <a href="meus-gastos.html"
-                               class="lateral-link">
+                            <a href="meus-gastos.html" class="lateral-link">
                                 Meus gastos
                             </a>
                         </li>
@@ -180,8 +163,7 @@
                         <!-- DIAGNÓSTICO -->
 
                         <li>
-                            <a href="pra-onde-foi-minha-grana.html"
-                               class="lateral-link">
+                            <a href="pra-onde-foi-minha-grana.html" class="lateral-link">
                                 Pra onde foi minha grana?
                             </a>
                         </li>
@@ -189,8 +171,7 @@
                         <!-- CONTAS -->
 
                         <li>
-                            <a href="contas-vencimentos.html"
-                               class="lateral-link">
+                            <a href="contas-vencimentos.html" class="lateral-link">
                                 Contas e vencimentos
                             </a>
                         </li>
@@ -198,8 +179,7 @@
                         <!-- METAS -->
 
                         <li>
-                            <a href="minhas-metas.html"
-                               class="lateral-link">
+                            <a href="minhas-metas.html" class="lateral-link">
                                 Minhas metas
                             </a>
                         </li>
@@ -229,11 +209,9 @@
                      6. APRESENTAÇÃO
                 ======================================== -->
 
-                <section class="rf-apresentacao"
-                         aria-labelledby="rf-titulo">
+                <section class="rf-apresentacao" aria-labelledby="rf-titulo">
 
-                    <nav class="rf-caminho"
-                         aria-label="Localização atual">
+                    <nav class="rf-caminho" aria-label="Localização atual">
 
                         <a href="minha-area.html">
                             Minha Área
@@ -280,8 +258,7 @@
                      7. BALANÇO FINANCEIRO
                 ======================================== -->
 
-                <section class="rf-balanco"
-                         aria-labelledby="rf-titulo-balanco">
+                <section class="rf-balanco" aria-labelledby="rf-titulo-balanco">
 
                     <header class="rf-balanco-topo">
 
@@ -295,8 +272,7 @@
                             </h2>
                         </div>
 
-                        <span class="rf-balanco-marcador"
-                              aria-hidden="true">
+                        <span class="rf-balanco-marcador" aria-hidden="true">
                             ✳
                         </span>
                     </header>
@@ -361,8 +337,7 @@
                      8. REGISTRAR MOVIMENTAÇÕES
                 ======================================== -->
 
-                <section class="rf-movimentacoes"
-                         aria-labelledby="rf-titulo-movimentacoes">
+                <section class="rf-movimentacoes" aria-labelledby="rf-titulo-movimentacoes">
 
                     <header class="rf-secao-topo">
                         <div>
@@ -388,26 +363,20 @@
                         <details class="rf-registro rf-registro-renda">
 
                             <summary>
-                                <span class="rf-registro-icone"
-                                      aria-hidden="true">+</span>
+                                <span class="rf-registro-icone" aria-hidden="true">+</span>
 
                                 <span>Adicionar renda</span>
                             </summary>
 
-                            <form class="rf-formulario"
-                                  id="rf-form-renda">
+                            <form class="rf-formulario" id="rf-form-renda">
 
                                 <div class="rf-campo">
                                     <label for="rf-renda-descricao">
                                         De onde veio o dinheiro?
                                     </label>
 
-                                    <input type="text"
-                                           id="rf-renda-descricao"
-                                           name="descricao"
-                                           maxlength="100"
-                                           placeholder="Salário, serviço, venda..."
-                                           required>
+                                    <input type="text" id="rf-renda-descricao" name="descricao" maxlength="100"
+                                        placeholder="Salário, serviço, venda..." required>
                                 </div>
 
                                 <div class="rf-campo">
@@ -415,13 +384,8 @@
                                         Valor recebido (R$)
                                     </label>
 
-                                    <input type="number"
-                                           id="rf-renda-valor"
-                                           name="valor"
-                                           min="0.01"
-                                           step="0.01"
-                                           inputmode="decimal"
-                                           required>
+                                    <input type="number" id="rf-renda-valor" name="valor" min="0.01" step="0.01"
+                                        inputmode="decimal" required>
                                 </div>
 
                                 <div class="rf-campo">
@@ -429,24 +393,16 @@
                                         Data do recebimento
                                     </label>
 
-                                    <input type="date"
-                                           id="rf-renda-data"
-                                           name="data"
-                                           required>
+                                    <input type="date" id="rf-renda-data" name="data" required>
                                 </div>
 
-                                <button type="button"
-                                        class="rf-salvar"
-                                        id="rf-salvar-renda"
-                                        data-acao="registrar-renda">
+                                <button type="button" class="rf-salvar" id="rf-salvar-renda"
+                                    data-acao="registrar-renda">
                                     Salvar renda
                                 </button>
 
-                                <p class="mensagem-formulario"
-                                   id="rf-mensagem-renda"
-                                   role="status"
-                                   aria-live="polite"
-                                   hidden></p>
+                                <p class="mensagem-formulario" id="rf-mensagem-renda" role="status" aria-live="polite"
+                                    hidden></p>
                             </form>
                         </details>
 
@@ -456,26 +412,20 @@
                         <details class="rf-registro rf-registro-gasto">
 
                             <summary>
-                                <span class="rf-registro-icone"
-                                      aria-hidden="true">+</span>
+                                <span class="rf-registro-icone" aria-hidden="true">+</span>
 
                                 <span>Adicionar gasto</span>
                             </summary>
 
-                            <form class="rf-formulario"
-                                  id="rf-form-gasto">
+                            <form class="rf-formulario" id="rf-form-gasto">
 
                                 <div class="rf-campo">
                                     <label for="rf-gasto-descricao">
                                         Com o que você gastou?
                                     </label>
 
-                                    <input type="text"
-                                           id="rf-gasto-descricao"
-                                           name="descricao"
-                                           maxlength="100"
-                                           placeholder="Mercado, transporte..."
-                                           required>
+                                    <input type="text" id="rf-gasto-descricao" name="descricao" maxlength="100"
+                                        placeholder="Mercado, transporte..." required>
                                 </div>
 
                                 <div class="rf-campo">
@@ -483,13 +433,8 @@
                                         Valor gasto (R$)
                                     </label>
 
-                                    <input type="number"
-                                           id="rf-gasto-valor"
-                                           name="valor"
-                                           min="0.01"
-                                           step="0.01"
-                                           inputmode="decimal"
-                                           required>
+                                    <input type="number" id="rf-gasto-valor" name="valor" min="0.01" step="0.01"
+                                        inputmode="decimal" required>
                                 </div>
 
                                 <div class="rf-campo">
@@ -497,9 +442,7 @@
                                         Categoria
                                     </label>
 
-                                    <select id="rf-gasto-categoria"
-                                            name="categoria"
-                                            required>
+                                    <select id="rf-gasto-categoria" name="categoria" required>
 
                                         <option value="">
                                             Selecione
@@ -540,24 +483,16 @@
                                         Data do gasto
                                     </label>
 
-                                    <input type="date"
-                                           id="rf-gasto-data"
-                                           name="data"
-                                           required>
+                                    <input type="date" id="rf-gasto-data" name="data" required>
                                 </div>
 
-                                <button type="button"
-                                        class="rf-salvar"
-                                        id="rf-salvar-gasto"
-                                        data-acao="registrar-gasto">
+                                <button type="button" class="rf-salvar" id="rf-salvar-gasto"
+                                    data-acao="registrar-gasto">
                                     Salvar gasto
                                 </button>
 
-                                <p class="mensagem-formulario"
-                                   id="rf-mensagem-gasto"
-                                   role="status"
-                                   aria-live="polite"
-                                   hidden></p>
+                                <p class="mensagem-formulario" id="rf-mensagem-gasto" role="status" aria-live="polite"
+                                    hidden></p>
                             </form>
                         </details>
                     </div>
@@ -568,8 +503,7 @@
                      9. GASTOS POR CATEGORIA
                 ======================================== -->
 
-                <section class="rf-categorias"
-                         aria-labelledby="rf-titulo-categorias">
+                <section class="rf-categorias" aria-labelledby="rf-titulo-categorias">
 
                     <div class="rf-categorias-texto">
 
@@ -588,8 +522,7 @@
 
                         <!-- ESTADO SEM REGISTROS -->
 
-                        <p class="rf-categorias-estado"
-                           id="rf-categorias-vazio">
+                        <p class="rf-categorias-estado" id="rf-categorias-vazio">
 
                             Seus gastos por categoria
                             aparecerão aqui quando você
@@ -598,28 +531,23 @@
 
                         <!-- ESTADO COM REGISTROS -->
 
-                        <div id="rf-categorias-dados"
-                             class="resultado-com-dados"
-                             hidden>
+                        <div id="rf-categorias-dados" class="resultado-com-dados" hidden>
 
                             <p>
                                 Distribuição dos gastos
                                 do período selecionado.
                             </p>
 
-                            <ul id="rf-lista-categorias"
-                                class="lista-resultado">
+                            <ul id="rf-lista-categorias" class="lista-resultado">
                             </ul>
                         </div>
                     </div>
 
                     <!-- GRÁFICO SEM REGISTROS -->
 
-                    <div class="rf-grafico-vazio"
-                         id="rf-grafico-vazio">
+                    <div class="rf-grafico-vazio" id="rf-grafico-vazio">
 
-                        <div class="rf-anel"
-                             aria-hidden="true">
+                        <div class="rf-anel" aria-hidden="true">
                             <span>—</span>
                         </div>
 
@@ -630,10 +558,8 @@
 
                     <!-- GRÁFICO COM REGISTROS -->
 
-                    <div id="rf-grafico-real"
-                         class="grafico-com-dados"
-                         aria-label="Distribuição de gastos por categoria"
-                         hidden>
+                    <div id="rf-grafico-real" class="grafico-com-dados"
+                        aria-label="Distribuição de gastos por categoria" hidden>
                     </div>
                 </section>
 
@@ -642,8 +568,7 @@
                      10. CONTAS E COMPARAÇÃO MENSAL
                 ======================================== -->
 
-                <section class="rf-extras"
-                         aria-label="Outras informações financeiras">
+                <section class="rf-extras" aria-label="Outras informações financeiras">
 
                     <!-- ========== PRÓXIMAS CONTAS ========== -->
 
@@ -660,16 +585,13 @@
                             que estão chegando.
                         </p>
 
-                        <div class="rf-contas-estado"
-                             id="rf-contas-vazio">
+                        <div class="rf-contas-estado" id="rf-contas-vazio">
 
                             Nenhuma conta cadastrada
                             para este período.
                         </div>
 
-                        <ul id="rf-contas-lista"
-                            class="lista-resultado"
-                            hidden>
+                        <ul id="rf-contas-lista" class="lista-resultado" hidden>
                         </ul>
 
                         <a href="contas-vencimentos.html">
@@ -725,8 +647,7 @@
 
                 <aside class="rf-entenda">
 
-                    <span class="rf-entenda-icone"
-                          aria-hidden="true">
+                    <span class="rf-entenda-icone" aria-hidden="true">
                         ✦
                     </span>
 
@@ -740,8 +661,7 @@
                             do seu mês.
                         </p>
 
-                        <a href="pra-onde-foi-minha-grana.html"
-                           class="link-analise">
+                        <a href="pra-onde-foi-minha-grana.html" class="link-analise">
                             Ver diagnóstico financeiro →
                         </a>
                     </div>
@@ -749,8 +669,7 @@
 
                 <!-- ========== VOLTAR ========== -->
 
-                <a href="minha-area.html"
-                   class="rf-voltar">
+                <a href="minha-area.html" class="rf-voltar">
                     ← Voltar à Minha Área
                 </a>
             </div>
@@ -775,6 +694,8 @@
         </div>
     </footer>
 
+    <script type="module" src="../js/auth.js"></script>
+    <script type="module" src="../js/resumo-financeiro.js"></script>
 </body>
-</html>
 
+</html>

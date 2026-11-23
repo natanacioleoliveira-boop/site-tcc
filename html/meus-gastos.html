@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -10,36 +8,34 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-          content="Organize seus gastos e contas na Base 6.">
+    <meta name="description" content="Organize seus gastos e contas na Base 6.">
 
     <title>Meus Gastos | Base 6</title>
 
     <!-- ========== FONTES ========== -->
 
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap"
-          rel="stylesheet">
+        rel="stylesheet">
 
     <!-- ========== ESTILOS ========== -->
 
-    <link rel="stylesheet"
-          href="../css/minha-area.css">
+    <link rel="stylesheet" href="../css/minha-area.css">
 
-    <link rel="stylesheet"
-          href="../css/meus-gastos.css">
+    <link rel="stylesheet" href="../css/meus-gastos.css">
 
-    <link rel="stylesheet"
-          href="../css/estados-financeiros.css">
+    <link rel="stylesheet" href="../css/estados-financeiros.css">
+
+    <style>
+        body{
+            visibility: hidden;
+        }
+    </style>
 </head>
 
 
@@ -62,40 +58,25 @@
 
             <!-- ========== COROA BASE 6 ========== -->
 
-            <a href="inicio.html"
-               class="base6-coroa-link"
-               aria-label="Voltar à página inicial da Base 6">
+            <a href="inicio.html" class="base6-coroa-link" aria-label="Voltar à página inicial da Base 6">
 
-                <svg class="base6-coroa-icone"
-                     viewBox="0 0 80 50"
-                     fill="none"
-                     aria-hidden="true">
+                <svg class="base6-coroa-icone" viewBox="0 0 80 50" fill="none" aria-hidden="true">
 
-                    <path
-                        d="M5 37 L13 12 L30 26 L42 5 L55 26 L72 12 L77 37 Z"
-                        stroke="currentColor"
-                        stroke-width="5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"/>
+                    <path d="M5 37 L13 12 L30 26 L42 5 L55 26 L72 12 L77 37 Z" stroke="currentColor" stroke-width="5"
+                        stroke-linecap="round" stroke-linejoin="round" />
 
-                    <path
-                        d="M8 44 L75 44"
-                        stroke="currentColor"
-                        stroke-width="5"
-                        stroke-linecap="round"/>
+                    <path d="M8 44 L75 44" stroke="currentColor" stroke-width="5" stroke-linecap="round" />
                 </svg>
             </a>
 
             <!-- ========== MENU SUPERIOR ========== -->
 
-            <nav class="menu-principal"
-                 aria-label="Menu principal">
+            <nav class="menu-principal" aria-label="Menu principal">
 
                 <a href="inicio.html">Início</a>
                 <a href="aulas.html">Aulas</a>
 
-                <a href="minha-area.html"
-                   class="ativo">
+                <a href="minha-area.html" class="ativo">
                     Minha Área
                 </a>
 
@@ -106,27 +87,31 @@
 
             <!-- ========== PERFIL ========== -->
 
-            <a href="login.html"
-               class="perfil-usuario"
-               aria-label="Entrar ou acessar seu perfil">
+            <div class="perfil-container">
 
-                <span class="perfil-icone"
-                      aria-hidden="true">
+                <button type="button" class="perfil-usuario" id="botao-perfil" aria-expanded="false"
+                    aria-controls="menu-perfil">
+                    <span class="perfil-icone" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
 
-                    <svg viewBox="0 0 24 24"
-                         fill="none"
-                         stroke="currentColor"
-                         stroke-width="1.8">
+                            <circle cx="12" cy="8" r="4" />
+                            <path d="M4 21v-2a8 8 0 0 1 16 0v2" />
+                        </svg>
+                    </span>
 
-                        <circle cx="12" cy="8" r="4"/>
-                        <path d="M4 21v-2a8 8 0 0 1 16 0v2"/>
-                    </svg>
-                </span>
+                    <span class="perfil-texto">
+                        Meu perfil
+                    </span>
+                </button>
 
-                <span class="perfil-texto">
-                    Meu perfil
-                </span>
-            </a>
+                <div class="menu-perfil" id="menu-perfil" hidden>
+                    <button type="button" id="botao-sair">
+                        Sair da conta
+                    </button>
+                </div>
+
+            </div>
+
         </div>
     </header>
 
@@ -156,8 +141,7 @@
                         <!-- RESUMO -->
 
                         <li>
-                            <a href="resumo-financeiro.html"
-                               class="lateral-link">
+                            <a href="resumo-financeiro.html" class="lateral-link">
                                 Resumo financeiro
                             </a>
                         </li>
@@ -165,8 +149,7 @@
                         <!-- RENDA -->
 
                         <li>
-                            <a href="minha-renda.html"
-                               class="lateral-link">
+                            <a href="minha-renda.html" class="lateral-link">
                                 Minha renda
                             </a>
                         </li>
@@ -174,9 +157,7 @@
                         <!-- GASTOS -->
 
                         <li>
-                            <a href="meus-gastos.html"
-                               class="lateral-link gastos-link-ativo"
-                               aria-current="page">
+                            <a href="meus-gastos.html" class="lateral-link gastos-link-ativo" aria-current="page">
                                 Meus gastos
                             </a>
                         </li>
@@ -184,8 +165,7 @@
                         <!-- DIAGNÓSTICO -->
 
                         <li>
-                            <a href="pra-onde-foi-minha-grana.html"
-                               class="lateral-link">
+                            <a href="pra-onde-foi-minha-grana.html" class="lateral-link">
                                 Pra onde foi minha grana?
                             </a>
                         </li>
@@ -193,8 +173,7 @@
                         <!-- CONTAS -->
 
                         <li>
-                            <a href="contas-vencimentos.html"
-                               class="lateral-link">
+                            <a href="contas-vencimentos.html" class="lateral-link">
                                 Contas e vencimentos
                             </a>
                         </li>
@@ -202,8 +181,7 @@
                         <!-- METAS -->
 
                         <li>
-                            <a href="minhas-metas.html"
-                               class="lateral-link">
+                            <a href="minhas-metas.html" class="lateral-link">
                                 Minhas metas
                             </a>
                         </li>
@@ -233,11 +211,9 @@
                      6. APRESENTAÇÃO
                 ======================================== -->
 
-                <section class="gastos-apresentacao"
-                         aria-labelledby="titulo-gastos">
+                <section class="gastos-apresentacao" aria-labelledby="titulo-gastos">
 
-                    <nav class="gastos-caminho"
-                         aria-label="Localização atual">
+                    <nav class="gastos-caminho" aria-label="Localização atual">
 
                         <a href="minha-area.html">
                             Minha Área
@@ -271,8 +247,7 @@
                             </p>
                         </div>
 
-                        <div class="gastos-decoracao"
-                             aria-hidden="true">
+                        <div class="gastos-decoracao" aria-hidden="true">
 
                             <span class="gastos-decoracao-circulo">
                                 $
@@ -290,8 +265,7 @@
                      7. BALANÇO DOS GASTOS
                 ======================================== -->
 
-                <section class="gastos-balanco"
-                         aria-labelledby="titulo-balanco-gastos">
+                <section class="gastos-balanco" aria-labelledby="titulo-balanco-gastos">
 
                     <header class="gastos-balanco-topo">
 
@@ -305,8 +279,7 @@
                             </h2>
                         </div>
 
-                        <span class="gastos-periodo"
-                              id="gastos-periodo">
+                        <span class="gastos-periodo" id="gastos-periodo">
                             Mês atual
                         </span>
                     </header>
@@ -377,8 +350,7 @@
                      8. ADICIONAR GASTOS
                 ======================================== -->
 
-                <section class="gastos-registros"
-                         aria-labelledby="titulo-registros-gastos">
+                <section class="gastos-registros" aria-labelledby="titulo-registros-gastos">
 
                     <header class="gastos-secao-topo">
 
@@ -403,26 +375,20 @@
                         <details class="gastos-registro registro-pago">
 
                             <summary>
-                                <span class="gastos-mais"
-                                      aria-hidden="true">+</span>
+                                <span class="gastos-mais" aria-hidden="true">+</span>
 
                                 Registrar gasto pago
                             </summary>
 
-                            <form class="gastos-formulario"
-                                  id="form-gasto-pago">
+                            <form class="gastos-formulario" id="form-gasto-pago">
 
                                 <div class="gastos-campo">
                                     <label for="pago-descricao">
                                         Com o que você gastou?
                                     </label>
 
-                                    <input type="text"
-                                           id="pago-descricao"
-                                           name="descricao"
-                                           maxlength="100"
-                                           placeholder="Mercado, passagem..."
-                                           required>
+                                    <input type="text" id="pago-descricao" name="descricao" maxlength="100"
+                                        placeholder="Mercado, passagem..." required>
                                 </div>
 
                                 <div class="gastos-campo">
@@ -430,13 +396,8 @@
                                         Valor pago (R$)
                                     </label>
 
-                                    <input type="number"
-                                           id="pago-valor"
-                                           name="valor"
-                                           min="0.01"
-                                           step="0.01"
-                                           inputmode="decimal"
-                                           required>
+                                    <input type="number" id="pago-valor" name="valor" min="0.01" step="0.01"
+                                        inputmode="decimal" required>
                                 </div>
 
                                 <div class="gastos-campo">
@@ -444,9 +405,7 @@
                                         Categoria
                                     </label>
 
-                                    <select id="pago-categoria"
-                                            name="categoria"
-                                            required>
+                                    <select id="pago-categoria" name="categoria" required>
 
                                         <option value="">
                                             Selecione
@@ -491,9 +450,7 @@
                                         Tipo de gasto
                                     </label>
 
-                                    <select id="pago-tipo"
-                                            name="tipo"
-                                            required>
+                                    <select id="pago-tipo" name="tipo" required>
 
                                         <option value="">
                                             Selecione
@@ -514,10 +471,7 @@
                                         Quando você pagou?
                                     </label>
 
-                                    <input type="date"
-                                           id="pago-data"
-                                           name="data"
-                                           required>
+                                    <input type="date" id="pago-data" name="data" required>
                                 </div>
 
                                 <div class="gastos-campo">
@@ -526,8 +480,7 @@
                                         (opcional)
                                     </label>
 
-                                    <select id="pago-prioridade"
-                                            name="prioridade">
+                                    <select id="pago-prioridade" name="prioridade">
 
                                         <option value="">
                                             Prefiro não classificar
@@ -547,18 +500,13 @@
                                     </select>
                                 </div>
 
-                                <button type="button"
-                                        class="gastos-salvar"
-                                        id="salvar-gasto-pago"
-                                        data-acao="registrar-gasto-pago">
+                                <button type="submit" class="gastos-salvar" id="salvar-gasto-pago"
+                                    data-acao="registrar-gasto-pago">
                                     Salvar gasto
                                 </button>
 
-                                <p class="mensagem-formulario"
-                                   id="mensagem-gasto-pago"
-                                   role="status"
-                                   aria-live="polite"
-                                   hidden></p>
+                                <p class="mensagem-formulario" id="mensagem-gasto-pago" role="status" aria-live="polite"
+                                    hidden></p>
                             </form>
                         </details>
 
@@ -568,26 +516,20 @@
                         <details class="gastos-registro registro-pendente">
 
                             <summary>
-                                <span class="gastos-mais"
-                                      aria-hidden="true">+</span>
+                                <span class="gastos-mais" aria-hidden="true">+</span>
 
                                 Registrar conta a pagar
                             </summary>
 
-                            <form class="gastos-formulario"
-                                  id="form-conta-pendente">
+                            <form class="gastos-formulario" id="form-conta-pendente">
 
                                 <div class="gastos-campo">
                                     <label for="pendente-descricao">
                                         Qual é a despesa?
                                     </label>
 
-                                    <input type="text"
-                                           id="pendente-descricao"
-                                           name="descricao"
-                                           maxlength="100"
-                                           placeholder="Conta de luz..."
-                                           required>
+                                    <input type="text" id="pendente-descricao" name="descricao" maxlength="100"
+                                        placeholder="Conta de luz..." required>
                                 </div>
 
                                 <div class="gastos-campo">
@@ -595,13 +537,8 @@
                                         Valor previsto (R$)
                                     </label>
 
-                                    <input type="number"
-                                           id="pendente-valor"
-                                           name="valor"
-                                           min="0.01"
-                                           step="0.01"
-                                           inputmode="decimal"
-                                           required>
+                                    <input type="number" id="pendente-valor" name="valor" min="0.01" step="0.01"
+                                        inputmode="decimal" required>
                                 </div>
 
                                 <div class="gastos-campo">
@@ -609,9 +546,7 @@
                                         Categoria
                                     </label>
 
-                                    <select id="pendente-categoria"
-                                            name="categoria"
-                                            required>
+                                    <select id="pendente-categoria" name="categoria" required>
 
                                         <option value="">
                                             Selecione
@@ -656,9 +591,7 @@
                                         Tipo de gasto
                                     </label>
 
-                                    <select id="pendente-tipo"
-                                            name="tipo"
-                                            required>
+                                    <select id="pendente-tipo" name="tipo" required>
 
                                         <option value="">
                                             Selecione
@@ -679,24 +612,16 @@
                                         Data de vencimento
                                     </label>
 
-                                    <input type="date"
-                                           id="pendente-data"
-                                           name="vencimento"
-                                           required>
+                                    <input type="date" id="pendente-data" name="vencimento" required>
                                 </div>
 
-                                <button type="button"
-                                        class="gastos-salvar"
-                                        id="salvar-conta-pendente"
-                                        data-acao="registrar-conta">
+                                <button type="button" class="gastos-salvar" id="salvar-conta-pendente"
+                                    data-acao="registrar-conta">
                                     Salvar conta
                                 </button>
 
-                                <p class="mensagem-formulario"
-                                   id="mensagem-conta-pendente"
-                                   role="status"
-                                   aria-live="polite"
-                                   hidden></p>
+                                <p class="mensagem-formulario" id="mensagem-conta-pendente" role="status"
+                                    aria-live="polite" hidden></p>
                             </form>
                         </details>
                     </div>
@@ -707,8 +632,7 @@
                      9. GASTOS POR CATEGORIA
                 ======================================== -->
 
-                <section class="gastos-categorias"
-                         aria-labelledby="titulo-categorias">
+                <section class="gastos-categorias" aria-labelledby="titulo-categorias">
 
                     <header class="gastos-secao-topo">
 
@@ -730,11 +654,9 @@
 
                         <!-- GRÁFICO SEM DADOS -->
 
-                        <div class="gastos-grafico-vazio"
-                             id="gastos-grafico-vazio">
+                        <div class="gastos-grafico-vazio" id="gastos-grafico-vazio">
 
-                            <div class="gastos-anel"
-                                 aria-hidden="true">
+                            <div class="gastos-anel" aria-hidden="true">
                                 <span>—</span>
                             </div>
 
@@ -745,10 +667,8 @@
 
                         <!-- GRÁFICO COM DADOS -->
 
-                        <div id="gastos-grafico-real"
-                             class="grafico-com-dados"
-                             aria-label="Gastos por categoria"
-                             hidden>
+                        <div id="gastos-grafico-real" class="grafico-com-dados" aria-label="Gastos por categoria"
+                            hidden>
                         </div>
 
                         <!-- LEGENDA -->
@@ -761,45 +681,37 @@
 
                             <ul>
                                 <li>
-                                    <span class="legenda-cor cor-alimentacao"
-                                          aria-hidden="true"></span>
+                                    <span class="legenda-cor cor-alimentacao" aria-hidden="true"></span>
                                     Alimentação
                                 </li>
 
                                 <li>
-                                    <span class="legenda-cor cor-moradia"
-                                          aria-hidden="true"></span>
+                                    <span class="legenda-cor cor-moradia" aria-hidden="true"></span>
                                     Moradia
                                 </li>
 
                                 <li>
-                                    <span class="legenda-cor cor-transporte"
-                                          aria-hidden="true"></span>
+                                    <span class="legenda-cor cor-transporte" aria-hidden="true"></span>
                                     Transporte
                                 </li>
 
                                 <li>
-                                    <span class="legenda-cor cor-saude"
-                                          aria-hidden="true"></span>
+                                    <span class="legenda-cor cor-saude" aria-hidden="true"></span>
                                     Saúde
                                 </li>
 
                                 <li>
-                                    <span class="legenda-cor cor-outros"
-                                          aria-hidden="true"></span>
+                                    <span class="legenda-cor cor-outros" aria-hidden="true"></span>
                                     Outras despesas
                                 </li>
                             </ul>
 
                             <!-- RESULTADOS POR CATEGORIA -->
 
-                            <ul id="gastos-categorias-valores"
-                                class="lista-resultado"
-                                hidden>
+                            <ul id="gastos-categorias-valores" class="lista-resultado" hidden>
                             </ul>
 
-                            <p class="legenda-aviso"
-                               id="gastos-categorias-vazio">
+                            <p class="legenda-aviso" id="gastos-categorias-vazio">
 
                                 Os valores de cada categoria
                                 aparecerão após o primeiro
@@ -814,8 +726,7 @@
                      10. HISTÓRICO DE GASTOS
                 ======================================== -->
 
-                <section class="gastos-historico"
-                         aria-labelledby="titulo-historico">
+                <section class="gastos-historico" aria-labelledby="titulo-historico">
 
                     <header class="gastos-secao-topo">
 
@@ -835,17 +746,14 @@
 
                     <!-- ========== FILTROS ========== -->
 
-                    <form class="gastos-filtros"
-                          id="gastos-form-filtros"
-                          aria-label="Filtros do histórico">
+                    <form class="gastos-filtros" id="gastos-form-filtros" aria-label="Filtros do histórico">
 
                         <div class="gastos-campo">
                             <label for="filtro-categoria">
                                 Categoria
                             </label>
 
-                            <select id="filtro-categoria"
-                                    name="categoria">
+                            <select id="filtro-categoria" name="categoria">
 
                                 <option value="todas">
                                     Todas
@@ -890,8 +798,7 @@
                                 Situação
                             </label>
 
-                            <select id="filtro-situacao"
-                                    name="situacao">
+                            <select id="filtro-situacao" name="situacao">
 
                                 <option value="todas">
                                     Todas
@@ -931,8 +838,7 @@
                             <tbody id="gastos-historico-corpo">
 
                                 <tr id="gastos-historico-vazio">
-                                    <td colspan="5"
-                                        class="gastos-tabela-vazia">
+                                    <td colspan="5" class="gastos-tabela-vazia">
 
                                         Você ainda não registrou
                                         nenhuma despesa.
@@ -953,8 +859,7 @@
                      11. COMPRAS PARCELADAS
                 ======================================== -->
 
-                <section class="gastos-parcelas"
-                         aria-labelledby="titulo-parcelas">
+                <section class="gastos-parcelas" aria-labelledby="titulo-parcelas">
 
                     <div class="gastos-parcelas-texto">
 
@@ -984,25 +889,19 @@
                                         formulario-parcela">
 
                             <summary>
-                                <span class="gastos-mais"
-                                      aria-hidden="true">+</span>
+                                <span class="gastos-mais" aria-hidden="true">+</span>
 
                                 Adicionar compra parcelada
                             </summary>
 
-                            <form class="gastos-formulario"
-                                  id="form-compra-parcelada">
+                            <form class="gastos-formulario" id="form-compra-parcelada">
 
                                 <div class="gastos-campo">
                                     <label for="parcela-descricao">
                                         O que você comprou?
                                     </label>
 
-                                    <input type="text"
-                                           id="parcela-descricao"
-                                           name="descricao"
-                                           maxlength="100"
-                                           required>
+                                    <input type="text" id="parcela-descricao" name="descricao" maxlength="100" required>
                                 </div>
 
                                 <div class="gastos-campo">
@@ -1010,13 +909,8 @@
                                         Valor total da compra (R$)
                                     </label>
 
-                                    <input type="number"
-                                           id="parcela-total"
-                                           name="valor_total"
-                                           min="0.01"
-                                           step="0.01"
-                                           inputmode="decimal"
-                                           required>
+                                    <input type="number" id="parcela-total" name="valor_total" min="0.01" step="0.01"
+                                        inputmode="decimal" required>
                                 </div>
 
                                 <div class="gastos-campo">
@@ -1024,13 +918,8 @@
                                         Número de parcelas
                                     </label>
 
-                                    <input type="number"
-                                           id="parcela-quantidade"
-                                           name="quantidade"
-                                           min="2"
-                                           max="120"
-                                           step="1"
-                                           required>
+                                    <input type="number" id="parcela-quantidade" name="quantidade" min="2" max="120"
+                                        step="1" required>
                                 </div>
 
                                 <div class="gastos-campo">
@@ -1038,24 +927,17 @@
                                         Primeiro vencimento
                                     </label>
 
-                                    <input type="date"
-                                           id="parcela-primeiro-vencimento"
-                                           name="primeiro_vencimento"
-                                           required>
+                                    <input type="date" id="parcela-primeiro-vencimento" name="primeiro_vencimento"
+                                        required>
                                 </div>
 
-                                <button type="button"
-                                        class="gastos-salvar"
-                                        id="salvar-compra-parcelada"
-                                        data-acao="registrar-parcelamento">
+                                <button type="button" class="gastos-salvar" id="salvar-compra-parcelada"
+                                    data-acao="registrar-parcelamento">
                                     Salvar compra parcelada
                                 </button>
 
-                                <p class="mensagem-formulario"
-                                   id="mensagem-parcelamento"
-                                   role="status"
-                                   aria-live="polite"
-                                   hidden></p>
+                                <p class="mensagem-formulario" id="mensagem-parcelamento" role="status"
+                                    aria-live="polite" hidden></p>
                             </form>
                         </details>
                     </div>
@@ -1064,8 +946,7 @@
 
                     <div>
 
-                        <div class="gastos-parcelas-estado"
-                             id="gastos-parcelas-vazio">
+                        <div class="gastos-parcelas-estado" id="gastos-parcelas-vazio">
 
                             <span aria-hidden="true">◷</span>
 
@@ -1079,9 +960,7 @@
                             </p>
                         </div>
 
-                        <ul id="gastos-parcelas-lista"
-                            class="lista-resultado"
-                            hidden>
+                        <ul id="gastos-parcelas-lista" class="lista-resultado" hidden>
                         </ul>
                     </div>
                 </section>
@@ -1091,8 +970,7 @@
                      12. HÁBITOS DE CONSUMO
                 ======================================== -->
 
-                <section class="gastos-reflexao"
-                         aria-labelledby="titulo-reflexao">
+                <section class="gastos-reflexao" aria-labelledby="titulo-reflexao">
 
                     <header>
                         <p class="gastos-etiqueta">
@@ -1115,8 +993,7 @@
                         <!-- ========== ESSENCIAL ========== -->
 
                         <li>
-                            <span class="prioridade-marca marca-essencial"
-                                  aria-hidden="true"></span>
+                            <span class="prioridade-marca marca-essencial" aria-hidden="true"></span>
 
                             <div>
                                 <h3>Essencial</h3>
@@ -1131,8 +1008,7 @@
                         <!-- ========== PLANEJÁVEL ========== -->
 
                         <li>
-                            <span class="prioridade-marca marca-planejavel"
-                                  aria-hidden="true"></span>
+                            <span class="prioridade-marca marca-planejavel" aria-hidden="true"></span>
 
                             <div>
                                 <h3>Planejável</h3>
@@ -1148,8 +1024,7 @@
                         <!-- ========== OCASIONAL ========== -->
 
                         <li>
-                            <span class="prioridade-marca marca-ocasional"
-                                  aria-hidden="true"></span>
+                            <span class="prioridade-marca marca-ocasional" aria-hidden="true"></span>
 
                             <div>
                                 <h3>Ocasional</h3>
@@ -1170,8 +1045,7 @@
 
                 <aside class="gastos-dica">
 
-                    <span class="gastos-dica-icone"
-                          aria-hidden="true">✦</span>
+                    <span class="gastos-dica-icone" aria-hidden="true">✦</span>
 
                     <div>
                         <h2>
@@ -1192,8 +1066,7 @@
 
                 <!-- ========== VOLTAR ========== -->
 
-                <a href="minha-area.html"
-                   class="gastos-voltar">
+                <a href="minha-area.html" class="gastos-voltar">
                     ← Voltar à Minha Área
                 </a>
             </div>
@@ -1218,5 +1091,8 @@
         </div>
     </footer>
 
+    <script type="module" src="../js/auth.js"></script>
+    <script type="module" src="../js/meus-gastos.js"></script>
 </body>
+
 </html>

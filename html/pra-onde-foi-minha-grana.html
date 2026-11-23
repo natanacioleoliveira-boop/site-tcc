@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -10,36 +8,34 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-          content="Entenda seu orçamento com o diagnóstico financeiro da Base 6.">
+    <meta name="description" content="Entenda seu orçamento com o diagnóstico financeiro da Base 6.">
 
     <title>Pra Onde Foi Minha Grana? | Base 6</title>
 
     <!-- ========== FONTES ========== -->
 
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap"
-          rel="stylesheet">
+        rel="stylesheet">
 
     <!-- ========== ESTILOS ========== -->
 
-    <link rel="stylesheet"
-          href="../css/minha-area.css">
+    <link rel="stylesheet" href="../css/minha-area.css">
 
-    <link rel="stylesheet"
-          href="../css/pra-onde-foi-minha-grana.css">
+    <link rel="stylesheet" href="../css/pra-onde-foi-minha-grana.css">
 
-    <link rel="stylesheet"
-          href="../css/estados-financeiros.css">
+    <link rel="stylesheet" href="../css/estados-financeiros.css">
+
+    <style>
+        body {
+            visibility: hidden;
+        }
+    </style>
 </head>
 
 
@@ -62,40 +58,25 @@
 
             <!-- ========== COROA BASE 6 ========== -->
 
-            <a href="inicio.html"
-               class="base6-coroa-link"
-               aria-label="Voltar à página inicial da Base 6">
+            <a href="inicio.html" class="base6-coroa-link" aria-label="Voltar à página inicial da Base 6">
 
-                <svg class="base6-coroa-icone"
-                     viewBox="0 0 80 50"
-                     fill="none"
-                     aria-hidden="true">
+                <svg class="base6-coroa-icone" viewBox="0 0 80 50" fill="none" aria-hidden="true">
 
-                    <path
-                        d="M5 37 L13 12 L30 26 L42 5 L55 26 L72 12 L77 37 Z"
-                        stroke="currentColor"
-                        stroke-width="5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"/>
+                    <path d="M5 37 L13 12 L30 26 L42 5 L55 26 L72 12 L77 37 Z" stroke="currentColor" stroke-width="5"
+                        stroke-linecap="round" stroke-linejoin="round" />
 
-                    <path
-                        d="M8 44 L75 44"
-                        stroke="currentColor"
-                        stroke-width="5"
-                        stroke-linecap="round"/>
+                    <path d="M8 44 L75 44" stroke="currentColor" stroke-width="5" stroke-linecap="round" />
                 </svg>
             </a>
 
             <!-- ========== MENU SUPERIOR ========== -->
 
-            <nav class="menu-principal"
-                 aria-label="Menu principal">
+            <nav class="menu-principal" aria-label="Menu principal">
 
                 <a href="inicio.html">Início</a>
                 <a href="aulas.html">Aulas</a>
 
-                <a href="minha-area.html"
-                   class="ativo">
+                <a href="minha-area.html" class="ativo">
                     Minha Área
                 </a>
 
@@ -106,27 +87,31 @@
 
             <!-- ========== PERFIL ========== -->
 
-            <a href="login.html"
-               class="perfil-usuario"
-               aria-label="Entrar ou acessar seu perfil">
+            <div class="perfil-container">
 
-                <span class="perfil-icone"
-                      aria-hidden="true">
+                <button type="button" class="perfil-usuario" id="botao-perfil" aria-expanded="false"
+                    aria-controls="menu-perfil">
+                    <span class="perfil-icone" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
 
-                    <svg viewBox="0 0 24 24"
-                         fill="none"
-                         stroke="currentColor"
-                         stroke-width="1.8">
+                            <circle cx="12" cy="8" r="4" />
+                            <path d="M4 21v-2a8 8 0 0 1 16 0v2" />
+                        </svg>
+                    </span>
 
-                        <circle cx="12" cy="8" r="4"/>
-                        <path d="M4 21v-2a8 8 0 0 1 16 0v2"/>
-                    </svg>
-                </span>
+                    <span class="perfil-texto">
+                        Meu perfil
+                    </span>
+                </button>
 
-                <span class="perfil-texto">
-                    Meu perfil
-                </span>
-            </a>
+                <div class="menu-perfil" id="menu-perfil" hidden>
+                    <button type="button" id="botao-sair">
+                        Sair da conta
+                    </button>
+                </div>
+
+            </div>
+
         </div>
     </header>
 
@@ -156,8 +141,7 @@
                         <!-- RESUMO -->
 
                         <li>
-                            <a href="resumo-financeiro.html"
-                               class="lateral-link">
+                            <a href="resumo-financeiro.html" class="lateral-link">
                                 Resumo financeiro
                             </a>
                         </li>
@@ -165,8 +149,7 @@
                         <!-- RENDA -->
 
                         <li>
-                            <a href="minha-renda.html"
-                               class="lateral-link">
+                            <a href="minha-renda.html" class="lateral-link">
                                 Minha renda
                             </a>
                         </li>
@@ -174,8 +157,7 @@
                         <!-- GASTOS -->
 
                         <li>
-                            <a href="meus-gastos.html"
-                               class="lateral-link">
+                            <a href="meus-gastos.html" class="lateral-link">
                                 Meus gastos
                             </a>
                         </li>
@@ -183,9 +165,8 @@
                         <!-- DIAGNÓSTICO -->
 
                         <li>
-                            <a href="pra-onde-foi-minha-grana.html"
-                               class="lateral-link diagnostico-link-ativo"
-                               aria-current="page">
+                            <a href="pra-onde-foi-minha-grana.html" class="lateral-link diagnostico-link-ativo"
+                                aria-current="page">
 
                                 Pra onde foi minha grana?
                             </a>
@@ -194,8 +175,7 @@
                         <!-- CONTAS -->
 
                         <li>
-                            <a href="contas-vencimentos.html"
-                               class="lateral-link">
+                            <a href="contas-vencimentos.html" class="lateral-link">
                                 Contas e vencimentos
                             </a>
                         </li>
@@ -203,8 +183,7 @@
                         <!-- METAS -->
 
                         <li>
-                            <a href="minhas-metas.html"
-                               class="lateral-link">
+                            <a href="minhas-metas.html" class="lateral-link">
                                 Minhas metas
                             </a>
                         </li>
@@ -235,11 +214,9 @@
                      6. APRESENTAÇÃO
                 ======================================== -->
 
-                <section class="diagnostico-abertura"
-                         aria-labelledby="titulo-diagnostico">
+                <section class="diagnostico-abertura" aria-labelledby="titulo-diagnostico">
 
-                    <nav class="diagnostico-caminho"
-                         aria-label="Localização atual">
+                    <nav class="diagnostico-caminho" aria-label="Localização atual">
 
                         <a href="minha-area.html">
                             Minha Área
@@ -276,8 +253,7 @@
                             </p>
                         </div>
 
-                        <span class="diagnostico-decoracao"
-                              aria-hidden="true">?</span>
+                        <span class="diagnostico-decoracao" aria-hidden="true">?</span>
                     </div>
                 </section>
 
@@ -286,8 +262,7 @@
                      7. RAIO-X DO MÊS
                 ======================================== -->
 
-                <section class="diagnostico-raiox"
-                         aria-labelledby="titulo-raiox">
+                <section class="diagnostico-raiox" aria-labelledby="titulo-raiox">
 
                     <header class="diagnostico-secao-topo">
 
@@ -307,8 +282,7 @@
                             </p>
                         </div>
 
-                        <span class="diagnostico-periodo"
-                              id="diagnostico-periodo">
+                        <span class="diagnostico-periodo" id="diagnostico-periodo">
                             Mês atual
                         </span>
                     </header>
@@ -385,11 +359,9 @@
                      8. ENTENDA SEU RESULTADO
                 ======================================== -->
 
-                <section class="diagnostico-resultado"
-                         aria-labelledby="titulo-resultado">
+                <section class="diagnostico-resultado" aria-labelledby="titulo-resultado">
 
-                    <div class="diagnostico-resultado-marca"
-                         aria-hidden="true">✳</div>
+                    <div class="diagnostico-resultado-marca" aria-hidden="true">✳</div>
 
                     <div>
                         <p class="diagnostico-etiqueta">
@@ -410,10 +382,7 @@
 
                         <!-- ESTADO COM REGISTROS -->
 
-                        <p id="diagnostico-resultado-texto"
-                           class="resultado-com-dados"
-                           aria-live="polite"
-                           hidden>
+                        <p id="diagnostico-resultado-texto" class="resultado-com-dados" aria-live="polite" hidden>
                         </p>
 
                         <div class="diagnostico-acoes">
@@ -434,8 +403,7 @@
                      9. LINHA DO TEMPO FINANCEIRA
                 ======================================== -->
 
-                <section class="diagnostico-tempo"
-                         aria-labelledby="titulo-tempo">
+                <section class="diagnostico-tempo" aria-labelledby="titulo-tempo">
 
                     <header class="diagnostico-secao-topo">
 
@@ -458,11 +426,9 @@
 
                     <!-- ========== SEM MOVIMENTAÇÕES ========== -->
 
-                    <div class="diagnostico-tempo-vazio"
-                         id="tempo-sem-dados">
+                    <div class="diagnostico-tempo-vazio" id="tempo-sem-dados">
 
-                        <span class="tempo-vazio-icone"
-                              aria-hidden="true">◷</span>
+                        <span class="tempo-vazio-icone" aria-hidden="true">◷</span>
 
                         <div>
                             <h3>
@@ -487,9 +453,7 @@
                         lista, organizados por data.
                     -->
 
-                    <ol class="diagnostico-linha-tempo"
-                        id="linha-tempo-movimentacoes"
-                        aria-label="Movimentações do mês"
+                    <ol class="diagnostico-linha-tempo" id="linha-tempo-movimentacoes" aria-label="Movimentações do mês"
                         hidden>
                     </ol>
                 </section>
@@ -499,8 +463,7 @@
                      10. POSSÍVEIS FATORES DO ORÇAMENTO
                 ======================================== -->
 
-                <section class="diagnostico-causas"
-                         aria-labelledby="titulo-causas">
+                <section class="diagnostico-causas" aria-labelledby="titulo-causas">
 
                     <header class="diagnostico-secao-topo">
 
@@ -601,11 +564,9 @@
 
                     <!-- ========== ANÁLISE PERSONALIZADA ========== -->
 
-                    <div id="diagnostico-fatores-reais"
-                         hidden>
+                    <div id="diagnostico-fatores-reais" hidden>
 
-                        <div class="diagnostico-fatores"
-                             id="diagnostico-fatores-lista">
+                        <div class="diagnostico-fatores" id="diagnostico-fatores-lista">
                         </div>
                     </div>
                 </section>
@@ -615,8 +576,7 @@
                      11. PRÓXIMOS PASSOS
                 ======================================== -->
 
-                <section class="diagnostico-proximos"
-                         aria-labelledby="titulo-proximos">
+                <section class="diagnostico-proximos" aria-labelledby="titulo-proximos">
 
                     <header>
                         <p class="diagnostico-etiqueta">
@@ -721,8 +681,7 @@
 
                 <!-- ========== VOLTAR ========== -->
 
-                <a href="minha-area.html"
-                   class="diagnostico-voltar">
+                <a href="minha-area.html" class="diagnostico-voltar">
                     ← Voltar à Minha Área
                 </a>
             </div>
@@ -747,5 +706,9 @@
         </div>
     </footer>
 
+    <script type="module" src="../js/auth.js"></script>
+    <script type="module" src="../js/pra-onde-foi-minha-grana.js"></script>
+
 </body>
+
 </html>
