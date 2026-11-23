@@ -13,10 +13,6 @@ formulario.addEventListener("submit", async function (event) {
     const senha = document.querySelector("#cadastro-senha").value;
     const confirmarSenha = document.querySelector("#confirmar-senha").value;
 
-    const preferencia = document.querySelector(
-        'input[name="preferencia_estudo"]:checked'
-    )?.value || "padrao";
-
     if (!nome || !email || !senha || !confirmarSenha) {
         mensagem.textContent = "Preencha todos os campos.";
         return;
@@ -41,8 +37,7 @@ formulario.addEventListener("submit", async function (event) {
             password: senha,
             options: {
                 data: {
-                    nome: nome,
-                    preferencia_estudo: preferencia
+                    nome: nome
                 }
             }
         });
