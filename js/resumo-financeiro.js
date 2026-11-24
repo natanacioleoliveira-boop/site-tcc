@@ -1,6 +1,60 @@
 
 import { supabase } from "./supabase.js";
 
+// ==========================================
+// 1. SITUAÇÃO DA RENDA
+// ==========================================
+
+const campoDataRenda =
+    document.querySelector("#rf-renda-data");
+
+const campoSituacaoRenda =
+    document.querySelector("#rf-campo-situacao");
+
+const selecionarSituacaoRenda =
+    document.querySelector("#rf-renda-situacao");
+
+const formRendaResumo =
+    document.querySelector("#rf-form-renda");
+
+function obterDataHoje() {
+    const hoje = new Date();
+
+    const ano = hoje.getFullYear();
+    const mes = String(hoje.getMonth() + 1).padStart(2, "0");
+    const dia = String(hoje.getDate()).padStart(2, "0");
+
+    return `${ano}-${mes}-${dia}`;
+}
+
+function verificarDataRenda() {
+    const dataEscolhida = campoDataRenda.value;
+    const dataFutura = dataEscolhida > obterDataHoje();
+
+    campoSituacaoRenda.hidden = !dataFutura;
+
+    if (dataFutura) {
+        selecionarSituacaoRenda.value = "previsto";
+    } else {
+        selecionarSituacaoRenda.value = "recebido";
+    }
+}
+
+campoDataRenda.addEventListener(
+    "change",
+    verificarDataRenda
+);
+
+formRendaResumo.addEventListener("reset", function () {
+    requestAnimationFrame(verificarDataRenda);
+});
+
+verificarDataRenda();
+
+// ==========================================
+// 2. CONFIGURAÇÕES E FUNÇÕES AUXILIARES
+// ==========================================
+
 const $ = (id) => document.getElementById(id);
 
 const moeda = (valor) =>
@@ -31,9 +85,16 @@ const mesAtual = agora.getMonth();
 function dataLocal(data) {
     if (!data) return null;
 
-    const partes = data.slice(0, 10).split("-").map(Number);
+    const partes = data
+        .slice(0, 10)
+        .split("-")
+        .map(Number);
 
-    return new Date(partes[0], partes[1] - 1, partes[2]);
+    return new Date(
+        partes[0],
+        partes[1] - 1,
+        partes[2]
+    );
 }
 
 function pertenceAoMes(data, ano, mes) {
@@ -46,7 +107,8 @@ function pertenceAoMes(data, ano, mes) {
 
 function somar(lista) {
     return lista.reduce(
-        (total, item) => total + Number(item.valor || 0),
+        (total, item) =>
+            total + Number(item.valor || 0),
         0
     );
 }
@@ -54,7 +116,9 @@ function somar(lista) {
 function atualizarTexto(id, valor) {
     const elemento = $(id);
 
-    if (elemento) elemento.textContent = valor;
+    if (elemento) {
+        elemento.textContent = valor;
+    }
 }
 
 function mostrarMensagem(id, texto) {
@@ -66,23 +130,37 @@ function mostrarMensagem(id, texto) {
     elemento.hidden = false;
 }
 
+// ==========================================
+// 3. FILTRAR RENDA E GASTOS POR MÊS
+// ==========================================
+
 function rendasDoMes(ano, mes) {
-    return rendas.filter((r) =>
-        pertenceAoMes(r.data, ano, mes) &&
-        r.status === "recebido"
+    return rendas.filter((renda) =>
+        pertenceAoMes(renda.data, ano, mes) &&
+        renda.status === "recebido"
     );
 }
 
 function gastosDoMes(ano, mes) {
-    return gastos.filter((g) =>
-        pertenceAoMes(g.data, ano, mes) &&
-        g.status === "pago"
+    return gastos.filter((gasto) =>
+        pertenceAoMes(gasto.data, ano, mes) &&
+        gasto.status === "pago"
     );
 }
 
+// ==========================================
+// 4. BALANÇO FINANCEIRO
+// ==========================================
+
 function atualizarBalanco() {
-    const entradas = somar(rendasDoMes(anoAtual, mesAtual));
-    const saidas = somar(gastosDoMes(anoAtual, mesAtual));
+    const entradas = somar(
+        rendasDoMes(anoAtual, mesAtual)
+    );
+
+    const saidas = somar(
+        gastosDoMes(anoAtual, mesAtual)
+    );
+
     const saldo = entradas - saidas;
 
     atualizarTexto("rf-total-renda", moeda(entradas));
@@ -115,8 +193,16 @@ function atualizarBalanco() {
     return { entradas, saidas, saldo };
 }
 
+// ==========================================
+// 5. GASTOS POR CATEGORIA
+// ==========================================
+
 function atualizarCategorias() {
-    const despesas = gastosDoMes(anoAtual, mesAtual);
+    const despesas = gastosDoMes(
+        anoAtual,
+        mesAtual
+    );
+
     const total = somar(despesas);
 
     const lista = $("rf-lista-categorias");
@@ -141,7 +227,8 @@ function atualizarCategorias() {
         const categoria = gasto.categoria || "outros";
 
         agrupados[categoria] =
-            (agrupados[categoria] || 0) + Number(gasto.valor);
+            (agrupados[categoria] || 0) +
+            Number(gasto.valor);
     }
 
     const cores = [
@@ -159,6 +246,7 @@ function atualizarCategorias() {
         .sort((a, b) => b[1] - a[1]);
 
     const partesGrafico = [];
+
     let inicio = 0;
 
     grupos.forEach(([categoria, valor], indice) => {
@@ -189,6 +277,7 @@ function atualizarCategorias() {
     anel.style.height = "190px";
     anel.style.borderRadius = "50%";
     anel.style.margin = "auto";
+
     anel.style.background =
         `conic-gradient(${partesGrafico.join(", ")})`;
 
@@ -202,9 +291,13 @@ function atualizarCategorias() {
     grafico.hidden = false;
 }
 
+// ==========================================
+// 6. PRÓXIMAS CONTAS
+// ==========================================
+
 function atualizarContas() {
     const contas = gastos
-        .filter((g) => g.status === "previsto")
+        .filter((gasto) => gasto.status === "previsto")
         .sort((a, b) => a.data.localeCompare(b.data))
         .slice(0, 5);
 
@@ -226,7 +319,8 @@ function atualizarContas() {
             .toLocaleDateString("pt-BR");
 
         item.textContent =
-            `${conta.descricao} — ${moeda(conta.valor)} — ${data}`;
+            `${conta.descricao} — ` +
+            `${moeda(conta.valor)} — ${data}`;
 
         lista.appendChild(item);
     }
@@ -235,8 +329,16 @@ function atualizarContas() {
     vazio.hidden = true;
 }
 
+// ==========================================
+// 7. COMPARAÇÃO ENTRE MESES
+// ==========================================
+
 function atualizarComparacao() {
-    const anterior = new Date(anoAtual, mesAtual - 1, 1);
+    const anterior = new Date(
+        anoAtual,
+        mesAtual - 1,
+        1
+    );
 
     const nomeMes = (data) =>
         data.toLocaleDateString("pt-BR", {
@@ -244,23 +346,43 @@ function atualizarComparacao() {
             year: "numeric"
         });
 
-    atualizarTexto("rf-mes-anterior", nomeMes(anterior));
-    atualizarTexto("rf-mes-atual", nomeMes(agora));
+    atualizarTexto(
+        "rf-mes-anterior",
+        nomeMes(anterior)
+    );
+
+    atualizarTexto(
+        "rf-mes-atual",
+        nomeMes(agora)
+    );
 
     const entradasAnteriores = somar(
-        rendasDoMes(anterior.getFullYear(), anterior.getMonth())
+        rendasDoMes(
+            anterior.getFullYear(),
+            anterior.getMonth()
+        )
     );
 
     const gastosAnteriores = somar(
-        gastosDoMes(anterior.getFullYear(), anterior.getMonth())
+        gastosDoMes(
+            anterior.getFullYear(),
+            anterior.getMonth()
+        )
     );
 
-    const entradasAtuais = somar(rendasDoMes(anoAtual, mesAtual));
-    const gastosAtuais = somar(gastosDoMes(anoAtual, mesAtual));
+    const entradasAtuais = somar(
+        rendasDoMes(anoAtual, mesAtual)
+    );
+
+    const gastosAtuais = somar(
+        gastosDoMes(anoAtual, mesAtual)
+    );
 
     atualizarTexto(
         "rf-dados-anterior",
-        `Saldo: ${moeda(entradasAnteriores - gastosAnteriores)}`
+        `Saldo: ${
+            moeda(entradasAnteriores - gastosAnteriores)
+        }`
     );
 
     atualizarTexto(
@@ -269,19 +391,30 @@ function atualizarComparacao() {
     );
 }
 
+// ==========================================
+// 8. ANÁLISE FINANCEIRA
+// ==========================================
+
 function atualizarAnalise({ entradas, saidas, saldo }) {
     let texto;
 
     if (entradas === 0 && saidas === 0) {
-        texto = "Registre seus recebimentos e despesas para acompanhar seu mês.";
+        texto =
+            "Registre seus recebimentos e despesas " +
+            "para acompanhar seu mês.";
+
     } else if (saldo > 0) {
         texto =
-            `Neste mês, entraram ${moeda(entradas)} e saíram ` +
-            `${moeda(saidas)}. Seu saldo está positivo em ${moeda(saldo)}.`;
+            `Neste mês, entraram ${moeda(entradas)} ` +
+            `e saíram ${moeda(saidas)}. ` +
+            `Seu saldo está positivo em ${moeda(saldo)}.`;
+
     } else if (saldo < 0) {
         texto =
             `Neste mês, seus gastos superaram as entradas em ` +
-            `${moeda(Math.abs(saldo))}. Vale revisar suas despesas.`;
+            `${moeda(Math.abs(saldo))}. ` +
+            "Vale revisar suas despesas.";
+
     } else {
         texto =
             "Suas entradas e saídas estão equilibradas neste mês.";
@@ -289,6 +422,10 @@ function atualizarAnalise({ entradas, saidas, saldo }) {
 
     atualizarTexto("rf-texto-analise", texto);
 }
+
+// ==========================================
+// 9. ATUALIZAR TODOS OS INDICADORES
+// ==========================================
 
 function atualizarTela() {
     const periodo = agora.toLocaleDateString("pt-BR", {
@@ -306,6 +443,10 @@ function atualizarTela() {
     atualizarAnalise(balanco);
 }
 
+// ==========================================
+// 10. BUSCAR DADOS NO SUPABASE
+// ==========================================
+
 async function carregarDados() {
     const { data: usuario, error: erroAuth } =
         await supabase.auth.getUser();
@@ -316,20 +457,26 @@ async function carregarDados() {
 
     usuarioId = usuario.user.id;
 
-    const [respostaRendas, respostaGastos] = await Promise.all([
-        supabase
-            .from("rendas")
-            .select("*")
-            .eq("user_id", usuarioId),
+    const [respostaRendas, respostaGastos] =
+        await Promise.all([
+            supabase
+                .from("rendas")
+                .select("*")
+                .eq("user_id", usuarioId),
 
-        supabase
-            .from("gastos")
-            .select("*")
-            .eq("user_id", usuarioId)
-    ]);
+            supabase
+                .from("gastos")
+                .select("*")
+                .eq("user_id", usuarioId)
+        ]);
 
-    if (respostaRendas.error) throw respostaRendas.error;
-    if (respostaGastos.error) throw respostaGastos.error;
+    if (respostaRendas.error) {
+        throw respostaRendas.error;
+    }
+
+    if (respostaGastos.error) {
+        throw respostaGastos.error;
+    }
 
     rendas = respostaRendas.data || [];
     gastos = respostaGastos.data || [];
@@ -337,12 +484,26 @@ async function carregarDados() {
     atualizarTela();
 }
 
-async function registrarRenda() {
-    const descricao = $("rf-renda-descricao").value.trim();
-    const valor = Number($("rf-renda-valor").value);
-    const data = $("rf-renda-data").value;
+// ==========================================
+// 11. REGISTRAR RENDA
+// ==========================================
 
-    if (!descricao || !Number.isFinite(valor) || valor <= 0 || !data) {
+async function registrarRenda() {
+    const descricao =
+        $("rf-renda-descricao").value.trim();
+
+    const valor =
+        Number($("rf-renda-valor").value);
+
+    const data =
+        $("rf-renda-data").value;
+
+    if (
+        !descricao ||
+        !Number.isFinite(valor) ||
+        valor <= 0 ||
+        !data
+    ) {
         mostrarMensagem(
             "rf-mensagem-renda",
             "Preencha todos os campos corretamente."
@@ -351,7 +512,14 @@ async function registrarRenda() {
     }
 
     const botao = $("rf-salvar-renda");
+
+    if (botao.disabled) return;
     botao.disabled = true;
+
+    // Se a data for futura, respeitar a escolha do usuário.
+    const statusRenda = data > obterDataHoje()
+        ? selecionarSituacaoRenda.value
+        : "recebido";
 
     try {
         const { error } = await supabase
@@ -359,11 +527,14 @@ async function registrarRenda() {
             .insert({
                 user_id: usuarioId,
                 descricao: descricao,
-               tipo: "variavel",
+                tipo: "variavel",
                 valor: valor,
                 data: data,
-                status: "recebido",
-                data_recebimento: data
+                status: statusRenda,
+                data_recebimento:
+                    statusRenda === "recebido"
+                        ? data
+                        : null
             });
 
         if (error) throw error;
@@ -374,7 +545,9 @@ async function registrarRenda() {
 
         mostrarMensagem(
             "rf-mensagem-renda",
-            "Renda registrada com sucesso!"
+            statusRenda === "previsto"
+                ? "Renda prevista cadastrada com sucesso!"
+                : "Renda registrada com sucesso!"
         );
 
     } catch (erro) {
@@ -390,14 +563,30 @@ async function registrarRenda() {
     }
 }
 
+// ==========================================
+// 12. REGISTRAR GASTO
+// ==========================================
 
 async function registrarGasto() {
-    const descricao = $("rf-gasto-descricao").value.trim();
-    const valor = Number($("rf-gasto-valor").value);
-    const categoria = $("rf-gasto-categoria").value;
-    const data = $("rf-gasto-data").value;
+    const descricao =
+        $("rf-gasto-descricao").value.trim();
 
-    if (!descricao || valor <= 0 || !categoria || !data) {
+    const valor =
+        Number($("rf-gasto-valor").value);
+
+    const categoria =
+        $("rf-gasto-categoria").value;
+
+    const data =
+        $("rf-gasto-data").value;
+
+    if (
+        !descricao ||
+        !Number.isFinite(valor) ||
+        valor <= 0 ||
+        !categoria ||
+        !data
+    ) {
         mostrarMensagem(
             "rf-mensagem-gasto",
             "Preencha todos os campos corretamente."
@@ -406,6 +595,8 @@ async function registrarGasto() {
     }
 
     const botao = $("rf-salvar-gasto");
+
+    if (botao.disabled) return;
     botao.disabled = true;
 
     try {
@@ -413,10 +604,10 @@ async function registrarGasto() {
             .from("gastos")
             .insert({
                 user_id: usuarioId,
-                descricao,
-                valor,
-                categoria,
-                data,
+                descricao: descricao,
+                valor: valor,
+                categoria: categoria,
+                data: data,
                 status: "pago",
                 tipo: "variavel",
                 prioridade: "ocasional",
@@ -433,33 +624,57 @@ async function registrarGasto() {
             "rf-mensagem-gasto",
             "Gasto registrado com sucesso!"
         );
+
     } catch (erro) {
-        console.error("ERRO SUPABASE:", erro);
+        console.error("Erro ao registrar gasto:", erro);
 
         mostrarMensagem(
-            "rf-mensagem-renda",
-            erro.message || "Não foi possível registrar a renda."
+            "rf-mensagem-gasto",
+            erro.message ||
+                "Não foi possível registrar o gasto."
         );
+
+    } finally {
+        // Reabilita o botão mesmo quando ocorre algum erro.
+        botao.disabled = false;
     }
-    
 }
 
-$("rf-salvar-gasto").addEventListener("click", registrarGasto);
+// ==========================================
+// 13. EVENTOS DOS FORMULÁRIOS
+// ==========================================
+
+$("rf-salvar-gasto").addEventListener(
+    "click",
+    registrarGasto
+);
 
 $("rf-form-gasto").addEventListener("submit", (event) => {
     event.preventDefault();
     registrarGasto();
 });
 
-$("rf-salvar-renda").addEventListener("click", registrarRenda);
+$("rf-salvar-renda").addEventListener(
+    "click",
+    registrarRenda
+);
 
 $("rf-form-renda").addEventListener("submit", (event) => {
     event.preventDefault();
     registrarRenda();
 });
 
+// ==========================================
+// 14. CARREGAMENTO INICIAL
+// ==========================================
 
 carregarDados().catch((erro) => {
-    console.error("Erro no resumo financeiro:", erro);
-    alert("Não foi possível carregar os dados financeiros.");
+    console.error(
+        "Erro no resumo financeiro:",
+        erro
+    );
+
+    alert(
+        "Não foi possível carregar os dados financeiros."
+    );
 });

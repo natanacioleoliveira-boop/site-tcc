@@ -87,26 +87,49 @@
                 futuramente o JavaScript substituirá
                 este conteúdo pelo perfil da pessoa.
             -->
+          <div id="conta-container">
 
-            <div class="area-perfil" id="area-perfil">
+    <a href="login.html" id="botaoConta">
 
-                <a href="login.html" class="botao-entrar">
+        <span class="conta-icone">
 
-                    <span>Entrar</span>
+            <svg viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="1.8"
+                 aria-hidden="true">
 
-                    <!-- Ícone de perfil -->
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
-                        stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="8" r="4"/>
+                <path d="M4 21v-2a8 8 0 0 1 16 0v2"/>
 
-                        <circle cx="12" cy="8" r="4"></circle>
-                        <path d="M4 21v-2a8 8 0 0 1 16 0v2"></path>
+            </svg>
 
-                    </svg>
+        </span>
 
-                </a>
+        <span id="textoConta">Entrar</span>
 
-            </div>
+    </a>
 
+    <button id="abrirMenuConta"
+            type="button"
+            aria-label="Opções da conta"
+            aria-expanded="false"
+            aria-controls="menuConta"
+            hidden>
+        ▾
+    </button>
+
+    <!-- MENU DO PERFIL -->
+
+    <div id="menuConta" hidden>
+
+        <button id="sairConta" type="button">
+            Sair da conta
+        </button>
+
+    </div>
+
+</div>
         </div>
 
     </header>
@@ -529,7 +552,9 @@
 
     </footer>
 
+    <script type="module" src="../js/menu.js"></script>
     <script src="../js/acessibilidade.js" defer></script>
+    <script src="../js/spake.js" defer></script>
 
 
 </body>

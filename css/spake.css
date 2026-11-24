@@ -1,0 +1,595 @@
+/* ======================================
+   BASE 6 - SPAKE ASSISTENTE
+====================================== */
+
+#spake-container {
+    --spake-verde: #8deb00;
+    --spake-fundo: #071a10;
+    --spake-borda: #4a9c19;
+
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+}
+
+#spake-container * {
+    box-sizing: border-box;
+}
+
+#spake-container [hidden] {
+    display: none !important;
+}
+
+#spake-container button {
+    font-family: inherit;
+}
+
+
+/* ======================================
+   BOTÃO FLUTUANTE
+====================================== */
+
+#spake-container .spake-flutuante {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+
+    display: flex;
+    align-items: center;
+
+    z-index: 9999;
+}
+
+#spake-container .spake-botao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 85px;
+    height: 85px;
+
+    padding: 0;
+
+    background: #102c1d;
+    border: 3px solid var(--spake-verde);
+    border-radius: 50%;
+
+    overflow: hidden;
+    cursor: pointer;
+
+    box-shadow: 0 4px 15px #00000055;
+
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+#spake-container .spake-botao img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#spake-container .spake-botao:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 20px #8deb0077;
+}
+
+
+/* ======================================
+   FAÍSCAS DECORATIVAS
+====================================== */
+
+#spake-container .spake-faiscas {
+    position: absolute;
+    top: -10px;
+    right: -12px;
+
+    width: 35px;
+    height: 35px;
+
+    fill: none;
+    stroke: var(--spake-verde);
+    stroke-width: 4;
+    stroke-linecap: round;
+
+    pointer-events: none;
+}
+
+
+/* ======================================
+   BALÃO DE MENSAGEM
+====================================== */
+
+#spake-container .spake-balao {
+    position: absolute;
+    left: calc(100% + 15px);
+
+    width: max-content;
+    max-width: 230px;
+
+    padding: 12px 20px;
+
+    background: var(--spake-verde);
+    color: #071a10;
+
+    border-radius: 20px;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.5;
+
+    box-shadow: 0 5px 15px #00000033;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateX(-10px);
+
+    transition: opacity 0.25s,
+                visibility 0.25s,
+                transform 0.25s;
+
+    pointer-events: none;
+}
+
+#spake-container .spake-balao strong {
+    display: block;
+}
+
+#spake-container .spake-balao::before {
+    content: "";
+
+    position: absolute;
+
+    left: -7px;
+    top: 50%;
+
+    width: 15px;
+    height: 15px;
+
+    background: var(--spake-verde);
+
+    transform: translateY(-50%) rotate(45deg);
+}
+
+
+/* MOSTRA APENAS QUANDO PASSA O MOUSE
+   OU NAVEGA PELO TECLADO */
+
+#spake-container:not(.spake-aberto)
+.spake-flutuante:hover .spake-balao,
+
+#spake-container:not(.spake-aberto)
+.spake-botao:focus-visible ~ .spake-balao {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateX(0);
+}
+
+
+/* ======================================
+   FUNDO DESFOCADO
+====================================== */
+
+#spake-container .spake-overlay {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 15, 5, 0.65);
+
+    backdrop-filter: blur(4px);
+
+    z-index: 9997;
+}
+
+
+/* ======================================
+   PAINEL PRINCIPAL
+====================================== */
+
+#spake-container .spake-painel {
+    position: fixed;
+
+    bottom: 120px;
+    left: 20px;
+
+    display: grid;
+    grid-template-columns: 38% 62%;
+
+    width: 850px;
+
+    max-width: calc(100vw - 40px);
+    max-height: calc(100dvh - 140px);
+
+    margin: 0;
+    padding: 0;
+
+    background: linear-gradient(
+        135deg,
+        #12351e,
+        #071a10 65%
+    );
+
+    color: #ffffff;
+
+    border: 2px solid var(--spake-borda);
+    border-radius: 30px;
+
+    box-shadow: 0 15px 45px #00000066;
+
+    overflow: auto;
+
+    z-index: 9998;
+
+    animation: spakeEntrada 0.25s ease;
+}
+
+
+/* ANIMAÇÃO */
+
+@keyframes spakeEntrada {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ======================================
+   BOTÃO DE FECHAR
+====================================== */
+
+#spake-container .spake-fechar {
+    position: absolute;
+
+    top: 12px;
+    right: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    padding: 0;
+
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    z-index: 2;
+}
+
+#spake-container .spake-fechar svg {
+    width: 25px;
+    height: 25px;
+
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+}
+
+#spake-container .spake-fechar:hover {
+    background: #ffffff15;
+}
+
+#spake-container .spake-fechar:hover svg {
+    stroke: var(--spake-verde);
+}
+
+
+/* ======================================
+   IMAGEM DO MASCOTE
+====================================== */
+
+#spake-container .spake-personagem {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    min-width: 0;
+
+    padding: 20px 10px 0;
+
+    overflow: hidden;
+}
+
+#spake-container .spake-personagem img {
+    display: block;
+
+    width: 100%;
+    max-height: 470px;
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* ======================================
+   CONTEÚDO PRINCIPAL
+====================================== */
+
+#spake-container .spake-conteudo {
+    min-width: 0;
+
+    padding: 40px 25px 25px 10px;
+}
+
+#spake-container #spake-titulo {
+    margin: 0 0 15px;
+
+    font-family: inherit;
+    font-size: clamp(1.6rem, 3vw, 2.3rem);
+    font-weight: 800;
+    line-height: 1.2;
+
+    color: #ffffff;
+}
+
+#spake-container #spake-titulo span {
+    color: var(--spake-verde);
+}
+
+#spake-container .spake-descricao {
+    margin: 0 0 20px;
+
+    font-size: 1rem;
+    line-height: 1.5;
+
+    color: #e1e8e3;
+}
+
+
+/* ======================================
+   CARDS DO MENU
+====================================== */
+
+#spake-container .spake-opcao {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    width: 100%;
+
+    padding: 15px;
+    margin-bottom: 10px;
+
+    background: linear-gradient(
+        100deg,
+        #193d13,
+        #10271c
+    );
+
+    border: 1px solid #42634a;
+    border-left: 2px solid var(--spake-verde);
+    border-radius: 15px;
+
+    color: #ffffff;
+
+    font-size: 1rem;
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: background 0.2s,
+                border-color 0.2s;
+}
+
+#spake-container .spake-opcao:hover {
+    background: #214a24;
+    border-color: var(--spake-verde);
+}
+
+#spake-container .spake-opcao-texto {
+    flex: 1;
+    min-width: 0;
+}
+
+#spake-container .spake-opcao strong {
+    display: block;
+
+    font-size: 1rem;
+    line-height: 1.3;
+}
+
+#spake-container .spake-opcao small {
+    display: block;
+
+    margin-top: 5px;
+
+    font-size: 0.8rem;
+    line-height: 1.4;
+
+    color: #d8e2d9;
+}
+
+
+/* ÍCONES */
+
+#spake-container .spake-icone {
+    flex-shrink: 0;
+
+    width: 35px;
+    height: 35px;
+
+    color: var(--spake-verde);
+}
+
+
+/* SETAS */
+
+#spake-container .spake-seta {
+    flex-shrink: 0;
+
+    width: 24px;
+    height: 24px;
+
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 2.5;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/* ======================================
+   BOTÃO VOLTAR
+====================================== */
+
+#spake-container .spake-voltar {
+    padding: 8px 16px;
+
+    margin: 10px 0 15px;
+
+    background: transparent;
+
+    border: 1px solid var(--spake-verde);
+    border-radius: 8px;
+
+    color: var(--spake-verde);
+
+    font-size: 0.9rem;
+
+    cursor: pointer;
+}
+
+#spake-container .spake-voltar:hover {
+    background: #8deb0020;
+}
+
+
+/* ======================================
+   RESPOSTAS
+====================================== */
+
+#spake-container #spake-assunto {
+    margin: 0 0 15px;
+
+    font-size: 1.3rem;
+    line-height: 1.4;
+
+    color: var(--spake-verde);
+}
+
+#spake-container #spake-texto {
+    font-size: 1rem;
+    line-height: 1.7;
+
+    color: #ffffff;
+}
+
+#spake-container #spake-texto p {
+    margin: 0 0 15px;
+}
+
+#spake-container #spake-texto details {
+    margin-bottom: 10px;
+    padding: 12px;
+
+    background: #102c1d;
+
+    border: 1px solid #42634a;
+    border-radius: 10px;
+}
+
+#spake-container #spake-texto summary {
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+#spake-container #spake-texto details p {
+    margin: 10px 0 0;
+}
+
+
+/* ======================================
+   ACESSIBILIDADE
+====================================== */
+
+#spake-container button:focus-visible,
+#spake-container summary:focus-visible {
+    outline: 3px solid var(--spake-verde);
+    outline-offset: 4px;
+}
+
+
+/* ======================================
+   RESPONSIVIDADE
+====================================== */
+
+@media (max-width: 650px) {
+
+    #spake-container .spake-flutuante {
+        bottom: 15px;
+        left: 15px;
+    }
+
+    #spake-container .spake-botao {
+        width: 65px;
+        height: 65px;
+    }
+
+    #spake-container .spake-painel {
+        grid-template-columns: 1fr;
+
+        bottom: 95px;
+        left: 10px;
+
+        width: calc(100vw - 20px);
+        max-width: none;
+        max-height: calc(100dvh - 115px);
+
+        border-radius: 20px;
+    }
+
+    #spake-container .spake-personagem {
+        display: none;
+    }
+
+    #spake-container .spake-conteudo {
+        padding: 45px 18px 20px;
+    }
+
+    #spake-container .spake-balao {
+        max-width: calc(100vw - 115px);
+
+        font-size: 0.8rem;
+    }
+
+    #spake-container .spake-opcao {
+        padding: 12px;
+        gap: 10px;
+    }
+
+    #spake-container .spake-icone {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+
+/* REDUÇÃO DE MOVIMENTO */
+
+@media (prefers-reduced-motion: reduce) {
+
+    #spake-container *,
+    #spake-container *::before {
+        animation: none !important;
+        transition: none !important;
+    }
+}
