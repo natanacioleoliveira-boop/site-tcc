@@ -1,0 +1,84 @@
+
+/* ========================================
+   BASE 6 — RESPONSIVIDADE COMPLEMENTAR
+======================================== */
+
+/* AJUSTE DOS CONTEÚDOS */
+
+.painel-layout > *,
+.conteudo-area > *,
+.cabecalho-conteudo > *,
+.conta-conteudo > * {
+    min-width: 0;
+}
+
+/* TABELAS E CALENDÁRIOS */
+
+.renda-tabela-area,
+.gastos-tabela-area,
+.cv-calendario-rolagem {
+    min-width: 0;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+/* ELEMENTOS DECORATIVOS */
+
+.cv-decoracao-estrela {
+    right: -10px;
+}
+
+/* ========================================
+   CELULARES E TABLETS ESTREITOS
+======================================== */
+
+@media (max-width: 760px) {
+
+    /* ÁREA FINANCEIRA */
+
+    body .painel-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .barra-lateral,
+    .conteudo-area {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    /* MENUS */
+
+    .menu-principal,
+    .lista-menu {
+        flex-wrap: wrap;
+        gap: 8px 14px;
+    }
+
+    .lista-menu li,
+    .lateral-link {
+        max-width: 100%;
+    }
+
+    /* FORMULÁRIOS */
+
+    input,
+    select,
+    textarea {
+        min-width: 0;
+        max-width: 100%;
+        font-size: max(16px, 1em);
+    }
+}
+
+/* ========================================
+   CABEÇALHO DAS PÁGINAS PÚBLICAS
+======================================== */
+
+@media (max-width: 700px) {
+
+    .cabecalho-conteudo .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 14px;
+    }
+}
