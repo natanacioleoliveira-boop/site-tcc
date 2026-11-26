@@ -199,7 +199,7 @@
             rgba(7, 27, 20, 0.08) 100%
         ),
 
-        url("../srcc/15f6cb07-2431-4b6c-ba49-297ad1b7b195.png");
+        url("../srcc/15f6c.png");
 
     background-size: cover;
 
@@ -1418,5 +1418,449 @@ button.comunidade-botao:not(:disabled):hover {
     .participacao-card:hover {
 
         transform: none;
+    }
+}
+
+
+
+/* ========== CHAMADA DA COMUNIDADE ========== */
+.chamada-comunidade {
+    padding: 30px 20px 10px;
+    text-align: center;
+}
+
+.chamada-comunidade-faixa {
+    max-width: 900px;
+    margin: 0 auto 18px;
+    background: linear-gradient(90deg, #c9f531 0%, #d9ff43 100%);
+    border-radius: 24px;
+    padding: 22px 28px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+.chamada-comunidade-faixa h2 {
+    margin: 0;
+    color: #071b14;
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.chamada-comunidade-texto {
+    margin: 0;
+    color: #e8f0ea;
+    font-size: 1.15rem;
+    line-height: 1.6;
+}
+
+
+
+
+/* ========== HERO COMUNIDADE ========== */
+.hero-comunidade {
+    position: relative;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    padding: 110px 20px 90px;
+    background-image:
+        linear-gradient(90deg, rgba(3, 20, 15, 0.92) 0%, rgba(3, 20, 15, 0.82) 40%, rgba(3, 20, 15, 0.45) 100%),
+        url("../src/aprendizado-comunitario.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.hero-comunidade-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(8, 36, 27, 0.40) 0%, rgba(12, 68, 44, 0.15) 100%);
+    z-index: 1;
+}
+
+.hero-comunidade-conteudo {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-comunidade-texto {
+    max-width: 620px;
+}
+
+.hero-comunidade-destaque {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: #c9f531;
+    font-size: 0.95rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.hero-comunidade-texto h1 {
+    margin: 0 0 20px;
+    color: #ffffff;
+    font-size: 4rem;
+    line-height: 1.05;
+    font-weight: 800;
+}
+
+.hero-comunidade-texto h1 span {
+    color: #c9f531;
+}
+
+.hero-comunidade-texto p {
+    margin: 0 0 30px;
+    color: #ecf2ee;
+    font-size: 1.35rem;
+    line-height: 1.7;
+}
+
+.botao-hero-comunidade {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 28px;
+    background: #c9f531;
+    color: #071b14;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 999px;
+    transition: 0.3s ease;
+}
+
+.botao-hero-comunidade:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.20);
+}
+
+
+
+
+
+
+/* ========== RESPONSIVIDADE DA COMUNIDADE ========== */
+@media (max-width: 992px) {
+    .hero-comunidade {
+        min-height: 620px;
+        padding: 90px 20px 70px;
+        background-position: center center;
+    }
+
+    .hero-comunidade-texto h1 {
+        font-size: 3.2rem;
+    }
+
+    .hero-comunidade-texto p {
+        font-size: 1.15rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-comunidade {
+        min-height: 560px;
+        padding: 80px 18px 60px;
+        background-position: 62% center;
+        background-size: cover;
+    }
+
+    .hero-comunidade-texto {
+        max-width: 100%;
+    }
+
+    .hero-comunidade-texto h1 {
+        font-size: 2.6rem;
+    }
+
+    .hero-comunidade-texto p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .botao-hero-comunidade {
+        width: 100%;
+        max-width: 240px;
+    }
+
+    .chamada-comunidade-faixa {
+        padding: 18px 18px;
+        border-radius: 20px;
+    }
+
+    .chamada-comunidade-faixa h2 {
+        font-size: 1.5rem;
+    }
+
+    .chamada-comunidade-texto {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-comunidade {
+        min-height: 520px;
+        padding: 70px 16px 50px;
+        background-position: 68% center;
+    }
+
+    .hero-comunidade-destaque {
+        font-size: 0.82rem;
+        letter-spacing: 1.5px;
+    }
+
+    .hero-comunidade-texto h1 {
+        font-size: 2.1rem;
+    }
+
+    .hero-comunidade-texto p {
+        font-size: 0.95rem;
+    }
+
+    .chamada-comunidade-faixa h2 {
+        font-size: 1.3rem;
+    }
+}
+
+
+
+
+
+
+
+/* ========================================
+   CORREÇÃO — TÍTULO DA COMUNIDADE
+======================================== */
+
+.chamada-comunidade {
+    padding: 20px 0 35px;
+    text-align: center;
+    background: transparent;
+}
+
+.chamada-comunidade h2 {
+    margin: 0 0 15px;
+
+    background: transparent;
+    color: #ffffff;
+
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 800;
+    line-height: 1.2;
+
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.chamada-comunidade h2 span {
+    color: #c7f238;
+}
+
+.chamada-comunidade-texto {
+    color: #c4d0c7;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   CORREÇÃO — IMAGEM DE FUNDO
+======================================== */
+
+.hero-comunidade {
+
+    background-color: #071b14;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            #071b14 0%,
+            rgba(7, 27, 20, 0.90) 25%,
+            rgba(7, 27, 20, 0.65) 45%,
+            rgba(7, 27, 20, 0.05) 100%
+        ),
+        url("../srcc/aprendizado-comunitario.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-comunidade-texto h1 span {
+    white-space: nowrap;
+}
+
+.hero-comunidade-overlay {
+    background: none;
+}
+
+
+/* ========================================
+   RESPONSIVIDADE — TABLETS
+======================================== */
+
+@media (max-width: 1024px) {
+
+    .hero-comunidade {
+        background-position: 65% center;
+    }
+
+}
+
+
+/* ========================================
+   RESPONSIVIDADE — CELULARES
+======================================== */
+
+@media (max-width: 767px) {
+
+    .hero-comunidade {
+
+        min-height: 620px;
+
+        display: flex;
+        align-items: flex-end;
+
+        padding: 260px 16px 40px;
+
+        background-image:
+            linear-gradient(
+                to top,
+                #071b14 0%,
+                rgba(7, 27, 20, 0.98) 30%,
+                rgba(7, 27, 20, 0.80) 48%,
+                rgba(7, 27, 20, 0.10) 75%,
+                transparent 100%
+            ),
+            url("../srcc/aprendizado-comunitario.png");
+
+        background-size: cover;
+        background-position: 65% center;
+        background-repeat: no-repeat;
+    }
+
+    .hero-comunidade-conteudo {
+        min-width: 0;
+    }
+
+    .hero-comunidade-texto {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero-comunidade-texto h1 {
+        font-size: clamp(2rem, 7vw, 3rem);
+    }
+
+    .hero-comunidade-texto p {
+        font-size: 1rem;
+    }
+
+    .chamada-comunidade h2 {
+        font-size: clamp(1.7rem, 6vw, 2.4rem);
+    }
+
+}
+
+
+/* ========================================
+   CELULARES PEQUENOS
+======================================== */
+
+@media (max-width: 360px) {
+
+    .hero-comunidade {
+        padding: 220px 12px 35px;
+    }
+
+    .hero-comunidade-texto h1 {
+        font-size: 1.9rem;
+    }
+
+    .hero-comunidade-texto p {
+        font-size: 0.95rem;
+    }
+
+}
+
+
+/* ========================================
+   ACESSIBILIDADE — MOVIMENTOS
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .botao-hero-comunidade {
+        transition: none;
+    }
+
+    .botao-hero-comunidade:hover {
+        transform: none;
+    }
+
+}
+
+
+
+
+
+/* ========================================
+   CORREÇÃO — FUNDO DA COMUNIDADE
+======================================== */
+
+.hero-comunidade {
+    background-image:
+        linear-gradient(
+            to right,
+            #071b14 0%,
+            rgba(7, 27, 20, 0.85) 30%,
+            rgba(7, 27, 20, 0.35) 60%,
+            transparent 100%
+        ),
+        url("../srcc/comunidade-fundo.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* REMOVER DEGRADÊ DUPLICADO */
+
+.hero-comunidade-overlay {
+    background: transparent;
+}
+
+/* RESPONSIVIDADE — TABLETS */
+
+@media (max-width: 1024px) {
+    .hero-comunidade {
+        background-position: 65% center;
+    }
+}
+
+/* RESPONSIVIDADE — CELULARES */
+
+@media (max-width: 767px) {
+    .hero-comunidade {
+        background-image:
+            linear-gradient(
+                to top,
+                #071b14 0%,
+                rgba(7, 27, 20, 0.90) 35%,
+                rgba(7, 27, 20, 0.30) 60%,
+                transparent 100%
+            ),
+            url("../srcc/comunidade-fundo.png");
+
+        background-size: cover;
+        background-position: center top;
+
+        min-height: 620px;
+        padding: 280px 16px 40px;
+        align-items: flex-end;
     }
 }
