@@ -327,6 +327,7 @@ a:focus-visible {
 }
 
 
+
 /* ========== BOTÃO ENTRAR ========== */
 
 .botao-entrar {
@@ -368,7 +369,210 @@ a:focus-visible {
     background: var(--verde-limao);
 }
 
+/* BOTÃO DE PERFIL */
 
+/* ========================================
+   MENU DE PERFIL - BASE 6
+======================================== */
+
+/* CONTAINER DO PERFIL */
+
+#conta-container {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+#conta-container * {
+    box-sizing: border-box;
+}
+
+#conta-container [hidden] {
+    display: none !important;
+}
+
+
+/* BOTÃO MEU PERFIL / ENTRAR */
+
+#botaoConta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    width: fit-content;
+    padding: 8px 18px 8px 8px;
+
+    background: #204332;
+    border: 1px solid #365b48;
+    border-radius: 50px;
+
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+
+    cursor: pointer;
+    box-shadow: none;
+}
+
+
+/* REMOVE OS EFEITOS DO PERFIL */
+
+#botaoConta:hover,
+#botaoConta:active {
+    background: #204332;
+    border-color: #365b48;
+
+    color: #ffffff;
+
+    box-shadow: none;
+    filter: none;
+    transform: none;
+}
+
+
+/* CÍRCULO DO ÍCONE */
+
+#botaoConta .conta-icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 34px;
+    height: 34px;
+
+    flex-shrink: 0;
+
+    background: #ddefbc;
+    color: #10291f;
+
+    border-radius: 50%;
+}
+
+
+/* ÍCONE DO USUÁRIO */
+
+#botaoConta .conta-icone svg {
+    display: block;
+
+    width: 18px;
+    height: 18px;
+
+    flex-shrink: 0;
+}
+
+
+/* TEXTO DO PERFIL */
+
+#botaoConta #textoConta {
+    color: #ffffff;
+}
+
+
+/* ========================================
+   MENU SUSPENSO
+======================================== */
+
+#conta-container #menuConta {
+    position: absolute;
+
+    top: calc(100% + 8px);
+    right: 0;
+
+    width: 180px;
+    padding: 8px;
+    margin: 0;
+
+    background: #173b2d;
+
+    border: none;
+    border-radius: 12px;
+
+    box-shadow: none;
+
+    z-index: 9999;
+}
+
+
+#menuConta[hidden] {
+    display: none !important;
+}
+
+
+/* ========================================
+   OPÇÕES DO MENU
+======================================== */
+
+#conta-container #menuConta .opcao-conta,
+#conta-container #menuConta #sairConta {
+    display: block;
+
+    width: 100%;
+    padding: 15px 12px;
+    margin: 0;
+
+    background: transparent !important;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 8px;
+
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.4;
+
+    text-align: left;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    box-shadow: none;
+    filter: none;
+    transform: none;
+
+    transition: background 0.2s ease;
+}
+
+
+/* ESPAÇAMENTO ENTRE AS OPÇÕES */
+
+#menuConta .opcao-conta + #sairConta {
+    margin-top: 5px;
+}
+
+
+/* ========================================
+   HOVER DAS OPÇÕES
+======================================== */
+
+#conta-container #menuConta .opcao-conta:hover,
+#conta-container #menuConta #sairConta:hover {
+    background: #28513e !important;
+    color: #ffffff;
+
+    border: none;
+
+    box-shadow: none;
+    filter: none;
+    transform: none;
+}
+
+
+/* ========================================
+   ACESSIBILIDADE PELO TECLADO
+======================================== */
+
+#botaoConta:focus-visible,
+#menuConta button:focus-visible,
+#menuConta a:focus-visible {
+    outline: 2px solid #ddefbc;
+    outline-offset: 3px;
+}
 /* ========================================
    7. APRESENTAÇÃO DA PÁGINA INICIAL
 ======================================== */

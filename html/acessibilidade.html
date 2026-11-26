@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button id="a6-abrir" class="a6-botao-flutuante" type="button" aria-label="Abrir painel de acessibilidade"
+    aria-controls="a6-painel" aria-expanded="false">
+    <svg viewBox="0 0 24 24" width="34" height="34" fill="none" aria-hidden="true">
+      <circle cx="12" cy="4" r="2" fill="currentColor" />
+      <path d="M4 9.5 12 11l8-1.5M12 11v4m0 0-4 7m4-7 4 7" stroke="currentColor" stroke-width="2.4"
+        stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  </button>
+
+  <!-- PAINEL LATERAL -->
+  <dialog id="a6-painel" aria-labelledby="a6-titulo">
+    <div class="a6-container">
+
+      <header class="a6-cabecalho">
+        <div class="a6-simbolo" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="42" height="42" fill="none">
+            <circle cx="12" cy="4" r="2" fill="currentColor" />
+            <path d="M4 9.5 12 11l8-1.5M12 11v4m0 0-4 7m4-7 4 7" stroke="currentColor" stroke-width="2.4"
+              stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+
+        <div class="a6-titulo-area">
+          <h2 id="a6-titulo">Acessibilidade</h2>
+          <p>Personalize a Base 6 do seu jeito.</p>
+        </div>
+
+        <button id="a6-fechar" class="a6-fechar" type="button" aria-label="Fechar painel">×</button>
+      </header>
+
+      <div class="a6-conteudo">
+        <div class="a6-principal">
+
+          <img class="a6-mascote" src="../srcc/Cachorro Base6 dando joinha.png"
+            alt="Mascote cachorro caramelo da Base 6">
+
+          <div class="a6-opcoes">
+
+            <label class="a6-opcao">
+              <span class="a6-icone" aria-hidden="true">🤟</span>
+              <span class="a6-descricao">
+                <strong>Libras (VLibras)</strong>
+                <small>Tradução em Língua Brasileira de Sinais.</small>
+              </span>
+              <input id="a6-libras" type="checkbox">
+              <span class="a6-switch" aria-hidden="true"></span>
+            </label>
+
+            <label class="a6-opcao">
+              <span class="a6-icone" aria-hidden="true">CC</span>
+              <span class="a6-descricao">
+                <strong>Legendas</strong>
+                <small>Ativa legendas disponíveis nos vídeos.</small>
+              </span>
+              <input id="a6-legendas" type="checkbox">
+              <span class="a6-switch" aria-hidden="true"></span>
+            </label>
+
+            <label class="a6-opcao">
+              <span class="a6-icone" aria-hidden="true">A+</span>
+              <span class="a6-descricao">
+                <strong>Texto maior</strong>
+                <small>Aumenta o tamanho das letras.</small>
+              </span>
+              <input id="a6-texto" type="checkbox">
+              <span class="a6-switch" aria-hidden="true"></span>
+            </label>
+
+            <label class="a6-opcao">
+              <span class="a6-icone" aria-hidden="true">◐</span>
+              <span class="a6-descricao">
+                <strong>Alto contraste</strong>
+                <small>Melhora a leitura e o destaque.</small>
+              </span>
+              <input id="a6-contraste" type="checkbox">
+              <span class="a6-switch" aria-hidden="true"></span>
+            </label>
+
+            <label class="a6-opcao">
+              <span class="a6-icone" aria-hidden="true">◖))</span>
+              <span class="a6-descricao">
+                <strong>Leitura de tela</strong>
+                <small>Lê o conteúdo principal em voz alta.</small>
+              </span>
+              <input id="a6-voz" type="checkbox">
+              <span class="a6-switch" aria-hidden="true"></span>
+            </label>
+
+          </div>
+        </div>
+
+        <!-- CONFIGURAÇÕES AVANÇADAS -->
+        <details class="a6-avancado">
+          <summary>Mais opções de acessibilidade</summary>
+
+          <div class="a6-campos">
+
+            <label class="a6-campo" for="a6-fonte">
+              Tamanho do texto
+              <input id="a6-fonte" type="range" min="100" max="180" step="10" value="100">
+              <output id="a6-fonte-valor">100%</output>
+            </label>
+
+            <label class="a6-campo" for="a6-modo-contraste">
+              Modo de contraste
+              <select id="a6-modo-contraste">
+                <option value="normal">Normal</option>
+                <option value="escuro">Escuro</option>
+                <option value="claro">Claro</option>
+                <option value="personalizado">Minhas cores</option>
+              </select>
+            </label>
+
+            <div class="a6-campo">
+              <strong>Personalizar cores</strong>
+
+              <label for="a6-cor-fundo">
+                Cor de fundo
+                <input id="a6-cor-fundo" type="color" value="#f6f0e2">
+              </label>
+
+              <label for="a6-cor-texto">
+                Cor do texto
+                <input id="a6-cor-texto" type="color" value="#10291f">
+              </label>
+
+              <button id="a6-aplicar-cores" class="a6-botao" type="button">
+                Aplicar cores
+              </button>
+            </div>
+
+            <label class="a6-campo a6-check">
+              <input id="a6-icones" type="checkbox">
+              Reforçar ícones
+            </label>
+
+            <label class="a6-campo a6-check">
+              <input id="a6-espacamento" type="checkbox">
+              Mais espaçamento
+            </label>
+
+            <label class="a6-campo a6-check">
+              <input id="a6-botoes" type="checkbox">
+              Botões maiores
+            </label>
+
+            <div class="a6-campo">
+              <strong>Navegação por teclado</strong>
+              <p>
+                Use Tab para navegar, Enter para selecionar
+                e Esc para fechar o painel.
+                Atalho: Alt + Shift + A.
+              </p>
+
+              <button id="a6-ir-conteudo" class="a6-botao" type="button">
+                Ir ao conteúdo
+              </button>
+            </div>
+
+          </div>
+        </details>
+
+        <div class="a6-rodape">
+          <button id="a6-restaurar" type="button">
+            Restaurar configurações
+          </button>
+
+          <p id="a6-mensagem" role="status" aria-live="polite">
+            Suas preferências são salvas neste navegador.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </dialog>
+
+  <script src="../js/acessibilidade.js" defer></script>
+</body>
+
+</html>
+<!-- BOTÃO DE ACESSIBILIDADE -->

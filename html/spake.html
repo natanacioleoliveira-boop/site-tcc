@@ -1,0 +1,227 @@
+<!-- FUNDO DESFOCADO -->
+
+<div id="spake-overlay" class="spake-overlay" hidden></div>
+
+
+<!-- BOTÃO FLUTUANTE -->
+
+<div class="spake-flutuante">
+
+    <button id="spake-abrir" class="spake-botao" type="button" aria-label="Abrir assistente Spake"
+        aria-controls="spake-painel" aria-expanded="false">
+        <img data-spake-img="rosto" alt="">
+    </button>
+
+    <svg class="spake-faiscas" viewBox="0 0 40 40" aria-hidden="true">
+        <path d="M5 33l6-5M15 22l4-9M28 18l8-3" />
+    </svg>
+
+    <span class="spake-balao" aria-hidden="true">
+        Está com dúvida?
+        <strong>Fale com Spike! 🐾</strong>
+    </span>
+
+</div>
+
+
+<!-- PAINEL PRINCIPAL -->
+
+<section id="spake-painel" class="spake-painel" role="dialog" aria-labelledby="spake-titulo" hidden>
+
+    <!-- BOTÃO FECHAR -->
+
+    <button id="spake-fechar" class="spake-fechar" type="button" aria-label="Fechar assistente">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 5l14 14M19 5L5 19" />
+        </svg>
+    </button>
+
+
+    <!-- MASCOTE -->
+
+    <div class="spake-personagem">
+
+        <img data-spake-img="personagem" alt="Spake, mascote da Base 6">
+
+    </div>
+
+
+    <!-- CONTEÚDO -->
+
+    <div class="spake-conteudo">
+
+        <h2 id="spake-titulo">
+            Spake <span>Assistente</span>
+        </h2>
+
+            <!-- ÁREA DAS RESPOSTAS -->
+
+            <div id="spake-resposta" hidden>
+
+                <button id="spake-voltar" class="spake-voltar" type="button">
+                    ← Voltar
+                </button>
+
+                <h3 id="spake-assunto" tabindex="-1"></h3>
+
+                <div id="spake-texto"></div>
+
+            </div>
+
+            <!-- MENU PRINCIPAL -->
+
+            <div id="spake-menu">
+
+                <!-- MENU PRINCIPAL -->
+
+                <div id="spake-menu">
+
+                    <p class="spake-descricao">
+                        Tire suas dúvidas, acesse assuntos rápidos
+                        e se conecte com a Base 6.
+                    </p>
+
+
+                    <!-- EDUCAÇÃO FINANCEIRA -->
+
+                    <button class="spake-opcao" data-assunto="financeiro" type="button">
+
+                        <svg class="spake-icone" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+
+                            <rect x="4" y="17" width="6" height="11" rx="1" />
+                            <rect x="13" y="11" width="6" height="17" rx="1" />
+                            <rect x="22" y="4" width="6" height="24" rx="1" />
+
+                        </svg>
+
+                        <span class="spake-opcao-texto">
+
+                            <strong>
+                                Dúvidas sobre Educação Financeira
+                            </strong>
+
+                            <small>
+                                Orçamento, gastos, metas, reservas e mais.
+                            </small>
+
+                        </span>
+
+                        <svg class="spake-seta" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M9 5l7 7-7 7" />
+                        </svg>
+
+                    </button>
+
+
+                    <!-- QUEM É A BASE 6 -->
+
+                    <button class="spake-opcao" data-assunto="sobre" type="button">
+
+                        <svg class="spake-icone" viewBox="0 0 32 32" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+
+                            <circle cx="12" cy="11" r="4.5" />
+
+                            <path d="M4 27c0-5 3.5-8 8-8s8 3 8 8" />
+
+                            <circle cx="23" cy="12" r="3.2" />
+
+                            <path d="M22.5 19c4 0 6.5 2.5 6.5 6.5" />
+
+                        </svg>
+
+                        <span class="spake-opcao-texto">
+
+                            <strong>Quem é a Base 6?</strong>
+
+                            <small>
+                                Conheça nosso propósito, equipe e projeto.
+                            </small>
+
+                        </span>
+
+                        <svg class="spake-seta" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M9 5l7 7-7 7" />
+                        </svg>
+
+                    </button>
+
+
+                    <!-- COMUNIDADE -->
+
+                    <button class="spake-opcao" data-assunto="comunidade" type="button">
+
+                        <svg class="spake-icone" viewBox="0 0 32 32" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+
+                            <circle cx="16" cy="10" r="4" />
+
+                            <path d="M8 27c0-5 3.5-8 8-8s8 3 8 8" />
+
+                            <circle cx="5.5" cy="13" r="3" />
+
+                            <path d="M1.5 24.5c0-3.5 1.8-5.5 4.5-5.5" />
+
+                            <circle cx="26.5" cy="13" r="3" />
+
+                            <path d="M30.5 24.5c0-3.5-1.8-5.5-4.5-5.5" />
+
+                        </svg>
+
+                        <span class="spake-opcao-texto">
+
+                            <strong>
+                                Como fazer parte da comunidade?
+                            </strong>
+
+                            <small>
+                                Participe, acompanhe novidades e ações.
+                            </small>
+
+                        </span>
+
+                        <svg class="spake-seta" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M9 5l7 7-7 7" />
+                        </svg>
+
+                    </button>
+
+
+                    <!-- CONTATO -->
+
+                    <button class="spake-opcao" data-assunto="contato" type="button">
+
+                        <svg class="spake-icone" viewBox="0 0 32 32" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+
+                            <rect x="3" y="7" width="26" height="18" rx="3" />
+
+                            <path d="M4 9l12 9 12-9" />
+
+                        </svg>
+
+                        <span class="spake-opcao-texto">
+
+                            <strong>Fale com a gente</strong>
+
+                            <small>
+                                Dúvidas, sugestões ou parcerias.
+                            </small>
+
+                        </span>
+
+                        <svg class="spake-seta" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M9 5l7 7-7 7" />
+                        </svg>
+
+                    </button>
+
+                </div>
+
+
+                <!-- ÁREA DAS RESPOSTAS -->
+
+
+            </div>
+
+</section>
