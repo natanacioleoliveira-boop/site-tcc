@@ -1,0 +1,1422 @@
+
+/* ========================================
+   BASE 6 — COMUNIDADE
+======================================== */
+
+
+/* ========================================
+   1. IDENTIDADE VISUAL
+======================================== */
+
+.pagina-comunidade {
+
+    --com-fundo: #071b14;
+    --com-verde: #123c2b;
+    --com-card: #0d3022;
+    --com-limao: #c7f238;
+    --com-branco: #ffffff;
+    --com-texto: #c4d0c7;
+    --com-borda: rgba(199, 242, 56, 0.18);
+
+    background: var(--com-fundo);
+    color: var(--com-branco);
+
+    font-family: "DM Sans", Arial, sans-serif;
+
+    margin: 0;
+
+    min-width: 0;
+    min-height: 100vh;
+
+    width: 100%;
+}
+
+
+/* ========================================
+   2. CONFIGURAÇÕES GERAIS
+======================================== */
+
+.pagina-comunidade *,
+.pagina-comunidade *::before,
+.pagina-comunidade *::after {
+
+    box-sizing: border-box;
+}
+
+.pagina-comunidade .container {
+
+    width: min(1200px, calc(100% - 48px));
+
+    margin-inline: auto;
+
+    min-width: 0;
+}
+
+.pagina-comunidade main {
+
+    width: 100%;
+    min-width: 0;
+}
+
+.pagina-comunidade h1,
+.pagina-comunidade h2,
+.pagina-comunidade h3,
+.pagina-comunidade p {
+
+    overflow-wrap: break-word;
+}
+
+.pagina-comunidade img {
+
+    display: block;
+
+    max-width: 100%;
+
+    height: auto;
+}
+
+
+/* FOCO PARA NAVEGAÇÃO */
+
+.pagina-comunidade a:focus-visible,
+.pagina-comunidade button:focus-visible {
+
+    outline: 3px solid var(--com-limao);
+
+    outline-offset: 5px;
+}
+
+
+/* ========================================
+   3. CABEÇALHO — BASE 6
+======================================== */
+
+.pagina-comunidade .cabecalho-conteudo {
+
+    min-width: 0;
+}
+
+.pagina-comunidade .menu {
+
+    min-width: 0;
+
+    flex-wrap: wrap;
+}
+
+.pagina-comunidade #conta-container {
+
+    position: relative;
+
+    justify-self: end;
+
+    min-width: 0;
+}
+
+
+/* MENU DA CONTA */
+
+.pagina-comunidade #menuConta {
+
+    position: absolute;
+
+    top: calc(100% + 12px);
+    right: 0;
+
+    z-index: 50;
+
+    min-width: 160px;
+
+    padding: 10px;
+
+    background: var(--com-verde);
+
+    border: 1px solid var(--com-borda);
+    border-radius: 15px;
+}
+
+.pagina-comunidade #menuConta[hidden] {
+
+    display: none;
+}
+
+.pagina-comunidade #sairConta {
+
+    width: 100%;
+
+    padding: 12px;
+
+    background: transparent;
+    color: var(--com-branco);
+
+    border: none;
+    border-radius: 8px;
+}
+
+.pagina-comunidade #sairConta:hover {
+
+    background: var(--com-limao);
+    color: var(--com-fundo);
+}
+
+
+/* ========================================
+   4. APRESENTAÇÃO — IMAGEM DE FUNDO
+======================================== */
+
+.comunidade-apresentacao {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    width: 100%;
+
+    min-height: clamp(580px, 45vw, 780px);
+
+    padding: 80px 0;
+
+
+    /* IMAGEM E DEGRADÊ */
+
+    background-color: var(--com-fundo);
+
+    background-image:
+
+        linear-gradient(
+            0deg,
+            #071b14 0%,
+            rgba(7, 27, 20, 0) 22%
+        ),
+
+        linear-gradient(
+            90deg,
+            #071b14 0%,
+            rgba(7, 27, 20, 0.97) 22%,
+            rgba(7, 27, 20, 0.88) 38%,
+            rgba(7, 27, 20, 0.40) 65%,
+            rgba(7, 27, 20, 0.08) 100%
+        ),
+
+        url("../srcc/15f6cb07-2431-4b6c-ba49-297ad1b7b195.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+}
+
+
+/* ORGANIZAÇÃO DO CONTEÚDO */
+
+.comunidade-abertura {
+
+    display: flex;
+
+    align-items: center;
+
+    width: 100%;
+
+    min-width: 0;
+}
+
+
+/* TEXTOS PRINCIPAIS */
+
+.comunidade-texto {
+
+    max-width: 650px;
+
+    min-width: 0;
+
+    text-align: left;
+}
+
+
+/* ETIQUETA SUPERIOR */
+
+.comunidade-etiqueta {
+
+    display: inline-block;
+
+    margin-bottom: 16px;
+
+    color: var(--com-limao);
+
+    font-size: 0.78rem;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+/* TÍTULO PRINCIPAL */
+
+.comunidade-texto h1 {
+
+    margin-bottom: 22px;
+
+    font-size: clamp(2.3rem, 5vw, 4.5rem);
+
+    font-weight: 800;
+
+    line-height: 1.1;
+
+    letter-spacing: -2px;
+}
+
+
+/* DESTAQUES EM VERDE-LIMÃO */
+
+.comunidade-texto h1 span,
+.futuro-cabecalho h2 span,
+.sugestao-cabecalho h2 span,
+.comunidade-encerramento h2 span {
+
+    color: var(--com-limao);
+}
+
+.comunidade-texto h1 span {
+
+    white-space: nowrap;
+}
+
+
+/* DESCRIÇÃO */
+
+.comunidade-descricao {
+
+    max-width: 550px;
+
+    margin-bottom: 30px;
+
+    color: var(--com-branco);
+
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   5. BOTÕES DA COMUNIDADE
+======================================== */
+
+.comunidade-botao {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 16px;
+
+    min-height: 50px;
+
+    min-width: 0;
+    max-width: 100%;
+
+    padding: 14px 25px;
+
+    background: var(--com-limao);
+    color: var(--com-fundo);
+
+    border: none;
+    border-radius: 40px;
+
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 800;
+
+    text-align: center;
+    text-decoration: none;
+
+    white-space: normal;
+    overflow-wrap: anywhere;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.comunidade-botao span {
+
+    flex-shrink: 0;
+
+    font-size: 1.3rem;
+}
+
+
+/* EFEITO DOS BOTÕES */
+
+.comunidade-botao[href]:hover,
+button.comunidade-botao:not(:disabled):hover {
+
+    background: #ddff73;
+
+    transform: translateY(-3px);
+}
+
+
+/* BOTÃO TEMPORARIAMENTE DESATIVADO */
+
+.comunidade-botao:disabled,
+.comunidade-botao[aria-disabled="true"] {
+
+    cursor: not-allowed;
+
+    opacity: 0.8;
+}
+
+
+/* ========================================
+   6. IDEIAS PARA O FUTURO
+======================================== */
+
+.comunidade-futuro {
+
+    padding: 30px 0 45px;
+}
+
+.futuro-painel {
+
+    min-width: 0;
+
+    padding: clamp(20px, 4vw, 45px);
+
+    background: linear-gradient(
+        135deg,
+        #123c2b,
+        #09251a
+    );
+
+    border: 1px solid var(--com-borda);
+    border-radius: 30px;
+}
+
+
+/* CABEÇALHO DA SEÇÃO */
+
+.futuro-cabecalho {
+
+    margin-bottom: 35px;
+}
+
+.futuro-cabecalho h2 {
+
+    margin-bottom: 15px;
+
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+
+    font-weight: 800;
+
+    line-height: 1.2;
+}
+
+.futuro-cabecalho p {
+
+    max-width: 780px;
+
+    color: var(--com-texto);
+
+    font-size: 1rem;
+
+    line-height: 1.6;
+}
+
+
+/* ORGANIZAÇÃO DOS OBJETIVOS */
+
+.futuro-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 25px;
+}
+
+
+/* OBJETIVOS INDIVIDUAIS */
+
+.futuro-item {
+
+    min-width: 0;
+
+    padding: 8px 18px 8px 0;
+}
+
+.futuro-item:not(:last-child) {
+
+    border-right: 1px solid var(--com-borda);
+}
+
+
+/* ÍCONES DOS OBJETIVOS */
+
+.futuro-item svg {
+
+    width: 45px;
+    height: 45px;
+
+    margin-bottom: 18px;
+
+    fill: none;
+
+    stroke: var(--com-limao);
+
+    stroke-width: 1.7;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/* TEXTOS DOS OBJETIVOS */
+
+.futuro-item h3 {
+
+    margin-bottom: 8px;
+
+    font-size: 1.1rem;
+    font-weight: 800;
+
+    line-height: 1.3;
+}
+
+.futuro-item p {
+
+    color: var(--com-texto);
+
+    font-size: 0.9rem;
+
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   7. PARTICIPAÇÃO NA COMUNIDADE
+======================================== */
+
+.comunidade-participacao {
+
+    padding: 25px 0 65px;
+
+    scroll-margin-top: 110px;
+}
+
+
+/* TÍTULO DA SEÇÃO */
+
+.participacao-titulo {
+
+    margin-bottom: 35px;
+
+    text-align: center;
+}
+
+.participacao-titulo h2 {
+
+    display: inline-block;
+
+    max-width: 100%;
+
+    padding: 15px 30px;
+
+    margin-bottom: 18px;
+
+    background: var(--com-limao);
+    color: var(--com-fundo);
+
+    border-radius: 40px;
+
+    font-size: clamp(1.4rem, 3vw, 2rem);
+
+    font-weight: 800;
+
+    line-height: 1.3;
+}
+
+.participacao-titulo p {
+
+    color: var(--com-texto);
+}
+
+
+/* ========================================
+   8. CARDS DE PARTICIPAÇÃO
+======================================== */
+
+.participacao-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+.participacao-card {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    min-width: 0;
+
+    padding: clamp(22px, 3vw, 35px);
+
+    background: linear-gradient(
+        145deg,
+        #103b29,
+        #0a281d
+    );
+
+    border: 1px solid var(--com-borda);
+    border-radius: 26px;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.participacao-card:hover {
+
+    transform: translateY(-4px);
+
+    border-color: var(--com-limao);
+}
+
+
+/* ÍCONES DOS CARDS E DO FORMULÁRIO */
+
+.participacao-icone,
+.sugestao-icone {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 66px;
+    height: 66px;
+
+    margin-bottom: 20px;
+
+    background: rgba(199, 242, 56, 0.07);
+
+    border: 1px solid var(--com-borda);
+    border-radius: 18px;
+}
+
+.participacao-icone svg,
+.sugestao-icone svg {
+
+    width: 36px;
+    height: 36px;
+
+    fill: none;
+
+    stroke: var(--com-limao);
+
+    stroke-width: 1.7;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/* TEXTOS DOS CARDS */
+
+.participacao-card h3 {
+
+    margin-bottom: 12px;
+
+    font-size: clamp(1.25rem, 2vw, 1.65rem);
+
+    font-weight: 800;
+
+    line-height: 1.3;
+}
+
+.participacao-card p {
+
+    margin-bottom: 25px;
+
+    color: var(--com-texto);
+
+    font-size: 1rem;
+
+    line-height: 1.7;
+}
+
+
+/* ALINHAMENTO DOS BOTÕES */
+
+.participacao-card .comunidade-botao {
+
+    width: 100%;
+
+    margin-top: auto;
+}
+
+
+/* ========================================
+   9. FORMULÁRIO — ENVIE SUA IDEIA
+======================================== */
+
+.comunidade-sugestao {
+
+    padding: 30px 0 70px;
+
+    scroll-margin-top: 110px;
+}
+
+
+/* PAINEL DO FORMULÁRIO */
+
+.sugestao-painel {
+
+    width: 100%;
+
+    max-width: 850px;
+
+    min-width: 0;
+
+    margin-inline: auto;
+
+    padding: clamp(20px, 5vw, 50px);
+
+    background: linear-gradient(
+        135deg,
+        #123c2b,
+        #09251a
+    );
+
+    border: 1px solid var(--com-borda);
+    border-radius: 30px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+
+/* CABEÇALHO DO FORMULÁRIO */
+
+.sugestao-cabecalho {
+
+    margin-bottom: 35px;
+}
+
+.sugestao-cabecalho h2 {
+
+    margin-bottom: 15px;
+
+    font-size: clamp(1.8rem, 4vw, 3rem);
+
+    font-weight: 800;
+
+    line-height: 1.2;
+}
+
+.sugestao-cabecalho p {
+
+    color: var(--com-texto);
+
+    line-height: 1.6;
+}
+
+
+/* ORGANIZAÇÃO DO FORMULÁRIO */
+
+.sugestao-formulario {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 24px;
+
+    min-width: 0;
+}
+
+
+/* CAMPOS INDIVIDUAIS */
+
+.sugestao-campo {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    min-width: 0;
+}
+
+
+/* LABELS */
+
+.sugestao-campo label {
+
+    color: var(--com-branco);
+
+    font-size: 0.95rem;
+
+    font-weight: 700;
+}
+
+.sugestao-campo label span {
+
+    color: var(--com-texto);
+
+    font-size: 0.85rem;
+
+    font-weight: 400;
+}
+
+
+/* INPUT, SELECT E TEXTAREA */
+
+.sugestao-campo input,
+.sugestao-campo select,
+.sugestao-campo textarea {
+
+    width: 100%;
+
+    min-width: 0;
+    max-width: 100%;
+
+    padding: 16px 18px;
+
+    background: #071b14;
+    color: #ffffff;
+
+    border: 1px solid #315743;
+    border-radius: 14px;
+
+    font-family: inherit;
+
+    font-size: 1rem;
+
+    transition: border-color 0.2s ease;
+}
+
+
+/* OPÇÕES DE CATEGORIA */
+
+.sugestao-campo select {
+
+    cursor: pointer;
+
+    color-scheme: dark;
+}
+
+.sugestao-campo select option {
+
+    background: #071b14;
+    color: #ffffff;
+}
+
+
+/* PLACEHOLDERS */
+
+.sugestao-campo input::placeholder,
+.sugestao-campo textarea::placeholder {
+
+    color: #a0b5a8;
+}
+
+
+/* CAMPOS SELECIONADOS */
+
+.sugestao-campo input:focus,
+.sugestao-campo select:focus,
+.sugestao-campo textarea:focus {
+
+    border-color: var(--com-limao);
+
+    outline: 2px solid var(--com-limao);
+
+    outline-offset: 2px;
+}
+
+
+/* ÁREA DA MENSAGEM */
+
+.sugestao-campo textarea {
+
+    min-height: 150px;
+
+    resize: vertical;
+
+    line-height: 1.6;
+}
+
+
+/* TEXTOS AUXILIARES */
+
+.sugestao-formulario small {
+
+    color: var(--com-texto);
+
+    font-size: 0.8rem;
+
+    line-height: 1.5;
+}
+
+
+/* BOTÃO DE ENVIO */
+
+.sugestao-enviar {
+
+    width: 100%;
+
+    min-height: 55px;
+
+    margin-top: 5px;
+}
+
+
+/* AVISO TEMPORÁRIO */
+
+.sugestao-aviso {
+
+    text-align: center;
+}
+
+
+/* FRASE FINAL DO FORMULÁRIO */
+
+.sugestao-frase {
+
+    margin-top: 25px;
+
+    color: var(--com-texto);
+
+    font-size: 0.9rem;
+
+    font-style: italic;
+
+    text-align: center;
+}
+
+
+/* ========================================
+   10. ENCERRAMENTO
+======================================== */
+
+.comunidade-encerramento {
+
+    padding: 45px 0 65px;
+
+    text-align: center;
+
+    background: radial-gradient(
+        ellipse at bottom,
+        #18452b,
+        #071b14 75%
+    );
+}
+
+.comunidade-encerramento p {
+
+    margin-bottom: 12px;
+
+    color: var(--com-texto);
+
+    font-size: 1rem;
+}
+
+.comunidade-encerramento h2 {
+
+    font-size: clamp(1.8rem, 4vw, 3rem);
+
+    font-weight: 800;
+
+    line-height: 1.2;
+}
+
+
+/* ========================================
+   11. RESPONSIVIDADE — MONITORES GRANDES
+======================================== */
+
+@media (min-width: 1920px) {
+
+    .pagina-comunidade .container {
+
+        width: min(1400px, calc(100% - 96px));
+    }
+
+    .comunidade-apresentacao {
+
+        min-height: 780px;
+
+        padding: 100px 0;
+    }
+
+    .comunidade-texto {
+
+        max-width: 700px;
+    }
+}
+
+
+/* ========================================
+   12. RESPONSIVIDADE — NOTEBOOKS
+======================================== */
+
+@media (max-width: 1366px) {
+
+    .comunidade-apresentacao {
+
+        min-height: 580px;
+    }
+
+    .comunidade-texto {
+
+        max-width: 600px;
+    }
+}
+
+
+/* ========================================
+   13. RESPONSIVIDADE — TABLETS
+======================================== */
+
+@media (max-width: 1024px) {
+
+    /* IMAGEM DE FUNDO */
+
+    .comunidade-apresentacao {
+
+        min-height: 540px;
+
+        padding: 65px 0;
+
+        background-position: 65% center;
+    }
+
+    .comunidade-texto {
+
+        max-width: min(100%, 480px);
+    }
+
+
+    /* IDEIAS PARA O FUTURO */
+
+    .futuro-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 30px;
+    }
+
+    .futuro-item:not(:last-child) {
+
+        border-right: none;
+    }
+
+    .futuro-item {
+
+        padding: 10px;
+    }
+
+
+    /* CARDS */
+
+    .participacao-card {
+
+        padding: 25px;
+    }
+}
+
+
+/* ========================================
+   14. RESPONSIVIDADE — CELULARES
+======================================== */
+
+@media (max-width: 767px) {
+
+    /* CONTAINER */
+
+    .pagina-comunidade .container {
+
+        width: calc(100% - 32px);
+    }
+
+
+    /* CABEÇALHO */
+
+    .pagina-comunidade .cabecalho-conteudo {
+
+        display: grid;
+
+        grid-template-columns: minmax(0, 1fr) auto;
+
+        gap: 10px 15px;
+
+        padding-block: 12px;
+    }
+
+    .pagina-comunidade .menu {
+
+        grid-column: 1 / -1;
+        grid-row: 2;
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 8px 16px;
+
+        overflow: visible;
+    }
+
+    .pagina-comunidade .menu a {
+
+        font-size: 0.85rem;
+
+        padding: 8px 0;
+    }
+
+    .pagina-comunidade #conta-container {
+
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+
+    /* IMAGEM DE FUNDO NO CELULAR */
+
+    .comunidade-apresentacao {
+
+        min-height: 620px;
+
+        align-items: flex-end;
+
+        padding: 240px 0 45px;
+
+        background-image:
+
+            linear-gradient(
+                to top,
+                #071b14 0%,
+                rgba(7, 27, 20, 0.98) 28%,
+                rgba(7, 27, 20, 0.92) 48%,
+                rgba(7, 27, 20, 0.40) 75%,
+                rgba(7, 27, 20, 0.05) 100%
+            ),
+
+            url("../srcc/comunidade-fundo.png");
+
+        background-position: 65% center;
+
+        background-size: cover;
+    }
+
+
+    /* TEXTOS DA APRESENTAÇÃO */
+
+    .comunidade-abertura {
+
+        justify-content: center;
+    }
+
+    .comunidade-texto {
+
+        max-width: 100%;
+
+        text-align: center;
+    }
+
+    .comunidade-texto h1 {
+
+        font-size: clamp(2rem, 7vw, 3rem);
+
+        letter-spacing: -1px;
+    }
+
+    .comunidade-descricao {
+
+        max-width: 500px;
+
+        margin-inline: auto;
+
+        font-size: 1rem;
+    }
+
+
+    /* IDEIAS PARA O FUTURO */
+
+    .comunidade-futuro {
+
+        padding: 20px 0 35px;
+    }
+
+    .futuro-painel {
+
+        padding: 25px 20px;
+
+        border-radius: 22px;
+    }
+
+    .futuro-cabecalho {
+
+        text-align: center;
+    }
+
+    .futuro-item {
+
+        padding: 8px 0;
+
+        text-align: center;
+    }
+
+    .futuro-item svg {
+
+        margin-inline: auto;
+    }
+
+
+    /* CARDS DE PARTICIPAÇÃO */
+
+    .participacao-grid {
+
+        grid-template-columns: minmax(0, 1fr);
+
+        gap: 18px;
+    }
+
+    .participacao-card {
+
+        padding: 25px;
+
+        border-radius: 22px;
+    }
+
+    .participacao-titulo h2 {
+
+        padding: 15px 20px;
+    }
+
+    .comunidade-participacao {
+
+        padding-bottom: 40px;
+    }
+
+
+    /* FORMULÁRIO */
+
+    .comunidade-sugestao {
+
+        padding: 20px 0 45px;
+    }
+
+    .sugestao-painel {
+
+        padding: 25px 20px;
+
+        border-radius: 22px;
+    }
+
+    .sugestao-cabecalho {
+
+        text-align: center;
+    }
+
+    .sugestao-icone {
+
+        margin-inline: auto;
+    }
+
+    .sugestao-campo input,
+    .sugestao-campo select,
+    .sugestao-campo textarea {
+
+        font-size: 16px;
+
+        padding: 14px;
+    }
+
+
+    /* ENCERRAMENTO */
+
+    .comunidade-encerramento {
+
+        padding: 35px 0 50px;
+    }
+
+
+    /* RODAPÉ */
+
+    .pagina-comunidade .rodape-conteudo {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 12px;
+    }
+}
+
+
+/* ========================================
+   15. RESPONSIVIDADE — CELULARES PEQUENOS
+======================================== */
+
+@media (max-width: 480px) {
+
+    /* IMAGEM DE FUNDO */
+
+    .comunidade-apresentacao {
+
+        min-height: 600px;
+
+        padding: 220px 0 35px;
+
+        background-position: 68% center;
+    }
+
+    .comunidade-texto h1 {
+
+        font-size: clamp(2rem, 8vw, 2.4rem);
+    }
+
+
+    /* OBJETIVOS FUTUROS */
+
+    .futuro-grid {
+
+        grid-template-columns: minmax(0, 1fr);
+
+        gap: 20px;
+    }
+
+    .futuro-item:not(:last-child) {
+
+        padding-bottom: 20px;
+
+        border-bottom: 1px solid var(--com-borda);
+    }
+
+
+    /* BOTÕES */
+
+    .comunidade-botao {
+
+        width: 100%;
+
+        padding: 13px 16px;
+
+        gap: 10px;
+    }
+
+
+    /* CARDS */
+
+    .participacao-card {
+
+        padding: 20px;
+    }
+
+
+    /* ETIQUETAS */
+
+    .comunidade-etiqueta {
+
+        font-size: 0.7rem;
+
+        letter-spacing: 1.5px;
+    }
+}
+
+
+/* ========================================
+   16. RESPONSIVIDADE — TELAS DE 320PX
+======================================== */
+
+@media (max-width: 360px) {
+
+    .pagina-comunidade .container {
+
+        width: calc(100% - 24px);
+    }
+
+
+    /* MENU PRINCIPAL */
+
+    .pagina-comunidade .menu {
+
+        gap: 5px 12px;
+    }
+
+    .pagina-comunidade .menu a {
+
+        font-size: 0.8rem;
+    }
+
+
+    /* APRESENTAÇÃO */
+
+    .comunidade-texto h1 {
+
+        font-size: 2rem;
+    }
+
+
+    /* CARDS */
+
+    .participacao-card {
+
+        padding: 18px;
+    }
+
+
+    /* FORMULÁRIO */
+
+    .sugestao-painel {
+
+        padding: 20px 15px;
+    }
+
+    .sugestao-cabecalho h2 {
+
+        font-size: 1.7rem;
+    }
+}
+
+
+/* ========================================
+   17. ACESSIBILIDADE — REDUZIR MOVIMENTOS
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .comunidade-botao,
+    .participacao-card,
+    .sugestao-campo input,
+    .sugestao-campo select,
+    .sugestao-campo textarea {
+
+        transition: none;
+    }
+
+    .comunidade-botao[href]:hover,
+    button.comunidade-botao:not(:disabled):hover,
+    .participacao-card:hover {
+
+        transform: none;
+    }
+}
